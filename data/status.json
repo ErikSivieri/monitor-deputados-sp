@@ -1,14 +1,111 @@
 {
  "tse": {
-  "registros": 10247,
+  "registros": 12805,
   "ok": true,
-  "segundos": 11
+  "segundos": 6
+ },
+ "camara_despesas": {
+  "colunas": [
+   "txNomeParlamentar",
+   "cpf",
+   "ideCadastro",
+   "nuCarteiraParlamentar",
+   "nuLegislatura",
+   "sgUF",
+   "sgPartido",
+   "codLegislatura",
+   "numSubCota",
+   "txtDescricao",
+   "numEspecificacaoSubCota",
+   "txtDescricaoEspecificacao",
+   "txtFornecedor",
+   "txtCNPJCPF",
+   "txtNumero",
+   "indTipoDocumento",
+   "datEmissao",
+   "vlrDocumento",
+   "vlrGlosa",
+   "vlrLiquido",
+   "numMes",
+   "numAno",
+   "numParcela",
+   "txtPassageiro",
+   "txtTrecho",
+   "numLote",
+   "numRessarcimento",
+   "datPagamentoRestituicao",
+   "vlrRestituicao",
+   "nuDeputadoId",
+   "ideDocumento",
+   "urlDocumento",
+   "v"
+  ],
+  "linhas": 69746,
+  "ok": true,
+  "segundos": 31
+ },
+ "camara_votacoes": {
+  "votacoes_nominais_plenario": 3912,
+  "votos_sp": 216144,
+  "ok": true,
+  "segundos": 37
  },
  "camara_deputados": {
+  "total": 192,
+  "falhas": [],
+  "n_falhas": 0,
+  "legislaturas": [
+   57,
+   56,
+   55
+  ],
+  "exemplo_historico": [
+   {
+    "data": "2023-02-01T00:00",
+    "partido": "PP",
+    "uf": "SP",
+    "situacao": null,
+    "condicao": null,
+    "leg": 57,
+    "desc": "Nome no início da legislatura / Partido no início da legislatura"
+   },
+   {
+    "data": "2023-02-01T12:05",
+    "partido": "PP",
+    "uf": "SP",
+    "situacao": "Exercício",
+    "condicao": "Titular",
+    "leg": 57,
+    "desc": "Entrada - Posse de Eleito Titular - Posse na Sessão Preparatória"
+   },
+   {
+    "data": "2026-04-29T22:10",
+    "partido": "UNIÃO",
+    "uf": "SP",
+    "situacao": "Exercício",
+    "condicao": "Titular",
+    "leg": 57,
+    "desc": "Alteração de partido"
+   }
+  ],
+  "ok": true,
+  "segundos": 144
+ },
+ "camara_proposicoes": {
   "ok": false,
-  "erro": "RuntimeError: falha em https://dadosabertos.camara.leg.br/api/v2/deputados",
-  "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 48, in inner\n    r = func(*a, **kw)\n        ^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/camara.py\", line 38, in deputados\n    lista = paginar(f\"{API}/deputados\", params)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 106, in paginar\n    j = get_json(prox, p)\n        ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 99, in get_json\n    raise RuntimeError(f\"falha em {url}\")\nRuntimeError: falha em https://dadosabertos.camara.leg.br/api/v2/deputados\n",
-  "segundos": 122
+  "erro": "AttributeError: 'float' object has no attribute 'lower'",
+  "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 48, in inner\n    r = func(*a, **kw)\n        ^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/camara.py\", line 216, in proposicoes\n    r = com_cache(\"camara_proposicoes\", ano, lambda a: _proposicoes_ano(a, ids))\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 156, in com_cache\n    r = func(ano)\n        ^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/camara.py\", line 216, in <lambda>\n    r = com_cache(\"camara_proposicoes\", ano, lambda a: _proposicoes_ano(a, ids))\n                                                       ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/camara.py\", line 199, in _proposicoes_ano\n    \"data\": (r.get(\"dataApresentacao\") or \"\")[:10], \"sit\": _situacao(sit),\n                                                           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/camara.py\", line 169, in _situacao\n    d = (desc or \"\").lower()\n        ^^^^^^^^^^^^^^^^^^\nAttributeError: 'float' object has no attribute 'lower'\n",
+  "segundos": 3
+ },
+ "montagem_federal": {
+  "parlamentares": 192,
+  "sem_tse": [
+   "ABELARDO CAMARINHA",
+   "OTONIEL LIMA"
+  ],
+  "n_sem_tse": 2,
+  "divergencia_partido_arquivo_cota": 16057,
+  "linhas_despesa": 69746
  },
  "alesp_cadastro": {
   "deputados": 94,
@@ -23,93 +120,153 @@
    "aniversario": "26/08"
   },
   "ok": true,
-  "segundos": 4
+  "segundos": 3
  },
  "alesp_despesas": {
-  "registros": 249563,
-  "linhas": 100765,
+  "registros": 112651,
+  "linhas": 47037,
   "tipos": [
    [
     "A - COMBUSTÍVEIS E LUBRIFICANTES",
-    61416
+    26498
    ],
    [
     "I - HOSPEDAGEM, ALIMENTAÇÃO E DESPESAS DE LOCOMOÇÃO",
-    39211
+    16599
    ],
    [
     "H - SERV.UTIL.PÚBLICA (TELEF.MÓVEL/FIXA, ENERGIA, ÁGUA, GÁS ETC)",
-    28177
+    13479
    ],
    [
     "E - MATERIAIS DE ESCRITÓRIO E OUTROS MATERIAIS DE CONSUMO",
-    22494
+    10545
    ],
    [
     "G - ASSINATURAS DE PERIÓDICOS, PUBLICAÇÕES, INTERNET E SOFTWARES",
-    18708
-   ],
-   [
-    "M - MANUTENÇÃO DE BENS MÓVEIS, IMÓVEIS, CONDOMÍNIOS E OUTROS",
-    15591
+    8159
    ],
    [
     "K - LOCAÇÃO DE BENS MÓVEIS",
-    15411
+    7834
+   ],
+   [
+    "M - MANUTENÇÃO DE BENS MÓVEIS, IMÓVEIS, CONDOMÍNIOS E OUTROS",
+    7286
    ],
    [
     "L - LOCAÇÃO DE BENS IMÓVEIS",
-    12700
+    6114
    ],
    [
     "D - MATERIAIS E SERVIÇOS GRÁFICOS, DE CÓPIAS E REPRODUÇÃO DE DOCS",
-    7947
+    3756
    ],
    [
     "F - SERVIÇOS TÉCNICOS PROFISSIONAIS (CONSULTORIA, PESQUISAS ETC)",
-    5702
-   ],
-   [
-    "O - LOCAÇÃO DE VEÍCULO DE REPRESENTAÇÃO",
-    5298
+    2637
    ],
    [
     "C - MATERIAIS E SERVIÇOS DE MANUT E CONSERV DE VEÍCULOS ; PEDÁGIOS",
-    5169
+    2482
+   ],
+   [
+    "O - LOCAÇÃO DE VEÍCULO DE REPRESENTAÇÃO",
+    2392
    ],
    [
     "J - SERVIÇOS DE COMUNICAÇÃO",
-    4538
+    1688
    ],
    [
     "P - DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR",
-    3594
+    1542
    ],
    [
     "N - MORADIA",
-    2808
+    1203
    ],
    [
     "B - PEDÁGIOS",
-    587
+    306
    ],
    [
     "Q - LOCAÇÃO DE VEÍCULO DE APOIO",
-    206
+    128
    ],
    [
     "C - MATERIAIS E SERVIÇOS DE MANUT E CONSERV DE VEÍCULOS",
-    6
+    3
    ]
   ],
-  "deputados": 238,
+  "deputados": 116,
+  "sem_matricula": [],
   "ok": true,
-  "segundos": 85
+  "segundos": 44
  },
  "alesp_proposituras": {
   "proposituras": 149887,
   "autorias": 179319,
   "naturezas": 106,
+  "naturezas_usadas": [
+   [
+    "Indicação",
+    97449
+   ],
+   [
+    "Req.",
+    26884
+   ],
+   [
+    "PL",
+    13005
+   ],
+   [
+    "RI",
+    7056
+   ],
+   [
+    "Moção",
+    3234
+   ],
+   [
+    "PLC",
+    724
+   ],
+   [
+    "Req Com",
+    676
+   ],
+   [
+    "PDL",
+    455
+   ],
+   [
+    "PR",
+    307
+   ],
+   [
+    "PEC",
+    97
+   ]
+  ],
+  "exemplo_autor": [
+   [
+    "Feliciano Filho",
+    "1191597",
+    "10599"
+   ],
+   [
+    "Ana do Carmo",
+    "1192949",
+    "418"
+   ],
+   [
+    "Hélio Nishimoto",
+    "1201264",
+    "11155"
+   ]
+  ],
   "etapas_finais_mais_comuns": [
    [
     [
@@ -273,71 +430,194 @@
    ]
   ],
   "ok": true,
-  "segundos": 59
+  "segundos": 60
  },
  "alesp_presencas": {
   "presencas": 16459,
   "exemplo": [
-   "JOAO CARAMEZ",
-   "202",
-   "1000000259",
-   "2016-12-13"
+   "Heni Ozi Cukier",
+   "1000000337",
+   "1000004129",
+   "2021-06-17"
   ],
   "ok": true,
-  "segundos": 7
+  "segundos": 11
+ },
+ "alesp_normas": {
+  "normas": 0,
+  "tipos": {
+   "9": "9",
+   "2": "2",
+   "55": "55",
+   "3": "3",
+   "28": "28",
+   "25": "25",
+   "1": "1",
+   "19": "19",
+   "14": "14",
+   "12": "12",
+   "21": "21",
+   "22": "22",
+   "23": "23",
+   "59": "59"
+  },
+  "ambito_promulg": [
+   [
+    [
+     null,
+     "E"
+    ],
+    157867
+   ],
+   [
+    [
+     null,
+     null
+    ],
+    26661
+   ],
+   [
+    [
+     null,
+     "L"
+    ],
+    19367
+   ],
+   [
+    [
+     null,
+     "I"
+    ],
+    63
+   ]
+  ],
+  "exemplo": [],
+  "ok": true,
+  "segundos": 69
  },
  "montagem_estadual": {
-  "parlamentares": 249,
-  "n_sem_tse": 41,
+  "parlamentares": 235,
+  "n_sem_tse": 11,
   "sem_tse": [
-   "ABELARDO CAMARINHA",
-   "AFONSO LOBATO",
-   "Alex Madureira",
-   "ALEX MANENTE",
-   "ARTHUR DO VAL",
-   "BRUNO COVAS",
-   "CELINO CARDOSO",
-   "CELSO NASCIMENTO",
-   "CEZINHA DE MADUREIRA",
-   "CONSTÂNCIA FÉLIX",
-   "DILMO DOS SANTOS",
-   "Dirceu Dalben",
-   "DOUTOR ULYSSES",
-   "EDINHO SILVA",
-   "ERICA MALUNGUINHO",
+   "Celino Cardoso",
+   "Doutor Ulysses",
+   "Francisco Campos Tito",
+   "Cezinha De Madureira",
+   "Teonilio Barba",
+   "Erica Malunguinho",
    "Fabiana Bolsonaro",
-   "Fábio Faria de Sá",
-   "FELICIANO FILHO",
-   "FRANCISCO CAMPOS TITO",
-   "Gil Diniz Bolsonaro",
-   "HEROILMA SOARES",
-   "HEROILMA SOARES TAVARES",
-   "Jorge Caruso",
-   "Jorge Wilson Xerife do Consumidor",
-   "JOSÉ ZICO PRADO",
-   "Leonardo Siqueira",
-   "LUIZ CARLOS GONDIM",
-   "Luiz Fernando T. Ferreira",
-   "LUIZ GONZAGA VIEIRA",
-   "Monica Seixas do Movimento Pretas",
-   "OLÍMPIO GOMES",
-   "ORLANDO BOLÇONE",
-   "PATRÍCIA GAMA",
    "Profª Camila Godoi",
-   "PROFESSOR AURIEL",
-   "RICARDO TRIPOLI",
-   "ROBERTO TRIPOLI",
-   "RUI FALCÃO",
-   "SAMUEL MOREIRA",
-   "Teonilio Barba"
+   "Heroilma Soares Tavares",
+   "Professor Auriel",
+   "Ricardo Trípoli"
   ],
-  "situacoes_proposituras": {
-   "tramitando": 170860,
-   "arquivada": 7575
-  }
+  "autores_nao_casados": [
+   [
+    "Governador",
+    311
+   ],
+   [
+    "Mesa Diretora",
+    241
+   ],
+   [
+    "Tribunal de Justiça",
+    66
+   ],
+   [
+    "Comissão de Finanças, Orçamento e Planejamento",
+    51
+   ],
+   [
+    "Ministério Público",
+    26
+   ],
+   [
+    "Tribunal de Contas do Estado de São Paulo",
+    21
+   ],
+   [
+    "Comissão de Saúde",
+    20
+   ],
+   [
+    "Tenente Carmelidia",
+    20
+   ],
+   [
+    "Comissão de Educação e Cultura",
+    17
+   ],
+   [
+    "Comissão de Transportes e Comunicações",
+    15
+   ],
+   [
+    "Comissão de Constituição, Justiça e Redação",
+    15
+   ],
+   [
+    "Defensoria Pública do Estado",
+    13
+   ],
+   [
+    "CPI Trabalho Escravo",
+    10
+   ],
+   [
+    "Comissão de Meio Ambiente e Desenvolvimento Sustentável",
+    9
+   ],
+   [
+    "Comissão de Defesa dos Direitos da Pessoa Humana, da Cidadania, da Participação e das Questões Sociais",
+    8
+   ],
+   [
+    "CPI Merenda",
+    7
+   ],
+   [
+    "Marco Aurélio de Souza",
+    6
+   ],
+   [
+    "Ulisses Sales",
+    6
+   ],
+   [
+    "Comissão de Infraestrutura",
+    6
+   ],
+   [
+    "Major Mauro",
+    6
+   ],
+   [
+    "Uebe Rezeck",
+    5
+   ],
+   [
+    "Comissão de Segurança Pública e Assuntos Penitenciários",
+    5
+   ],
+   [
+    "Comissão de Administração Pública e Relações do Trabalho",
+    5
+   ],
+   [
+    "CPI Obesidade Infantil",
+    4
+   ],
+   [
+    "Coronel Helena",
+    4
+   ]
+  ],
+  "normas_autores_nao_casados": [],
+  "normas_casadas": 0
  },
  "geral": {
-  "geradoEm": "2026-10-09 10:49",
-  "tamanho_painel_mb": 3.2
+  "geradoEm": "2026-10-09 11:02",
+  "tamanho_painel_mb": 4.01
  }
 }
