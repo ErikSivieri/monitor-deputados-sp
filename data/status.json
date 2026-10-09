@@ -89,7 +89,7 @@
    }
   ],
   "ok": true,
-  "segundos": 152
+  "segundos": 139
  },
  "camara_proposicoes": {
   "linhas": 127341,
@@ -196,7 +196,7 @@
    ]
   ],
   "ok": true,
-  "segundos": 49
+  "segundos": 14
  },
  "montagem_federal": {
   "parlamentares": 192,
@@ -221,7 +221,7 @@
    "aniversario": "26/08"
   },
   "ok": true,
-  "segundos": 4
+  "segundos": 3
  },
  "alesp_despesas": {
   "registros": 249563,
@@ -303,7 +303,7 @@
   "deputados": 238,
   "sem_matricula": [],
   "ok": true,
-  "segundos": 73
+  "segundos": 76
  },
  "alesp_proposituras": {
   "proposituras": 149887,
@@ -531,36 +531,36 @@
    ]
   ],
   "ok": true,
-  "segundos": 47
+  "segundos": 57
  },
  "alesp_presencas": {
   "presencas": 16459,
   "exemplo": [
-   "Marina Helou",
-   "1000000349",
-   "1000002562",
-   "2019-06-25"
+   "Reinaldo Alguz",
+   "10619",
+   "12777",
+   "2015-06-10"
   ],
   "ok": true,
-  "segundos": 9
+  "segundos": 15
  },
  "alesp_normas": {
-  "normas": 0,
+  "normas": 2462,
   "tipos": {
-   "9": "9",
-   "2": "2",
-   "55": "55",
-   "3": "3",
-   "28": "28",
-   "25": "25",
-   "1": "1",
-   "19": "19",
-   "14": "14",
-   "12": "12",
-   "21": "21",
-   "22": "22",
-   "23": "23",
-   "59": "59"
+   "9": "Lei",
+   "2": "Lei Complementar",
+   "55": "Emenda Constitucional",
+   "3": "Decreto",
+   "28": "Decreto Legislativo",
+   "25": "Decreto-Lei",
+   "1": "Decreto-Lei Complementar",
+   "19": "Resolução da Alesp",
+   "14": "Resolução",
+   "12": "Decisão da Mesa",
+   "21": "Ato da Mesa",
+   "22": "Ato do Presidente",
+   "23": "Decisão do Presidente",
+   "59": "Constituição Estadual"
   },
   "ambito_promulg": [
    [
@@ -592,7 +592,41 @@
     63
    ]
   ],
-  "exemplo": [],
+  "exemplo": [
+   {
+    "id": "197700",
+    "tipo": "Lei",
+    "numero": "17349",
+    "ano": 2021,
+    "data": "2021-03-31",
+    "autores": "Léo Oliveira",
+    "ementa": "Autoriza o Poder Executivo a construir o Hospital Veterinário Público Metropolitano no Município de Ribeirão Preto, destinado aos animais domésticos de famílias comprovadamente de baixa renda",
+    "url": "http://www.al.sp.gov.br/norma/197700",
+    "situacao": "1"
+   },
+   {
+    "id": "197382",
+    "tipo": "Lei",
+    "numero": "17324",
+    "ano": 2021,
+    "data": "2021-03-05",
+    "autores": "Rodrigo Gambale",
+    "ementa": "Declara de utilidade pública o Clube de Mães Residencial Pâmela, com sede em Itaquaquecetuba",
+    "url": "http://www.al.sp.gov.br/norma/197382",
+    "situacao": "1"
+   },
+   {
+    "id": "197389",
+    "tipo": "Lei",
+    "numero": "17331",
+    "ano": 2021,
+    "data": "2021-03-05",
+    "autores": "Estevam Galvão",
+    "ementa": "Declara de utilidade pública a Associação dos Voluntários de Combate ao Câncer de Bastos, com sede naquele Município",
+    "url": "http://www.al.sp.gov.br/norma/197389",
+    "situacao": "1"
+   }
+  ],
   "registro_bruto_tipo": {
    "idtipo": "9",
    "dstipo": "Lei"
@@ -643,7 +677,7 @@
    }
   ],
   "ok": true,
-  "segundos": 46
+  "segundos": 38
  },
  "montagem_estadual": {
   "parlamentares": 244,
@@ -757,11 +791,92 @@
     2
    ]
   ],
-  "normas_autores_nao_casados": [],
-  "normas_casadas": 0
+  "normas_autores_nao_casados": [
+   [
+    "Governador",
+    251
+   ],
+   [
+    "Mesa",
+    61
+   ],
+   [
+    "Tribunal de Justiça",
+    25
+   ],
+   [
+    "Mesa Diretora",
+    25
+   ],
+   [
+    "CFOP",
+    24
+   ],
+   [
+    "Tribunal de Contas do Estado de São Paulo",
+    22
+   ],
+   [
+    "Ministério Público",
+    9
+   ],
+   [
+    "Defensoria Pública do Estado",
+    8
+   ],
+   [
+    "Monica da Mandata Ativista",
+    7
+   ],
+   [
+    "CCJR",
+    7
+   ],
+   [
+    "Baleia Rossi",
+    7
+   ],
+   [
+    "outros",
+    5
+   ],
+   [
+    "Patricia Bezerra",
+    4
+   ],
+   [
+    "Sebastião Almeida",
+    2
+   ],
+   [
+    "MESA",
+    2
+   ],
+   [
+    "CCTI",
+    2
+   ],
+   [
+    "CSPAP",
+    1
+   ],
+   [
+    "Donisete Braga",
+    1
+   ],
+   [
+    "Paulo Alexandre Barbosa",
+    1
+   ],
+   [
+    "CEDP",
+    1
+   ]
+  ],
+  "normas_casadas": 3785
  },
  "geral": {
-  "geradoEm": "2026-10-09 11:11",
-  "tamanho_painel_mb": 6.03
+  "geradoEm": "2026-10-09 11:18",
+  "tamanho_painel_mb": 6.78
  }
 }

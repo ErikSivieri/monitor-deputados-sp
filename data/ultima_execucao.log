@@ -1,90 +1,70 @@
-14:04:17 início; atualização completa: False
-14:04:17 despesas 2015 ok
-14:04:17 despesas 2016 ok
-14:04:17 despesas 2017 ok
-14:04:17 despesas 2018 ok
-14:04:18 despesas 2019 ok
-14:04:18 despesas 2020 ok
-14:04:18 despesas 2021 ok
-14:04:18 despesas 2022 ok
-14:04:18 despesas 2023 ok
-14:04:18 despesas 2024 ok
-14:04:20 baixado https://www.camara.leg.br/cotas/Ano-2025.csv.zip 6.9 MB
-14:04:22 despesas 2025 ok
-14:04:23 baixado https://www.camara.leg.br/cotas/Ano-2026.csv.zip 4.3 MB
-14:04:24 despesas 2026 ok
-14:04:24 votações 2015 ok
-14:04:24 votações 2016 ok
-14:04:24 votações 2017 ok
-14:04:24 votações 2018 ok
-14:04:24 votações 2019 ok
-14:04:24 votações 2020 ok
-14:04:24 votações 2021 ok
-14:04:24 votações 2022 ok
-14:04:24 votações 2023 ok
-14:04:24 votações 2024 ok
-14:04:27 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2025.csv 8.8 MB
-14:04:30 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2025.csv 58.2 MB
-14:04:31 votações 2025 ok
-14:04:31 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2026.csv 4.5 MB
-14:04:32 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2026.csv 17.2 MB
-14:04:33 votações 2026 ok
-14:04:33 federais SP desde 2015 : 192
-14:04:34 detalhes 0 / 192
-14:04:49 detalhes 20 / 192
-14:05:06 detalhes 40 / 192
-14:05:21 detalhes 60 / 192
-14:05:37 detalhes 80 / 192
-14:05:53 detalhes 100 / 192
-14:06:09 detalhes 120 / 192
-14:06:25 detalhes 140 / 192
-14:06:40 detalhes 160 / 192
-14:06:56 detalhes 180 / 192
-14:07:06 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2015.csv 14.4 MB
-14:07:08 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2015.csv 34.2 MB
-14:07:08 proposições 2015 ok
-14:07:09 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2016.csv 8.8 MB
-14:07:10 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2016.csv 21.4 MB
-14:07:11 proposições 2016 ok
-14:07:11 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2017.csv 16.2 MB
-14:07:13 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2017.csv 27.7 MB
-14:07:13 proposições 2017 ok
-14:07:14 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2018.csv 5.6 MB
-14:07:15 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2018.csv 16.2 MB
-14:07:15 proposições 2018 ok
-14:07:16 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2019.csv 32.9 MB
-14:07:18 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2019.csv 33.3 MB
-14:07:19 proposições 2019 ok
-14:07:20 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2020.csv 14.2 MB
-14:07:21 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2020.csv 25.3 MB
-14:07:22 proposições 2020 ok
-14:07:23 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2021.csv 19.4 MB
-14:07:25 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2021.csv 34.6 MB
-14:07:26 proposições 2021 ok
-14:07:26 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2022.csv 11.1 MB
-14:07:28 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2022.csv 23.2 MB
-14:07:28 proposições 2022 ok
-14:07:30 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2023.csv 42.3 MB
-14:07:32 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2023.csv 52.3 MB
-14:07:34 proposições 2023 ok
-14:07:36 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2024.csv 24.4 MB
-14:07:38 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2024.csv 53.1 MB
-14:07:40 proposições 2024 ok
-14:07:42 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2025.csv 38.9 MB
-14:07:46 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2025.csv 90.2 MB
-14:07:49 proposições 2025 ok
-14:07:50 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2026.csv 14.2 MB
-14:07:52 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2026.csv 39.7 MB
-14:07:53 proposições 2026 ok
-14:07:55 baixado https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml 0.0 MB
-14:07:58 baixado https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml 0.3 MB
-14:08:53 baixado https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml 172.0 MB
-14:09:12 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml 0.0 MB
-14:09:18 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/proposituras.zip 17.3 MB
-14:09:26 ALESP proposituras desde 2015 149887
-14:09:31 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/documento_andamento_atual.zip 2.0 MB
-14:09:44 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/documento_autor.zip 6.5 MB
-14:10:06 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml 8.2 MB
-14:10:08 baixado https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml 0.0 MB
-14:10:44 baixado https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_normas.xml 95.3 MB
-14:11:00 fim
+14:12:07 início; atualização completa: False
+14:12:07 despesas 2015 ok
+14:12:07 despesas 2016 ok
+14:12:07 despesas 2017 ok
+14:12:07 despesas 2018 ok
+14:12:07 despesas 2019 ok
+14:12:07 despesas 2020 ok
+14:12:07 despesas 2021 ok
+14:12:07 despesas 2022 ok
+14:12:07 despesas 2023 ok
+14:12:07 despesas 2024 ok
+14:12:10 baixado https://www.camara.leg.br/cotas/Ano-2025.csv.zip 6.9 MB
+14:12:12 despesas 2025 ok
+14:12:12 baixado https://www.camara.leg.br/cotas/Ano-2026.csv.zip 4.3 MB
+14:12:14 despesas 2026 ok
+14:12:14 votações 2015 ok
+14:12:14 votações 2016 ok
+14:12:14 votações 2017 ok
+14:12:14 votações 2018 ok
+14:12:14 votações 2019 ok
+14:12:14 votações 2020 ok
+14:12:14 votações 2021 ok
+14:12:14 votações 2022 ok
+14:12:14 votações 2023 ok
+14:12:14 votações 2024 ok
+14:12:16 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2025.csv 8.8 MB
+14:12:19 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2025.csv 58.2 MB
+14:12:20 votações 2025 ok
+14:12:21 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2026.csv 4.5 MB
+14:12:22 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2026.csv 17.2 MB
+14:12:22 votações 2026 ok
+14:12:23 federais SP desde 2015 : 192
+14:12:23 detalhes 0 / 192
+14:12:38 detalhes 20 / 192
+14:12:53 detalhes 40 / 192
+14:13:07 detalhes 60 / 192
+14:13:22 detalhes 80 / 192
+14:13:36 detalhes 100 / 192
+14:13:51 detalhes 120 / 192
+14:14:05 detalhes 140 / 192
+14:14:19 detalhes 160 / 192
+14:14:34 detalhes 180 / 192
+14:14:41 proposições 2015 ok
+14:14:41 proposições 2016 ok
+14:14:41 proposições 2017 ok
+14:14:41 proposições 2018 ok
+14:14:41 proposições 2019 ok
+14:14:41 proposições 2020 ok
+14:14:41 proposições 2021 ok
+14:14:41 proposições 2022 ok
+14:14:41 proposições 2023 ok
+14:14:41 proposições 2024 ok
+14:14:44 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2025.csv 38.9 MB
+14:14:47 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2025.csv 90.2 MB
+14:14:50 proposições 2025 ok
+14:14:52 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2026.csv 14.2 MB
+14:14:54 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2026.csv 39.7 MB
+14:14:56 proposições 2026 ok
+14:14:58 baixado https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml 0.0 MB
+14:15:00 baixado https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml 0.3 MB
+14:15:50 baixado https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml 172.0 MB
+14:16:16 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml 0.0 MB
+14:16:23 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/proposituras.zip 17.3 MB
+14:16:34 ALESP proposituras desde 2015 149887
+14:16:38 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/documento_andamento_atual.zip 2.0 MB
+14:16:54 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/documento_autor.zip 6.5 MB
+14:17:27 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml 8.2 MB
+14:17:28 baixado https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml 0.0 MB
+14:17:54 baixado https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_normas.xml 95.3 MB
+14:18:15 fim
