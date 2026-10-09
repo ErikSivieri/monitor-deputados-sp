@@ -171,7 +171,7 @@ def _situacao(desc):
         return "norma"
     if "arquivad" in d:
         return "arquivada"
-    if "aguardando sanç" in d or "aguardando promulga" in d or "remetida ao senado" in d or "enviada ao senado" in d:
+    if "aguardando sanç" in d or "aguardando promulga" in d or "remetida ao senado" in d or "apreciação pelo senado" in d or "enviada ao senado" in d:
         return "aprovada_camara"
     return "tramitando"
 

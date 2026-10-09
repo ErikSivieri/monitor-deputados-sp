@@ -173,7 +173,7 @@ def normas():
         for r in registros(f, ["idtipo", "id"]):
             ex_tipo = ex_tipo or r
             k = r.get("idtipo") or r.get("id")
-            tipos[k] = r.get("sigla") or r.get("nome") or r.get("descricao") or r.get("nmtipo") or r.get("sgtipo") or k
+            tipos[k] = r.get("dstipo") or r.get("sigla") or r.get("nome") or r.get("descricao") or r.get("nmtipo") or r.get("sgtipo") or k
     saida = []
     amb = collections.Counter()
     f = _xml(f"{BASE}/legislacao/legislacao_normas.xml")
@@ -181,10 +181,8 @@ def normas():
     for r in registros(f, ["idnorma", "autores"]):
         if len(ex_norma) < 3:
             ex_norma.append(r)
-        try:
-            ano = int(r.get("ano") or 0)
-        except ValueError:
-            continue
+        data = iso(r.get("data"))
+        ano = int(r.get("ano") or (data[:4] if data else 0) or 0)
         amb[(r.get("ambito"), r.get("promulg"))] += 1
         if ano < INICIO or not (r.get("autores") or "").strip():
             continue
