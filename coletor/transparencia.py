@@ -59,7 +59,8 @@ def _ano(ano, alvos, consultas):
                 a = linhas[(did, func)]
                 a[0] += num(_campo(reg, "valorEmpenhado"))
                 a[1] += num(_campo(reg, "valorLiquidado"))
-                a[2] += num(_campo(reg, "valorPago"))
+                # pago no próprio ano + restos a pagar quitados nos anos seguintes
+                a[2] += num(_campo(reg, "valorPago")) + num(_campo(reg, "valorRestoPago"))
                 a[3] += 1
             pagina += 1
             if pagina > 50:
