@@ -1,0 +1,343 @@
+{
+ "tse": {
+  "registros": 10247,
+  "ok": true,
+  "segundos": 11
+ },
+ "camara_deputados": {
+  "ok": false,
+  "erro": "RuntimeError: falha em https://dadosabertos.camara.leg.br/api/v2/deputados",
+  "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 48, in inner\n    r = func(*a, **kw)\n        ^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/camara.py\", line 38, in deputados\n    lista = paginar(f\"{API}/deputados\", params)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 106, in paginar\n    j = get_json(prox, p)\n        ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 99, in get_json\n    raise RuntimeError(f\"falha em {url}\")\nRuntimeError: falha em https://dadosabertos.camara.leg.br/api/v2/deputados\n",
+  "segundos": 122
+ },
+ "alesp_cadastro": {
+  "deputados": 94,
+  "partidos": 25,
+  "exemplo": {
+   "idDeputado": "1139",
+   "nome": "Agente Federal Danilo Balas",
+   "partido": "PL",
+   "situacao": "EXE",
+   "matricula": "300607",
+   "idSPL": "1000000335",
+   "aniversario": "26/08"
+  },
+  "ok": true,
+  "segundos": 4
+ },
+ "alesp_despesas": {
+  "registros": 249563,
+  "linhas": 100765,
+  "tipos": [
+   [
+    "A - COMBUSTÍVEIS E LUBRIFICANTES",
+    61416
+   ],
+   [
+    "I - HOSPEDAGEM, ALIMENTAÇÃO E DESPESAS DE LOCOMOÇÃO",
+    39211
+   ],
+   [
+    "H - SERV.UTIL.PÚBLICA (TELEF.MÓVEL/FIXA, ENERGIA, ÁGUA, GÁS ETC)",
+    28177
+   ],
+   [
+    "E - MATERIAIS DE ESCRITÓRIO E OUTROS MATERIAIS DE CONSUMO",
+    22494
+   ],
+   [
+    "G - ASSINATURAS DE PERIÓDICOS, PUBLICAÇÕES, INTERNET E SOFTWARES",
+    18708
+   ],
+   [
+    "M - MANUTENÇÃO DE BENS MÓVEIS, IMÓVEIS, CONDOMÍNIOS E OUTROS",
+    15591
+   ],
+   [
+    "K - LOCAÇÃO DE BENS MÓVEIS",
+    15411
+   ],
+   [
+    "L - LOCAÇÃO DE BENS IMÓVEIS",
+    12700
+   ],
+   [
+    "D - MATERIAIS E SERVIÇOS GRÁFICOS, DE CÓPIAS E REPRODUÇÃO DE DOCS",
+    7947
+   ],
+   [
+    "F - SERVIÇOS TÉCNICOS PROFISSIONAIS (CONSULTORIA, PESQUISAS ETC)",
+    5702
+   ],
+   [
+    "O - LOCAÇÃO DE VEÍCULO DE REPRESENTAÇÃO",
+    5298
+   ],
+   [
+    "C - MATERIAIS E SERVIÇOS DE MANUT E CONSERV DE VEÍCULOS ; PEDÁGIOS",
+    5169
+   ],
+   [
+    "J - SERVIÇOS DE COMUNICAÇÃO",
+    4538
+   ],
+   [
+    "P - DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR",
+    3594
+   ],
+   [
+    "N - MORADIA",
+    2808
+   ],
+   [
+    "B - PEDÁGIOS",
+    587
+   ],
+   [
+    "Q - LOCAÇÃO DE VEÍCULO DE APOIO",
+    206
+   ],
+   [
+    "C - MATERIAIS E SERVIÇOS DE MANUT E CONSERV DE VEÍCULOS",
+    6
+   ]
+  ],
+  "deputados": 238,
+  "ok": true,
+  "segundos": 85
+ },
+ "alesp_proposituras": {
+  "proposituras": 149887,
+  "autorias": 179319,
+  "naturezas": 106,
+  "etapas_finais_mais_comuns": [
+   [
+    [
+     "Publicacao",
+     "E"
+    ],
+    22605
+   ],
+   [
+    [
+     "Comissao",
+     "E"
+    ],
+    1831
+   ],
+   [
+    [
+     "Não Identificada",
+     "E"
+    ],
+    1709
+   ],
+   [
+    [
+     "Comissao",
+     "S"
+    ],
+    1427
+   ],
+   [
+    [
+     "Arquivo",
+     "I"
+    ],
+    858
+   ],
+   [
+    [
+     "Conclusao",
+     "S"
+    ],
+    306
+   ],
+   [
+    [
+     "Publicacao",
+     "S"
+    ],
+    103
+   ],
+   [
+    [
+     "Prontos para Ordem do Dia",
+     "S"
+    ],
+    58
+   ],
+   [
+    [
+     "Distribuicao",
+     "S"
+    ],
+    39
+   ],
+   [
+    [
+     "Pauta",
+     "E"
+    ],
+    21
+   ],
+   [
+    [
+     "Distribuicao",
+     "E"
+    ],
+    19
+   ],
+   [
+    [
+     "Pauta",
+     "S"
+    ],
+    8
+   ],
+   [
+    [
+     "Arquivo",
+     "E"
+    ],
+    3
+   ],
+   [
+    [
+     "Não Identificada",
+     "I"
+    ],
+    1
+   ]
+  ],
+  "autores_mais_comuns": [
+   [
+    "Rogério Nogueira",
+    14430
+   ],
+   [
+    "Jorge Wilson Xerife do Consumidor",
+    13025
+   ],
+   [
+    "Sebastião Santos",
+    12180
+   ],
+   [
+    "Letícia Aguiar",
+    6087
+   ],
+   [
+    "Jorge Caruso",
+    5788
+   ],
+   [
+    "Caio França",
+    4685
+   ],
+   [
+    "Coronel Telhada",
+    4497
+   ],
+   [
+    "Itamar Borges",
+    4265
+   ],
+   [
+    "Enio Tatto",
+    3483
+   ],
+   [
+    "Ricardo Madalena",
+    3333
+   ],
+   [
+    "Gil Diniz Bolsonaro",
+    2643
+   ],
+   [
+    "Mauro Bragato",
+    2465
+   ],
+   [
+    "Carlos Giannazi",
+    2130
+   ],
+   [
+    "Carla Morando",
+    2076
+   ],
+   [
+    "Agente Federal Danilo Balas",
+    2054
+   ]
+  ],
+  "ok": true,
+  "segundos": 59
+ },
+ "alesp_presencas": {
+  "presencas": 16459,
+  "exemplo": [
+   "JOAO CARAMEZ",
+   "202",
+   "1000000259",
+   "2016-12-13"
+  ],
+  "ok": true,
+  "segundos": 7
+ },
+ "montagem_estadual": {
+  "parlamentares": 249,
+  "n_sem_tse": 41,
+  "sem_tse": [
+   "ABELARDO CAMARINHA",
+   "AFONSO LOBATO",
+   "Alex Madureira",
+   "ALEX MANENTE",
+   "ARTHUR DO VAL",
+   "BRUNO COVAS",
+   "CELINO CARDOSO",
+   "CELSO NASCIMENTO",
+   "CEZINHA DE MADUREIRA",
+   "CONSTÂNCIA FÉLIX",
+   "DILMO DOS SANTOS",
+   "Dirceu Dalben",
+   "DOUTOR ULYSSES",
+   "EDINHO SILVA",
+   "ERICA MALUNGUINHO",
+   "Fabiana Bolsonaro",
+   "Fábio Faria de Sá",
+   "FELICIANO FILHO",
+   "FRANCISCO CAMPOS TITO",
+   "Gil Diniz Bolsonaro",
+   "HEROILMA SOARES",
+   "HEROILMA SOARES TAVARES",
+   "Jorge Caruso",
+   "Jorge Wilson Xerife do Consumidor",
+   "JOSÉ ZICO PRADO",
+   "Leonardo Siqueira",
+   "LUIZ CARLOS GONDIM",
+   "Luiz Fernando T. Ferreira",
+   "LUIZ GONZAGA VIEIRA",
+   "Monica Seixas do Movimento Pretas",
+   "OLÍMPIO GOMES",
+   "ORLANDO BOLÇONE",
+   "PATRÍCIA GAMA",
+   "Profª Camila Godoi",
+   "PROFESSOR AURIEL",
+   "RICARDO TRIPOLI",
+   "ROBERTO TRIPOLI",
+   "RUI FALCÃO",
+   "SAMUEL MOREIRA",
+   "Teonilio Barba"
+  ],
+  "situacoes_proposituras": {
+   "tramitando": 170860,
+   "arquivada": 7575
+  }
+ },
+ "geral": {
+  "geradoEm": "2026-10-09 10:49",
+  "tamanho_painel_mb": 3.2
+ }
+}
