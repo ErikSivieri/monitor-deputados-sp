@@ -46,7 +46,7 @@ def cadastro():
     for r in registros(f, ["iddeputado", "nomeparlamentar"]):
         deps.append({"idDeputado": r.get("iddeputado"), "nome": r.get("nomeparlamentar"),
                      "partido": partidos.get(r.get("partido"), r.get("partido")),
-                     "situacao": r.get("situacao"), "matricula": r.get("matricula"),
+                     "situacao": r.get("situacao"), "matricula": (r.get("matricula") or "").strip().lstrip("0"),
                      "idSPL": r.get("idspl"), "aniversario": r.get("aniversario")})
     registrar("alesp_cadastro", deputados=len(deps), partidos=len(partidos),
               exemplo=deps[0] if deps else None)
@@ -58,7 +58,8 @@ def despesas():
     f = _xml(f"{BASE}/deputados/despesas_gabinetes.xml")
     agg = collections.defaultdict(lambda: [0.0, 0])
     forn = collections.defaultdict(float)
-    nomes_matr = {}
+    variantes = collections.defaultdict(collections.Counter)  # matrícula -> nomes usados
+    sem_matr = collections.Counter()
     tipos = collections.Counter()
     n = 0
     for r in registros(f, ["ano", "valor", "deputado"]):
@@ -70,22 +71,24 @@ def despesas():
             continue
         mes = int(re.sub(r"\D", "", r.get("mes") or "0") or 0)
         nome = r.get("deputado") or ""
-        k = norm(nome)
-        nomes_matr[k] = (nome, r.get("matricula"))
+        m = (r.get("matricula") or "").strip().lstrip("0")
+        if not m:
+            sem_matr[nome] += 1
+            m = "n:" + norm(nome)
+        variantes[m][nome] += 1
         tipo = r.get("tipo") or "N/I"
         tipos[tipo] += 1
         v = num(r.get("valor"))
-        a = agg[(k, ano, mes, tipo)]
+        a = agg[(m, ano, mes, tipo)]
         a[0] += v
         a[1] += 1
-        forn[(k, ano, (r.get("fornecedor") or "")[:80], r.get("cnpj") or "")] += v
+        forn[(m, ano, (r.get("fornecedor") or "")[:80], r.get("cnpj") or "")] += v
         n += 1
-    linhas = [[k, ano, mes, tipo, round(v, 2), c] for (k, ano, mes, tipo), (v, c) in agg.items()]
-    fl = [[k, ano, nome, cnpj, round(v, 2)] for (k, ano, nome, cnpj), v in forn.items() if v > 0]
+    linhas = [[m, ano, mes, tipo, round(v, 2), c] for (m, ano, mes, tipo), (v, c) in agg.items()]
+    fl = [[m, ano, nome, cnpj, round(v, 2)] for (m, ano, nome, cnpj), v in forn.items() if v > 0]
     registrar("alesp_despesas", registros=n, linhas=len(linhas), tipos=tipos.most_common(30),
-              deputados=len(nomes_matr))
-    return {"linhas": linhas, "forn": fl, "nomes": {k: v[0] for k, v in nomes_matr.items()},
-            "matriculas": {k: v[1] for k, v in nomes_matr.items()}}
+              deputados=len(variantes), sem_matricula=sem_matr.most_common(10))
+    return {"linhas": linhas, "forn": fl, "variantes": {m: dict(c) for m, c in variantes.items()}}
 
 
 @protegido("alesp_proposituras")
@@ -131,7 +134,7 @@ def proposituras():
     for r in registros(f, ["iddocumento", "nomeautor"]):
         d = r.get("iddocumento")
         if d in props:
-            autores.append([norm(r.get("nomeautor")), d, r.get("idautor")])
+            autores.append([r.get("nomeautor"), d, r.get("idautor")])
             nomes_autor[r.get("nomeautor")] += 1
     for d, p in props.items():
         u = ult.get(d)
@@ -139,7 +142,8 @@ def proposituras():
         p["tpAnd"] = u[2] if u else ""
         p["ultDesc"] = (u[3] if u else "")[:200]
     registrar("alesp_proposituras", proposituras=len(props), autorias=len(autores),
-              naturezas=len(nat), etapas_finais_mais_comuns=[[list(k), v] for k, v in etapas.most_common(40)],
+              naturezas=len(nat), naturezas_usadas=collections.Counter(p["tipo"] for p in props.values()).most_common(25),
+              exemplo_autor=autores[:3], etapas_finais_mais_comuns=[[list(k), v] for k, v in etapas.most_common(40)],
               autores_mais_comuns=nomes_autor.most_common(15))
     return {"props": props, "autores": autores, "naturezas": nat}
 
@@ -150,13 +154,39 @@ def presencas():
     vistos = set()
     for r in registros(f, ["idreuniao", "iddeputado"]):
         data = iso(r.get("datareuniao"))
-        ano = int(data[:4]) if data else 0
-        if ano < INICIO:
+        if not data or int(data[:4]) < INICIO:
             continue
-        vistos.add((norm(r.get("deputado")), r.get("iddeputado"), r.get("idreuniao"), data))
+        vistos.add((r.get("deputado"), r.get("iddeputado"), r.get("idreuniao"), data))
     linhas = collections.Counter()
-    for k, idd, reun, data in vistos:
-        linhas[(k, data[:4], data[5:7] if len(data) >= 7 else "")] += 1
-    registrar("alesp_presencas", presencas=len(vistos),
-              exemplo=next(iter(vistos)) if vistos else None)
-    return [[k, a, m, c] for (k, a, m), c in linhas.items()]
+    for nome, idd, reun, data in vistos:
+        linhas[(nome, idd, int(data[:4]), int(data[5:7]))] += 1
+    registrar("alesp_presencas", presencas=len(vistos), exemplo=next(iter(vistos)) if vistos else None)
+    return [[nome, idd, a, m, c] for (nome, idd, a, m), c in linhas.items()]
+
+
+@protegido("alesp_normas")
+def normas():
+    tipos = {}
+    f = _xml(f"{BASE}/legislacao/legislacao_tipo_normas.xml")
+    if f is not None:
+        for r in registros(f, ["idtipo", "id"]):
+            k = r.get("idtipo") or r.get("id")
+            tipos[k] = r.get("sigla") or r.get("nome") or r.get("descricao") or r.get("nmtipo") or r.get("sgtipo") or k
+    saida = []
+    amb = collections.Counter()
+    f = _xml(f"{BASE}/legislacao/legislacao_normas.xml")
+    for r in registros(f, ["idnorma", "autores"]):
+        try:
+            ano = int(r.get("ano") or 0)
+        except ValueError:
+            continue
+        amb[(r.get("ambito"), r.get("promulg"))] += 1
+        if ano < INICIO or not (r.get("autores") or "").strip():
+            continue
+        saida.append({"id": r.get("idnorma"), "tipo": tipos.get(r.get("idtipo"), r.get("idtipo")), "numero": r.get("numero"),
+                      "ano": ano, "data": iso(r.get("data")), "autores": r.get("autores"),
+                      "ementa": (r.get("ementa") or "")[:400], "url": r.get("urlficha"), "situacao": r.get("situacao")})
+    registrar("alesp_normas", normas=len(saida), tipos=dict(list(tipos.items())[:40]),
+              ambito_promulg=[[list(k), v] for k, v in amb.most_common(10)],
+              exemplo=saida[:3])
+    return saida

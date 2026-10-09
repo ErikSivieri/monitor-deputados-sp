@@ -1,0 +1,450 @@
+<title>Monitor de Deputados SP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: barra de controles fixa no topo, abas, e uma área de trabalho com tabelas ordenáveis e gráficos de barras de uma cor só (partidos nunca ganham cor própria, para não sugerir afinidade). */
+:root{
+  --bg:#f6f7f8; --surface:#ffffff; --surface-2:#eef1f3; --line:#d9dee2; --line-soft:#e8ecef;
+  --fg:#14191d; --fg-2:#4a555e; --fg-3:#6f7b84;
+  --accent:#0f5f74; --accent-soft:#dcecf0; --accent-fg:#ffffff;
+  --bar:#2a78d6; --bar-2:#eb6834; --bar-soft:#cde2fb;
+  --good:#1a7f37; --warn:#9a6700; --bad:#c62828;
+  --display:"Archivo","Arial Narrow",system-ui,sans-serif;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --shadow:0 1px 2px rgba(20,25,29,.06),0 2px 8px rgba(20,25,29,.05);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#111517; --surface:#181d20; --surface-2:#20272b; --line:#2f383d; --line-soft:#263035;
+  --fg:#eef2f4; --fg-2:#b5c0c7; --fg-3:#8a979f;
+  --accent:#5fb3c9; --accent-soft:#1d3a43; --accent-fg:#0b1214;
+  --bar:#3987e5; --bar-2:#d95926; --bar-soft:#1c3a5e;
+  --good:#4cc26a; --warn:#d6a21e; --bad:#ef6a6a; --shadow:none; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111517; --surface:#181d20; --surface-2:#20272b; --line:#2f383d; --line-soft:#263035;
+  --fg:#eef2f4; --fg-2:#b5c0c7; --fg-3:#8a979f;
+  --accent:#5fb3c9; --accent-soft:#1d3a43; --accent-fg:#0b1214;
+  --bar:#3987e5; --bar-2:#d95926; --bar-soft:#1c3a5e;
+  --good:#4cc26a; --warn:#d6a21e; --bad:#ef6a6a; --shadow:none; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:14px;line-height:1.45}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:16px;padding-block:0 48px}
+h1,h2,h3{font-family:var(--display);font-stretch:85%;letter-spacing:-.01em;text-wrap:balance;margin:0}
+.num,td.n,th.n{font-variant-numeric:tabular-nums}
+header.top{padding-block:22px 6px;display:flex;flex-wrap:wrap;gap:8px 24px;align-items:flex-end;justify-content:space-between}
+header.top h1{font-size:30px;font-weight:800;line-height:1}
+header.top .sub{color:var(--fg-2);margin-top:6px;max-width:62ch}
+.stamp{font-size:12px;color:var(--fg-3);text-align:right}
+.stamp b{color:var(--fg-2);font-weight:600}
+.controls{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface)}
+.seg button{border:0;background:none;color:var(--fg-2);font:600 13px var(--body);padding:7px 12px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--accent-fg)}
+.seg button:focus-visible,select:focus-visible,input:focus-visible,.tab:focus-visible,tr.click:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+label.ctl{display:inline-flex;gap:6px;align-items:center;font-size:12px;color:var(--fg-3);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+select,input[type=search]{font:500 13px var(--body);color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:7px;padding:6px 8px}
+label.chk{display:inline-flex;gap:6px;align-items:center;font-size:13px;color:var(--fg-2);cursor:pointer}
+nav.tabs{display:flex;gap:2px;flex-wrap:wrap;margin-top:16px;border-bottom:1px solid var(--line)}
+.tab{border:0;background:none;font:600 14px var(--body);color:var(--fg-3);padding:9px 14px;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-1px}
+.tab[aria-selected="true"]{color:var(--fg);border-bottom-color:var(--accent)}
+section.pane{padding-top:18px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-bottom:18px}
+.kpi{background:var(--surface);border:1px solid var(--line-soft);border-radius:10px;padding:12px 14px}
+.kpi .l{font-size:11px;color:var(--fg-3);text-transform:uppercase;letter-spacing:.07em;font-weight:600}
+.kpi .v{font-family:var(--display);font-size:24px;font-weight:700;font-stretch:90%;margin-top:4px;font-variant-numeric:tabular-nums}
+.kpi .h{font-size:12px;color:var(--fg-3);margin-top:2px}
+.grid2{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:18px;align-items:start}
+@media (max-width:900px){.grid2{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--surface);border:1px solid var(--line-soft);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow);min-width:0}
+.card h2{font-size:18px;font-weight:700}
+.card .note{font-size:12px;color:var(--fg-3);margin:4px 0 10px}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--fg-3);font-weight:600;text-align:left;padding:8px 8px;border-bottom:1px solid var(--line);white-space:nowrap;cursor:pointer;user-select:none}
+th.n,td.n{text-align:right}
+th[aria-sort="descending"]::after{content:" ↓";color:var(--accent)}
+th[aria-sort="ascending"]::after{content:" ↑";color:var(--accent)}
+td{padding:7px 8px;border-bottom:1px solid var(--line-soft);vertical-align:middle}
+tr.click{cursor:pointer}
+tr.click:hover td{background:var(--surface-2)}
+.cellbar{position:relative}
+.cellbar i{position:absolute;right:0;top:50%;height:6px;transform:translateY(8px);background:var(--bar-soft);border-radius:3px}
+.pill{display:inline-block;font-size:11px;font-weight:600;padding:1px 7px;border-radius:99px;background:var(--surface-2);color:var(--fg-2);border:1px solid var(--line)}
+.pill.on{background:var(--accent-soft);color:var(--accent);border-color:transparent}
+.muted{color:var(--fg-3)}
+.chart svg{display:block;width:100%;height:auto}
+.chart text{fill:var(--fg-2);font:12px var(--body)}
+.chart .lbl{fill:var(--fg);font-weight:500}
+.chart .ax{stroke:var(--line);stroke-width:1}
+.chart .grid{stroke:var(--line-soft);stroke-width:1}
+.tip{position:fixed;pointer-events:none;background:var(--fg);color:var(--bg);font-size:12px;padding:6px 9px;border-radius:6px;z-index:20;max-width:260px;line-height:1.35}
+.tip[hidden]{display:none!important}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+.drawer{position:fixed;inset:0;z-index:30;display:flex;justify-content:flex-end;background:rgba(10,14,16,.35)}
+.drawer .panel{width:min(640px,100%);height:100%;overflow-y:auto;background:var(--bg);padding:20px 18px calc(28px + env(safe-area-inset-bottom,0px));box-shadow:-4px 0 18px rgba(0,0,0,.15)}
+.drawer .close{float:right;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:8px;padding:6px 10px;font:600 13px var(--body);cursor:pointer}
+dl.facts{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:4px 14px;margin:10px 0 0;font-size:13px}
+dl.facts dt{color:var(--fg-3)}
+dl.facts dd{margin:0}
+.stack{display:grid;gap:14px}
+ul.normas{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+ul.normas li{font-size:13px;border-left:3px solid var(--line);padding-left:10px}
+ul.normas b{font-weight:600}
+a{color:var(--accent)}
+.method{max-width:78ch}
+.method h3{font-size:17px;margin-top:20px}
+.method p,.method li{color:var(--fg-2)}
+.status-ok{color:var(--good);font-weight:600}
+.status-erro{color:var(--bad);font-weight:600}
+.empty{padding:28px;text-align:center;color:var(--fg-3)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>Monitor de Deputados SP</h1>
+      <div class="sub">Gastos, produção legislativa, participação e perfil da bancada paulista na Câmara dos Deputados e dos deputados da ALESP, com dados públicos desde 2015.</div>
+    </div>
+    <div class="stamp">Dados atualizados em <b id="geradoEm">…</b><br><span id="avisos"></span></div>
+  </header>
+
+  <div class="controls" role="toolbar" aria-label="Filtros">
+    <div class="seg" id="casa">
+      <button id="casa-federal" data-v="federal" aria-pressed="true">Câmara · bancada SP</button>
+      <button id="casa-estadual" data-v="estadual" aria-pressed="false">ALESP</button>
+    </div>
+    <label class="ctl" for="anoIni">De <select id="anoIni"></select></label>
+    <label class="ctl" for="anoFim">até <select id="anoFim"></select></label>
+    <label class="ctl" for="partido">Partido <select id="partido"></select></label>
+    <label class="chk" for="agrupar"><input type="checkbox" id="agrupar"> Agrupar siglas sucessoras</label>
+  </div>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab" role="tab" id="t-partidos" data-aba="partidos" aria-selected="true">Partidos</button>
+    <button class="tab" role="tab" id="t-parl" data-aba="parl" aria-selected="false">Parlamentares</button>
+    <button class="tab" role="tab" id="t-gastos" data-aba="gastos" aria-selected="false">Gastos</button>
+    <button class="tab" role="tab" id="t-perfil" data-aba="perfil" aria-selected="false">Perfil</button>
+    <button class="tab" role="tab" id="t-met" data-aba="met" aria-selected="false">Metodologia</button>
+  </nav>
+
+  <section class="pane" id="p-partidos"></section>
+  <section class="pane" id="p-parl" hidden></section>
+  <section class="pane" id="p-gastos" hidden></section>
+  <section class="pane" id="p-perfil" hidden></section>
+  <section class="pane" id="p-met" hidden></section>
+</div>
+<div class="tip" id="tip" hidden></div>
+<div class="drawer" id="drawer" hidden><div class="panel" id="drawerPanel" role="dialog" aria-modal="true"></div></div>
+
+<script id="dados" type="application/json">/*__DADOS__*/</script>
+<script>
+(function(){
+const RAW = JSON.parse(document.getElementById('dados').textContent);
+const META = RAW.meta || {};
+const SUC = META.sucessoras || {};
+const ANO0 = META.inicio || 2015;
+const ANO1 = new Date().getFullYear();
+const S = {casa:'federal', ini:ANO0, fim:ANO1, partido:'', agrupar:false, aba:'partidos',
+  sortP:{k:'gasto', d:-1}, sortD:{k:'gasto', d:-1}, busca:'', metrica:'mediaMes'};
+const LEG = {federal:new Set(['PL','PLP','PEC','PDL','PRC']), estadual:new Set(['PL','PLC','PEC','PDL','PR'])};
+const brl = new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:0});
+const brl2 = new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:2});
+const nf = new Intl.NumberFormat('pt-BR',{maximumFractionDigits:1});
+const nf0 = new Intl.NumberFormat('pt-BR',{maximumFractionDigits:0});
+const pct = v => v==null||isNaN(v) ? '–' : nf.format(v*100)+'%';
+const esc = s => String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const $ = id => document.getElementById(id);
+const H = () => RAW[S.casa];
+
+function sucessora(p){let x=p, n=0; while(SUC[x] && n<6){x=SUC[x]; n++} return x}
+function pn(idx){const p = H().partidos[idx] || 'N/I'; return S.agrupar ? sucessora(p) : p}
+const noAno = a => a>=S.ini && a<=S.fim;
+const okP = name => !S.partido || name===S.partido;
+
+/* -------------------------------------------------- agregação */
+function agregar(){
+  const h = H(); const leg = LEG[S.casa];
+  const porP = new Map(), porD = new Map();
+  const P = n => {let o=porP.get(n); if(!o){o={nome:n,deps:new Set(),gasto:0,meses:new Set(),prop:0,normas:0,esp:0,reg:0,pres:0}; porP.set(n,o)} return o};
+  const D = i => {let o=porD.get(i); if(!o){o={i,gasto:0,meses:new Set(),prop:0,co:0,normas:0,aprov:0,esp:0,reg:0,pres:0,partidos:new Set(),cat:new Map(),ano:new Map()}; porD.set(i,o)} return o};
+  for(const [i,ano,mes,ci,pi,v] of h.desp){ if(!noAno(ano)) continue; const n=pn(pi); if(!okP(n)) continue;
+    const p=P(n); p.deps.add(i); p.gasto+=v; p.meses.add(i+'|'+ano+'|'+mes);
+    const d=D(i); d.gasto+=v; d.meses.add(ano+'|'+mes); d.partidos.add(n);
+    d.cat.set(ci,(d.cat.get(ci)||0)+v); d.ano.set(ano,(d.ano.get(ano)||0)+v); }
+  for(const [i,ano,pi,ti,principal,sit,c] of h.prop){ if(!noAno(ano)) continue; const n=pn(pi); if(!okP(n)) continue;
+    const t=h.tipos[ti]; if(!leg.has(t)) continue; const d=D(i); d.partidos.add(n); const p=P(n); p.deps.add(i);
+    if(principal){ p.prop+=c; d.prop+=c; if(sit==='norma'){p.normas+=c; d.normas+=c} if(sit==='aprovada_camara') d.aprov+=c }
+    else d.co+=c; }
+  if(h.normasAgg) for(const [i,ano,pi,c] of h.normasAgg){ if(!noAno(ano)) continue; const n=pn(pi); if(!okP(n)) continue;
+    const p=P(n); p.deps.add(i); p.normas+=c; const d=D(i); d.normas+=c; d.partidos.add(n); }
+  if(h.vot) for(const [i,ano,mes,pi,e,r] of h.vot){ if(!noAno(ano)) continue; const n=pn(pi); if(!okP(n)) continue;
+    const p=P(n); p.deps.add(i); p.esp+=e; p.reg+=r; const d=D(i); d.esp+=e; d.reg+=r; d.partidos.add(n); }
+  if(h.pres) for(const [i,ano,mes,pi,c] of h.pres){ if(!noAno(ano)) continue; const n=pn(pi); if(!okP(n)) continue;
+    const p=P(n); p.deps.add(i); p.pres+=c; const d=D(i); d.pres+=c; d.partidos.add(n); }
+  const partidos=[...porP.values()].map(p=>({...p, n:p.deps.size, mediaMes:p.meses.size?p.gasto/p.meses.size:0,
+    propPorDep:p.deps.size?p.prop/p.deps.size:0, part:p.esp?p.reg/p.esp:null, presPorDep:p.deps.size?p.pres/p.deps.size:0}));
+  const deps=[...porD.values()].map(d=>({...d, nome:h.parlamentares[d.i].nome, mediaMes:d.meses.size?d.gasto/d.meses.size:0,
+    part:d.esp?d.reg/d.esp:null, partidoTxt:[...d.partidos].join(' / ')}));
+  return {partidos, deps};
+}
+
+/* -------------------------------------------------- gráficos SVG */
+const tip=$('tip');
+function showTip(ev,html){tip.innerHTML=html; tip.hidden=false; const x=Math.min(ev.clientX+14, innerWidth-tip.offsetWidth-8); tip.style.left=x+'px'; tip.style.top=(ev.clientY+14)+'px'}
+function hideTip(){tip.hidden=true}
+
+function barras(el, itens, fmt, opts={}){
+  if(!itens.length){el.innerHTML='<div class="empty">Sem dados no recorte escolhido.</div>'; return}
+  const W=600, rowH=22, labW=opts.labW||120, valW=86, top=4;
+  const Hh=top+itens.length*rowH+4; const max=Math.max(...itens.map(d=>d.v))||1;
+  const sx=v=>Math.max(0,(v/max)*(W-labW-valW-8));
+  let s=`<svg viewBox="0 0 ${W} ${Hh}" role="img" aria-label="${esc(opts.aria||'Gráfico de barras')}">`;
+  itens.forEach((d,k)=>{const y=top+k*rowH; const w=sx(d.v);
+    s+=`<g class="hit" data-k="${k}"><rect x="0" y="${y}" width="${W}" height="${rowH}" fill="transparent"/>`+
+      `<text class="lbl" x="${labW-8}" y="${y+15}" text-anchor="end">${esc(d.l.length>20?d.l.slice(0,19)+'…':d.l)}</text>`+
+      `<path d="M${labW},${y+5}h${Math.max(w-4,0)}a4,4 0 0 1 4,4v4a4,4 0 0 1 -4,4h${-Math.max(w-4,0)}z" fill="var(--bar)" ${w<1?'opacity="0"':''}/>`+
+      `<text x="${labW+w+6}" y="${y+15}" class="num">${esc(fmt(d.v))}</text></g>`});
+  s+='</svg>'; el.innerHTML=s;
+  el.querySelectorAll('.hit').forEach(g=>{const d=itens[+g.dataset.k];
+    g.addEventListener('mousemove',e=>showTip(e,`<b>${esc(d.l)}</b><br>${esc(fmt(d.v))}${d.extra?'<br>'+esc(d.extra):''}`));
+    g.addEventListener('mouseleave',hideTip);
+    if(opts.onClick){g.style.cursor='pointer'; g.addEventListener('click',()=>opts.onClick(d))}});
+}
+
+function linha(el, series, rotulos, fmt){
+  const W=640, Hh=230, L=64, R=12, T=12, B=28; const n=rotulos.length;
+  if(!n){el.innerHTML='<div class="empty">Sem dados no recorte escolhido.</div>'; return}
+  const max=Math.max(1,...series.flatMap(s=>s.vals)); const nice=niceMax(max);
+  const x=k=>L+(n<=1?0:k*(W-L-R)/(n-1)); const y=v=>T+(Hh-T-B)*(1-v/nice);
+  let s=`<svg viewBox="0 0 ${W} ${Hh}" role="img" aria-label="Gasto mensal">`;
+  for(let g=0; g<=4; g++){const v=nice*g/4; s+=`<line class="grid" x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}"/><text x="${L-6}" y="${y(v)+4}" text-anchor="end" class="num">${esc(fmtCurto(v))}</text>`}
+  rotulos.forEach((r,k)=>{ const m=r.slice(5,7), yr=r.slice(0,4);
+    if(n>24 ? m==='01' : k%3===0) s+=`<text x="${x(k)}" y="${Hh-8}" text-anchor="middle">${n>24?yr:m+'/'+yr.slice(2)}</text>`});
+  series.forEach((se,si)=>{ s+=`<path d="${se.vals.map((v,k)=>(k?'L':'M')+x(k).toFixed(1)+','+y(v).toFixed(1)).join('')}" fill="none" stroke="${si?'var(--bar-2)':'var(--bar)'}" stroke-width="2" stroke-linejoin="round"/>`});
+  s+=`<line id="xh" class="ax" x1="0" x2="0" y1="${T}" y2="${Hh-B}" opacity="0"/><rect id="hitarea" x="${L}" y="${T}" width="${W-L-R}" height="${Hh-T-B}" fill="transparent"/></svg>`;
+  el.innerHTML=s; const svg=el.querySelector('svg'); const xh=svg.querySelector('#xh');
+  svg.querySelector('#hitarea').addEventListener('mousemove',e=>{const r=svg.getBoundingClientRect(); const px=(e.clientX-r.left)*W/r.width;
+    const k=Math.max(0,Math.min(n-1,Math.round((px-L)/((W-L-R)/Math.max(1,n-1))))); xh.setAttribute('x1',x(k)); xh.setAttribute('x2',x(k)); xh.setAttribute('opacity',1);
+    showTip(e,`<b>${rotulos[k].slice(5,7)}/${rotulos[k].slice(0,4)}</b>`+series.map(se=>`<br>${esc(se.nome)}: ${esc(fmt(se.vals[k]))}`).join(''))});
+  svg.querySelector('#hitarea').addEventListener('mouseleave',()=>{hideTip(); xh.setAttribute('opacity',0)});
+}
+function niceMax(v){const p=Math.pow(10,Math.floor(Math.log10(v))); for(const m of [1,2,2.5,5,10]) if(m*p>=v) return m*p; return v}
+function fmtCurto(v){ if(v>=1e6) return 'R$ '+nf.format(v/1e6)+' mi'; if(v>=1e3) return 'R$ '+nf0.format(v/1e3)+' mil'; return 'R$ '+nf0.format(v)}
+
+/* -------------------------------------------------- tabelas */
+function tabela(el, cols, linhas, sort, onSort, onRow){
+  const sorted=[...linhas].sort((a,b)=>{const va=a[sort.k], vb=b[sort.k]; if(va==null) return 1; if(vb==null) return -1;
+    return (typeof va==='string'? va.localeCompare(vb,'pt-BR') : va-vb)*sort.d});
+  const maxes={}; cols.filter(c=>c.bar).forEach(c=>maxes[c.k]=Math.max(...linhas.map(r=>r[c.k]||0))||1);
+  let h='<div class="tbl"><table><thead><tr>'+cols.map(c=>`<th class="${c.n?'n':''}" data-k="${c.k}" title="${esc(c.t||'')}" ${sort.k===c.k?`aria-sort="${sort.d<0?'descending':'ascending'}"`:''}>${esc(c.h)}</th>`).join('')+'</tr></thead><tbody>';
+  sorted.forEach((r,ri)=>{h+=`<tr ${onRow?`class="click" tabindex="0" data-r="${ri}"`:''}>`+cols.map(c=>{const v=r[c.k]; const txt=c.f?c.f(v,r):esc(v);
+    if(c.bar){const w=Math.round(60*(v||0)/maxes[c.k]); return `<td class="n cellbar">${txt}<i style="width:${w}px"></i></td>`}
+    return `<td class="${c.n?'n':''}">${txt}</td>`}).join('')+'</tr>'});
+  h+='</tbody></table></div>'; if(!linhas.length) h+='<div class="empty">Nenhum registro no recorte escolhido.</div>';
+  el.innerHTML=h;
+  el.querySelectorAll('th').forEach(th=>th.addEventListener('click',()=>{const k=th.dataset.k; onSort(sort.k===k?{k,d:-sort.d}:{k,d:-1})}));
+  if(onRow) el.querySelectorAll('tr.click').forEach(tr=>{const go=()=>onRow(sorted[+tr.dataset.r]); tr.addEventListener('click',go); tr.addEventListener('keydown',e=>{if(e.key==='Enter') go()})});
+}
+
+/* -------------------------------------------------- abas */
+function rotuloAtiv(){return S.casa==='federal'?'Participação em votações nominais':'Presenças em comissões por deputado'}
+
+function renderPartidos(A){
+  const el=$('p-partidos'); const fed=S.casa==='federal';
+  const tot=A.partidos.reduce((s,p)=>s+p.gasto,0); const nDeps=new Set(A.deps.map(d=>d.i)).size;
+  const meses=A.deps.reduce((s,d)=>s+d.meses.size,0);
+  const esp=A.partidos.reduce((s,p)=>s+p.esp,0), reg=A.partidos.reduce((s,p)=>s+p.reg,0);
+  const props=A.partidos.reduce((s,p)=>s+p.prop,0), normas=A.partidos.reduce((s,p)=>s+p.normas,0);
+  el.innerHTML=`<div class="kpis">
+    <div class="kpi"><div class="l">Parlamentares no recorte</div><div class="v">${nf0.format(nDeps)}</div><div class="h">${S.ini}–${S.fim}${S.partido?' · '+esc(S.partido):''}</div></div>
+    <div class="kpi"><div class="l">${fed?'Cota parlamentar':'Verba de gabinete'}</div><div class="v">${fmtCurto(tot)}</div><div class="h">${brl.format(meses?tot/meses:0)} por parlamentar/mês</div></div>
+    <div class="kpi"><div class="l">${fed?'Proposições como 1º autor':'Proposituras (autoria ou coautoria)'}</div><div class="v">${nf0.format(props)}</div><div class="h">${nf0.format(normas)} viraram norma</div></div>
+    ${fed?`<div class="kpi"><div class="l">Participação em votações</div><div class="v">${pct(esp?reg/esp:null)}</div><div class="h">nominais do Plenário, em exercício</div></div>`:
+    `<div class="kpi"><div class="l">Presenças em comissões</div><div class="v">${nf0.format(A.partidos.reduce((s,p)=>s+p.pres,0))}</div><div class="h">reuniões registradas</div></div>`}
+  </div>
+  <div class="grid2"><div class="card"><h2>Comparativo por partido</h2><div class="note">Clique no cabeçalho para ordenar. Valores médios por parlamentar evitam favorecer bancadas maiores.</div><div id="tabP"></div></div>
+  <div class="card"><div class="row"><h2 style="flex:1">Ranking</h2><select id="metrica" aria-label="Métrica do ranking">
+    <option value="mediaMes">Gasto médio por parlamentar/mês</option><option value="gasto">Gasto total</option>
+    <option value="propPorDep">Proposições por parlamentar</option><option value="normas">Proposições que viraram norma</option>
+    ${fed?'<option value="part">Participação em votações</option>':'<option value="presPorDep">Presenças em comissões por deputado</option>'}
+    <option value="n">Número de parlamentares</option></select></div><div class="chart" id="chP"></div></div></div>`;
+  const cols=[{k:'nome',h:'Partido'},{k:'n',h:'Parl.',n:1,t:'Parlamentares distintos que atuaram pelo partido no período'},
+    {k:'gasto',h:'Gasto total',n:1,f:v=>brl.format(v),bar:1},{k:'mediaMes',h:'Média/mês',n:1,f:v=>brl.format(v),t:'Gasto total dividido pelos meses com despesa lançada'},
+    {k:'prop',h:fed?'Proposições':'Proposituras',n:1,t:fed?'PL, PLP, PEC, PDL e PRC como primeiro autor':'PL, PLC, PEC, PDL e PR, autoria ou coautoria'},
+    {k:'normas',h:'Viraram norma',n:1}];
+  if(fed) cols.push({k:'part',h:'Participação',n:1,f:v=>pct(v),t:'Votos registrados ÷ votações nominais do Plenário ocorridas enquanto em exercício'});
+  else cols.push({k:'presPorDep',h:'Presenças/dep.',n:1,f:v=>nf.format(v)});
+  tabela($('tabP'), cols, A.partidos, S.sortP, s=>{S.sortP=s; render()}, r=>{S.partido=r.nome; syncControls(); render()});
+  const sel=$('metrica'); if(![...sel.options].some(o=>o.value===S.metrica)) S.metrica='mediaMes'; sel.value=S.metrica;
+  sel.onchange=()=>{S.metrica=sel.value; render()};
+  const fmt={mediaMes:v=>brl.format(v),gasto:v=>fmtCurto(v),propPorDep:v=>nf.format(v),normas:v=>nf0.format(v),part:v=>pct(v),presPorDep:v=>nf.format(v),n:v=>nf0.format(v)}[S.metrica];
+  const itens=A.partidos.filter(p=>p[S.metrica]!=null).map(p=>({l:p.nome,v:p[S.metrica]||0,extra:`${p.n} parlamentar(es)`})).sort((a,b)=>b.v-a.v).slice(0,30);
+  barras($('chP'), itens, fmt, {aria:'Ranking de partidos', onClick:d=>{S.partido=d.l; syncControls(); render()}});
+}
+
+function renderParl(A){
+  const el=$('p-parl'); const fed=S.casa==='federal'; const h=H();
+  el.innerHTML=`<div class="row"><input type="search" id="busca" placeholder="Buscar parlamentar" value="${esc(S.busca)}" aria-label="Buscar parlamentar"><span class="muted" id="contagem"></span></div><div class="card"><div id="tabD"></div></div>`;
+  const q=S.busca.trim().toLowerCase();
+  const linhas=A.deps.filter(d=>!q||d.nome.toLowerCase().includes(q)).map(d=>({...d, atual:h.parlamentares[d.i].partidoAtual||'', exe:h.parlamentares[d.i].emExercicio}));
+  $('contagem').textContent=`${linhas.length} parlamentares`;
+  const cols=[{k:'nome',h:'Parlamentar',f:(v,r)=>`${esc(v)} ${r.exe?'<span class="pill on">em exercício</span>':''}`},
+    {k:'partidoTxt',h:'Partido(s) no período'},{k:'gasto',h:'Gasto',n:1,f:v=>brl.format(v),bar:1},{k:'mediaMes',h:'Média/mês',n:1,f:v=>brl.format(v)},
+    {k:'prop',h:fed?'1º autor':'Proposituras',n:1},{k:'normas',h:'Normas',n:1}];
+  if(fed) cols.push({k:'part',h:'Participação',n:1,f:v=>pct(v)}); else cols.push({k:'pres',h:'Presenças',n:1});
+  tabela($('tabD'), cols, linhas, S.sortD, s=>{S.sortD=s; render()}, r=>abrirPerfil(r.i));
+  const b=$('busca'); b.oninput=()=>{S.busca=b.value; const pos=b.selectionStart; render(); const nb=$('busca'); nb.focus(); nb.setSelectionRange(pos,pos)};
+}
+
+function renderGastos(A){
+  const el=$('p-gastos'); const h=H();
+  el.innerHTML=`<div class="card" style="margin-bottom:18px"><h2>Gasto mensal</h2><div class="note">${S.partido?`Azul: ${esc(S.partido)}. Laranja: média por parlamentar da casa inteira, para comparação.`:'Total mensal de todos os parlamentares no recorte.'}</div><div class="chart" id="chL"></div></div>
+  <div class="grid2"><div class="card"><h2>Por categoria de despesa</h2><div class="note">Total no período.</div><div class="chart" id="chC"></div></div>
+  <div class="card"><h2>Por ano</h2><div class="note">Total no período.</div><div class="chart" id="chA"></div></div></div>`;
+  const rot=[]; for(let a=S.ini;a<=S.fim;a++) for(let m=1;m<=12;m++){ const k=`${a}-${String(m).padStart(2,'0')}`; rot.push(k)}
+  const idx=new Map(rot.map((r,k)=>[r,k]));
+  const tot=new Array(rot.length).fill(0), totAll=new Array(rot.length).fill(0), depsAll=rot.map(()=>new Set()), depsSel=rot.map(()=>new Set());
+  const cat=new Map(), anos=new Map();
+  for(const [i,ano,mes,ci,pi,v] of h.desp){ if(!noAno(ano)) continue; const k=idx.get(`${ano}-${String(mes).padStart(2,'0')}`); if(k==null) continue;
+    totAll[k]+=v; depsAll[k].add(i); const n=pn(pi); if(!okP(n)) continue; tot[k]+=v; depsSel[k].add(i);
+    cat.set(h.categorias[ci],(cat.get(h.categorias[ci])||0)+v); anos.set(ano,(anos.get(ano)||0)+v)}
+  let ult=rot.length; while(ult>0 && totAll[ult-1]===0) ult--; const rr=rot.slice(0,ult);
+  const series = S.partido ? [{nome:S.partido+' (média por parlamentar)', vals:tot.slice(0,ult).map((v,k)=>depsSel[k].size?v/depsSel[k].size:0)},
+    {nome:'Casa (média por parlamentar)', vals:totAll.slice(0,ult).map((v,k)=>depsAll[k].size?v/depsAll[k].size:0)}] : [{nome:'Total', vals:tot.slice(0,ult)}];
+  linha($('chL'), series, rr, v=>brl.format(v));
+  barras($('chC'), [...cat].map(([l,v])=>({l,v})).sort((a,b)=>b.v-a.v).slice(0,15), v=>fmtCurto(v), {labW:200, aria:'Gasto por categoria'});
+  barras($('chA'), [...anos].map(([l,v])=>({l:String(l),v})).sort((a,b)=>a.l-b.l), v=>fmtCurto(v), {labW:60, aria:'Gasto por ano'});
+}
+
+function idade(nasc, ref){ if(!nasc) return null; let d; const m=nasc.match(/^(\d{4})-(\d{2})-(\d{2})/)||nasc.match(/^(\d{2})\/(\d{2})\/(\d{4})/);
+  if(!m) return null; d = m[0].includes('/') ? new Date(+m[3],+m[2]-1,+m[1]) : new Date(+m[1],+m[2]-1,+m[3]); const r=ref||new Date(); let a=r.getFullYear()-d.getFullYear(); if(r<new Date(r.getFullYear(),d.getMonth(),d.getDate())) a--; return a}
+
+function renderPerfil(A){
+  const el=$('p-perfil'); const h=H();
+  const porP=new Map();
+  for(const d of A.deps){ const parl=h.parlamentares[d.i]; const t=parl.tse||{};
+    for(const n of d.partidos){ let o=porP.get(n); if(!o){o={nome:n,n:0,mulheres:0,genInf:0,idades:[],sup:0,instInf:0,bens:[],ocup:new Map(),cor:new Map()}; porP.set(n,o)}
+      o.n++; const g=(t.genero||parl.sexo||'').toUpperCase(); if(g){o.genInf++; if(g.startsWith('F')) o.mulheres++}
+      const id=idade(parl.nascimento||t.nascimento); if(id) o.idades.push(id);
+      const inst=(t.instrucao||parl.escolaridade||'').toUpperCase(); if(inst){o.instInf++; if(inst.includes('SUPERIOR COMPLETO')||inst.includes('PÓS')||inst.includes('MESTRADO')||inst.includes('DOUTORADO')) o.sup++}
+      const ult=(t.eleicoes||[]).filter(e=>e.bens!=null).pop(); if(ult) o.bens.push(ult.bens);
+      if(t.ocupacao) o.ocup.set(t.ocupacao,(o.ocup.get(t.ocupacao)||0)+1);
+      if(t.corRaca) o.cor.set(t.corRaca,(o.cor.get(t.corRaca)||0)+1); }}
+  const med=a=>{if(!a.length) return null; const s=[...a].sort((x,y)=>x-y); const m=s.length>>1; return s.length%2?s[m]:(s[m-1]+s[m])/2};
+  const linhas=[...porP.values()].map(o=>({nome:o.nome,n:o.n,pctM:o.genInf?o.mulheres/o.genInf:null,idade:o.idades.length?o.idades.reduce((a,b)=>a+b,0)/o.idades.length:null,
+    pctSup:o.instInf?o.sup/o.instInf:null,bens:med(o.bens),ocup:[...o.ocup].sort((a,b)=>b[1]-a[1])[0]?.[0]||'–',
+    cor:[...o.cor].sort((a,b)=>b[1]-a[1]).map(([k,v])=>`${k.toLowerCase()} ${v}`).join(', ')||'–'}));
+  el.innerHTML=`<div class="card"><h2>Perfil declarado por partido</h2><div class="note">Dados autodeclarados ao TSE no registro de candidatura (2014, 2018 e 2022) e cadastro da Câmara. Idade calculada hoje. Patrimônio é a mediana dos bens declarados na eleição mais recente de cada parlamentar, em valores nominais.</div><div id="tabPerf"></div></div>`;
+  const sortPerf=S.sortPerf||{k:'n',d:-1};
+  tabela($('tabPerf'),[{k:'nome',h:'Partido'},{k:'n',h:'Parl.',n:1},{k:'pctM',h:'Mulheres',n:1,f:v=>pct(v)},{k:'idade',h:'Idade média',n:1,f:v=>v==null?'–':nf.format(v)},
+    {k:'pctSup',h:'Superior completo ou mais',n:1,f:v=>pct(v)},{k:'bens',h:'Patrimônio mediano',n:1,f:v=>v==null?'–':brl.format(v)},
+    {k:'ocup',h:'Ocupação mais citada'},{k:'cor',h:'Cor/raça autodeclarada'}], linhas, sortPerf, s=>{S.sortPerf=s; render()});
+}
+
+function renderMet(){
+  const f=META.fontes||{}; const nomes={tse:'TSE · candidaturas e bens',camara_deputados:'Câmara · cadastro e histórico',camara_despesas:'Câmara · cota parlamentar',
+    camara_proposicoes:'Câmara · proposições',camara_votacoes:'Câmara · votações nominais',alesp_cadastro:'ALESP · deputados e partidos',alesp_despesas:'ALESP · despesas de gabinete',
+    alesp_proposituras:'ALESP · proposituras, autores e tramitação',alesp_presencas:'ALESP · presença em comissões'};
+  const st=Object.entries(nomes).map(([k,l])=>{const s=f[k]; return `<li>${l}: ${!s?'<span class="muted">não executado</span>':s.ok?'<span class="status-ok">coletado</span>':`<span class="status-erro">falhou</span> <span class="muted">(${esc(s.erro||'')})</span>`}</li>`}).join('');
+  $('p-met').innerHTML=`<div class="card method">
+  <h2>Como os números são calculados</h2>
+  <h3>Situação das fontes nesta atualização</h3><ul>${st}</ul>
+  <h3>Partido atribuído</h3>
+  <p><b>Câmara:</b> cada gasto, proposição e votação conta para o partido em que o deputado estava na data do fato, segundo o histórico oficial de cada deputado na API da Câmara. Quem trocou de partido aparece nos dois.</p>
+  <p><b>ALESP:</b> a Assembleia não publica histórico de filiação. Usa-se o partido pelo qual o deputado concorreu na eleição da legislatura correspondente (TSE). Trocas de partido no meio do mandato, como as da janela partidária, não são captadas.</p>
+  <p>A opção "Agrupar siglas sucessoras" soma partidos que se fundiram ou mudaram de nome (por exemplo PMDB e MDB; PR e PL; DEM, PSL e União Brasil). Desligada, cada sigla aparece como era na época.</p>
+  <h3>Gastos</h3>
+  <p><b>Câmara:</b> valor líquido reembolsado pela Cota para o Exercício da Atividade Parlamentar (CEAP). O teto mensal varia por estado; como todos aqui são de SP, a comparação entre eles é direta. <b>ALESP:</b> despesas de gabinete reembolsadas. As duas verbas têm regras e tetos diferentes e não devem ser comparadas entre si. A média mensal divide o gasto pelos meses em que houve despesa lançada.</p>
+  <h3>Produção legislativa</h3>
+  <p><b>Câmara:</b> contam-se PL, PLP, PEC, PDL (e PDC, nome anterior) e PRC em que o deputado é o primeiro signatário, pela data de apresentação. "Virou norma" usa a situação atual informada pela Câmara ("Transformado em Norma Jurídica"). Projetos apensados a outro que virou lei não recebem crédito. Requerimentos e indicações ficam de fora da contagem principal.</p>
+  <p><b>ALESP:</b> o arquivo de autores não distingue o autor principal dos coautores, então conta-se autoria ou coautoria de PL, PLC, PEC, PDL e PR. A situação vem do último andamento publicado e é classificada por palavras-chave, por isso deve ser lida como aproximação.</p>
+  <h3>Participação e presença</h3>
+  <p><b>Câmara:</b> participação = votos registrados (inclusive abstenção e obstrução) ÷ votações nominais do Plenário ocorridas enquanto o deputado estava em exercício. Não é a lista oficial de faltas: votações simbólicas não entram, e ausências justificadas (missão oficial, licença médica) não são separadas porque esse dado não está nos arquivos abertos. O presidente da Câmara não vota e teria participação artificialmente baixa.</p>
+  <p><b>ALESP:</b> os dados abertos trazem presença apenas nas reuniões de comissões permanentes, sem a composição histórica das comissões, por isso o painel mostra o número de presenças e não uma taxa de faltas. Presença em Plenário não é publicada em formato aberto.</p>
+  <h3>Perfil</h3>
+  <p>Gênero, instrução, ocupação, cor/raça e bens são autodeclarados ao TSE. Bens em valores nominais da época da eleição, sem correção.</p>
+  <h3>Fontes</h3>
+  <p>BRASIL. Câmara dos Deputados. <i>Dados Abertos da Câmara dos Deputados</i>. Brasília, DF, [${ANO1}]. Disponível em: <a href="https://dadosabertos.camara.leg.br/" target="_blank" rel="noopener">https://dadosabertos.camara.leg.br/</a>.</p>
+  <p>SÃO PAULO (Estado). Assembleia Legislativa. <i>Portal de Dados Abertos da Alesp</i>. São Paulo, [${ANO1}]. Disponível em: <a href="https://www.al.sp.gov.br/dados-abertos/" target="_blank" rel="noopener">https://www.al.sp.gov.br/dados-abertos/</a>.</p>
+  <p>BRASIL. Tribunal Superior Eleitoral. <i>Portal de Dados Abertos do TSE</i>. Brasília, DF, [${ANO1}]. Disponível em: <a href="https://dadosabertos.tse.jus.br/" target="_blank" rel="noopener">https://dadosabertos.tse.jus.br/</a>.</p>
+  <p class="muted">Código da coleta: <a href="https://github.com/ErikSivieri/monitor-deputados-sp" target="_blank" rel="noopener">github.com/ErikSivieri/monitor-deputados-sp</a>. Projeto de estudo pessoal.</p></div>`;
+}
+
+/* -------------------------------------------------- perfil individual */
+function abrirPerfil(i){
+  const h=H(); const p=h.parlamentares[i]; const t=p.tse||{}; const fed=S.casa==='federal';
+  const A=agregar(); const d=A.deps.find(x=>x.i===i)||{gasto:0,meses:new Set(),cat:new Map(),ano:new Map(),prop:0,co:0,normas:0,aprov:0,esp:0,reg:0,pres:0};
+  const normas=h.normas.filter(n=>n[0]===i && noAno(Number(n[3])||0)).sort((a,b)=>(+b[3])-(+a[3]));
+  const link=n=> fed?`https://www.camara.leg.br/propostas-legislativas/${n[6]}`:(String(n[6]).startsWith('http')?n[6]:`https://www.al.sp.gov.br/norma/${n[6]}`);
+  const forn=(h.forn[i]||h.forn[String(i)]||[]);
+  const id=idade(p.nascimento||t.nascimento);
+  const hp=(p.partidos||[]).map(([dt,s])=>`${esc(s)} <span class="muted">desde ${dt.slice(8,10)}/${dt.slice(5,7)}/${dt.slice(0,4)}</span>`).join('<br>');
+  const el=(t.eleicoes||[]).map(e=>`${e.ano}: ${esc(e.partido)} · ${esc((e.situacao||'').toLowerCase())}${e.bens!=null?' · bens '+brl.format(e.bens):''}`).join('<br>');
+  $('drawerPanel').innerHTML=`<button class="close" id="fechar">Fechar</button>
+   <h2 style="font-size:24px">${esc(p.nome)}</h2>
+   <div class="muted">${esc(p.nomeCivil||'')} ${p.partidoAtual?'· partido atual: '+esc(p.partidoAtual):''} ${p.emExercicio?'<span class="pill on">em exercício</span>':''}</div>
+   <div class="stack" style="margin-top:14px">
+   <div class="card"><h3>Perfil</h3><dl class="facts">
+     ${id?`<dt>Idade</dt><dd>${id} anos</dd>`:''}
+     ${(t.genero||p.sexo)?`<dt>Gênero</dt><dd>${esc((t.genero||p.sexo).toLowerCase())}</dd>`:''}
+     ${(t.instrucao||p.escolaridade)?`<dt>Instrução</dt><dd>${esc(t.instrucao||p.escolaridade)}</dd>`:''}
+     ${t.ocupacao?`<dt>Ocupação</dt><dd>${esc(t.ocupacao)}</dd>`:''}
+     ${p.municipio?`<dt>Naturalidade</dt><dd>${esc(p.municipio)}/${esc(p.ufNasc||'')}</dd>`:''}
+     ${hp?`<dt>Filiação</dt><dd>${hp}</dd>`:''}
+     ${el?`<dt>Eleições</dt><dd>${el}</dd>`:''}
+     ${p.url?`<dt>Página oficial</dt><dd><a href="${esc(p.url)}" target="_blank" rel="noopener">abrir</a></dd>`:''}
+   </dl></div>
+   <div class="kpis" style="margin:0">
+     <div class="kpi"><div class="l">Gasto ${S.ini}–${S.fim}</div><div class="v">${fmtCurto(d.gasto)}</div><div class="h">${brl.format(d.meses.size?d.gasto/d.meses.size:0)}/mês</div></div>
+     <div class="kpi"><div class="l">${fed?'1º autor':'Proposituras'}</div><div class="v">${nf0.format(d.prop)}</div><div class="h">${nf0.format(d.normas)} viraram norma${fed&&d.co?' · '+nf0.format(d.co)+' em coautoria':''}</div></div>
+     ${fed?`<div class="kpi"><div class="l">Participação</div><div class="v">${pct(d.esp?d.reg/d.esp:null)}</div><div class="h">${nf0.format(d.reg)} de ${nf0.format(d.esp)} votações</div></div>`:
+       `<div class="kpi"><div class="l">Presenças em comissões</div><div class="v">${nf0.format(d.pres)}</div><div class="h">reuniões</div></div>`}
+   </div>
+   <div class="card"><h3>Gasto por ano</h3><div class="chart" id="dAno"></div></div>
+   <div class="card"><h3>Gasto por categoria</h3><div class="chart" id="dCat"></div></div>
+   <div class="card"><h3>Maiores fornecedores desde ${ANO0}</h3>${forn.length?`<div class="tbl"><table><thead><tr><th>Fornecedor</th><th>CNPJ/CPF</th><th class="n">Valor</th></tr></thead><tbody>${forn.map(f=>`<tr><td>${esc(f[0])}</td><td class="num">${esc(f[1])}</td><td class="n">${brl2.format(f[2])}</td></tr>`).join('')}</tbody></table></div>`:'<div class="muted">Sem registros.</div>'}</div>
+   <div class="card"><h3>${fed?'Proposições que viraram norma ou foram aprovadas na Câmara':'Normas de autoria do deputado (base de legislação da ALESP)'}</h3>${normas.length?`<ul class="normas">${normas.map(n=>`<li><b><a href="${link(n)}" target="_blank" rel="noopener">${esc(n[1])} ${esc(n[2])}/${esc(n[3])}</a></b> ${n[4]==='aprovada_camara'?'<span class="pill">aprovada na Câmara</span>':'<span class="pill on">norma</span>'} ${n[7]?'':'<span class="pill">${fed?'coautoria':'coautor'}</span>'}<br>${esc(n[5])}</li>`).join('')}</ul>`:'<div class="muted">Nenhuma no período.</div>'}</div>
+   </div>`;
+  $('drawer').hidden=false; $('fechar').focus();
+  $('fechar').onclick=fecharPerfil;
+  barras($('dAno'), [...d.ano].map(([a,v])=>({l:String(a),v})).sort((a,b)=>a.l-b.l), v=>fmtCurto(v), {labW:50});
+  barras($('dCat'), [...d.cat].map(([c,v])=>({l:h.categorias[c],v})).sort((a,b)=>b.v-a.v).slice(0,10), v=>fmtCurto(v), {labW:200});
+}
+function fecharPerfil(){ $('drawer').hidden=true; hideTip() }
+$('drawer').addEventListener('click',e=>{ if(e.target.id==='drawer') fecharPerfil() });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') fecharPerfil() });
+
+/* -------------------------------------------------- controles */
+function syncControls(){
+  ['federal','estadual'].forEach(c=>$('casa-'+c).setAttribute('aria-pressed', String(S.casa===c)));
+  const anos=[]; for(let a=ANO0;a<=ANO1;a++) anos.push(a);
+  $('anoIni').innerHTML=anos.map(a=>`<option ${a===S.ini?'selected':''}>${a}</option>`).join('');
+  $('anoFim').innerHTML=anos.map(a=>`<option ${a===S.fim?'selected':''}>${a}</option>`).join('');
+  const h=H(); const nomes=h?[...new Set(h.partidos.map((_,k)=>pn(k)))].filter(x=>x!=='N/I').sort((a,b)=>a.localeCompare(b,'pt-BR')):[];
+  if(S.partido && !nomes.includes(S.partido)) S.partido='';
+  $('partido').innerHTML='<option value="">Todos</option>'+nomes.map(n=>`<option ${n===S.partido?'selected':''}>${esc(n)}</option>`).join('');
+  $('agrupar').checked=S.agrupar;
+  document.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected', String(t.dataset.aba===S.aba)));
+  document.querySelectorAll('section.pane').forEach(p=>p.hidden = p.id!=='p-'+S.aba);
+}
+function render(){
+  syncControls();
+  if(!H()){ $('p-'+S.aba).innerHTML='<div class="empty">Os dados desta casa ainda não foram coletados.</div>'; if(S.aba==='met') renderMet(); return }
+  const A=agregar();
+  if(S.aba==='partidos') renderPartidos(A); else if(S.aba==='parl') renderParl(A); else if(S.aba==='gastos') renderGastos(A);
+  else if(S.aba==='perfil') renderPerfil(A); else renderMet();
+  try{ localStorage.setItem('mdsp', JSON.stringify({casa:S.casa, ini:S.ini, fim:S.fim, agrupar:S.agrupar, aba:S.aba})) }catch(e){}
+}
+document.querySelectorAll('#casa button').forEach(b=>b.addEventListener('click',()=>{S.casa=b.dataset.v; S.partido=''; render()}));
+$('anoIni').onchange=e=>{S.ini=+e.target.value; if(S.fim<S.ini) S.fim=S.ini; render()};
+$('anoFim').onchange=e=>{S.fim=+e.target.value; if(S.ini>S.fim) S.ini=S.fim; render()};
+$('partido').onchange=e=>{S.partido=e.target.value; render()};
+$('agrupar').onchange=e=>{S.agrupar=e.target.checked; S.partido=''; render()};
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{S.aba=t.dataset.aba; render()}));
+try{ const s=JSON.parse(localStorage.getItem('mdsp')||'null'); if(s) Object.assign(S, s) }catch(e){}
+const hash=location.hash.slice(1); if(['partidos','parl','gastos','perfil','met'].includes(hash)) S.aba=hash;
+$('geradoEm').textContent = META.geradoEm ? META.geradoEm.split(' ')[0].split('-').reverse().join('/')+' às '+META.geradoEm.split(' ')[1] : '–';
+$('avisos').textContent = (META.avisos||[]).join(' ');
+render();
+})();
+</script>

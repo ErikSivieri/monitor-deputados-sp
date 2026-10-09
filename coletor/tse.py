@@ -4,7 +4,7 @@ import pandas as pd
 from .util import abrir_zip, baixar, com_cache, log, norm, num, protegido, registrar
 
 BASE = "https://cdn.tse.jus.br/estatistica/sead/odsele"
-ELEICOES = [2014, 2018, 2022]
+ELEICOES = [2010, 2014, 2018, 2022]  # 2010 cobre quem exerceu mandato no início de 2015
 CARGOS = {"DEPUTADO FEDERAL": "F", "DEPUTADO ESTADUAL": "E"}
 
 

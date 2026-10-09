@@ -30,22 +30,30 @@ def ler_csv(caminho, **kw):
 # ----------------------------------------------------------------- parlamentares
 
 @protegido("camara_deputados")
-def deputados():
-    legs = [l for l in paginar(f"{API}/legislaturas", {"itens": 100})
-            if (l.get("dataFim") or "9999") >= f"{INICIO}-02-01"]
-    ids_leg = sorted(int(l["id"]) for l in legs)
-    params = [("siglaUf", "SP"), ("itens", 1000)] + [("idLegislatura", i) for i in ids_leg]
-    lista = paginar(f"{API}/deputados", params)
-    por_id = {}
-    for d in lista:
-        e = por_id.setdefault(d["id"], {"id": d["id"], "legislaturas": set()})
-        e["legislaturas"].add(d.get("idLegislatura"))
-    log("federais SP desde", INICIO, ":", len(por_id))
-
-    saida = []
-    for i, (did, e) in enumerate(sorted(por_id.items())):
-        det = get_json(f"{API}/deputados/{did}")["dados"]
-        hist = paginar(f"{API}/deputados/{did}/historico")
+def deputados(ids_fontes):
+    """Universo = deputados de SP que aparecem na cota ou nas votações desde 2015, mais os atuais."""
+    try:
+        legs = [l for l in paginar(f"{API}/legislaturas", {"itens": 100})
+                if (l.get("dataFim") or "9999") >= f"{INICIO}-02-01"]
+    except Exception:  # noqa: BLE001
+        legs = [{"id": 55, "dataInicio": "2015-02-01", "dataFim": "2019-01-31"},
+                {"id": 56, "dataInicio": "2019-02-01", "dataFim": "2023-01-31"},
+                {"id": 57, "dataInicio": "2023-02-01", "dataFim": "2027-01-31"}]
+    try:
+        atuais = paginar(f"{API}/deputados", {"siglaUf": "SP", "itens": 100})
+    except Exception as e:  # noqa: BLE001
+        log("lista atual indisponível:", e)
+        atuais = []
+    ids = sorted(set(ids_fontes) | {d["id"] for d in atuais})
+    log("federais SP desde", INICIO, ":", len(ids))
+    saida, falhas = [], []
+    for i, did in enumerate(ids):
+        try:
+            det = get_json(f"{API}/deputados/{did}")["dados"]
+            hist = paginar(f"{API}/deputados/{did}/historico")
+        except Exception as e:  # noqa: BLE001
+            falhas.append([did, str(e)[:200]])
+            continue
         us = det.get("ultimoStatus") or {}
         saida.append({
             "id": did,
@@ -58,17 +66,21 @@ def deputados():
             "municipio": det.get("municipioNascimento"),
             "ufNasc": det.get("ufNascimento"),
             "partidoAtual": us.get("siglaPartido"),
+            "ufAtual": us.get("siglaUf"),
             "situacaoAtual": us.get("situacao"),
             "legislaturaAtual": us.get("idLegislatura"),
-            "legislaturas": sorted(x for x in e["legislaturas"] if x),
-            "historico": [{"data": h.get("dataHora"), "partido": h.get("siglaPartido"),
+            "legislaturas": sorted({h.get("idLegislatura") for h in hist if h.get("idLegislatura") and h["idLegislatura"] >= 55}),
+            "historico": [{"data": h.get("dataHora"), "partido": h.get("siglaPartido"), "uf": h.get("siglaUf"),
                            "situacao": h.get("situacao"), "condicao": h.get("condicaoEleitoral"),
                            "leg": h.get("idLegislatura"), "desc": h.get("descricaoStatus")} for h in hist],
         })
         if i % 20 == 0:
-            log("detalhes", i, "/", len(por_id))
-    registrar("camara_deputados", total=len(saida), legislaturas=ids_leg,
-              exemplo_historico=saida[0]["historico"][:3] if saida else None)
+            log("detalhes", i, "/", len(ids))
+    if not saida:
+        raise RuntimeError(f"nenhum detalhe obtido; exemplo de falha: {falhas[:1]}")
+    registrar("camara_deputados", total=len(saida), falhas=falhas[:10], n_falhas=len(falhas),
+              legislaturas=[l["id"] for l in legs],
+              exemplo_historico=saida[0]["historico"][:3])
     return {"deputados": saida, "legislaturas": legs}
 
 
@@ -111,7 +123,7 @@ class Linha:
 
 # ----------------------------------------------------------------- cota parlamentar
 
-def _despesas_ano(ano, ids):
+def _despesas_ano(ano):
     arq = baixar(f"{COTAS}/Ano-{ano}.csv.zip")
     if arq is None:
         return None
@@ -119,8 +131,7 @@ def _despesas_ano(ano, ids):
     df = ler_csv(f)
     c_id = col(df, "ideCadastro", "nuDeputadoId")
     c_uf = col(df, "sgUF")
-    df = df[df[c_uf] == "SP"]
-    df = df[df[c_id].isin({str(i) for i in ids})]
+    df = df[(df[c_uf] == "SP") & df[c_id].notna() & (df[c_id].str.strip() != "") & (df[c_id] != "0")]
     c_val = col(df, "vlrLiquido")
     c_mes = col(df, "numMes")
     c_cat = col(df, "txtDescricao")
@@ -139,10 +150,10 @@ def _despesas_ano(ano, ids):
 
 
 @protegido("camara_despesas")
-def despesas(ids):
+def despesas():
     res = {"linhas": [], "forn": []}
     for ano in ANOS:
-        r = com_cache("camara_despesas", ano, lambda a: _despesas_ano(a, ids))
+        r = com_cache("camara_despesas", ano, _despesas_ano)
         if r:
             res["linhas"] += r["linhas"]
             res["forn"] += r["forn"]
@@ -213,7 +224,7 @@ def proposicoes(ids):
 
 # ----------------------------------------------------------------- votações nominais
 
-def _votacoes_ano(ano, ids):
+def _votacoes_ano(ano):
     v = baixar(f"{ARQ}/votacoes/csv/votacoes-{ano}.csv")
     vv = baixar(f"{ARQ}/votacoesVotos/csv/votacoesVotos-{ano}.csv")
     if v is None or vv is None:
@@ -228,16 +239,17 @@ def _votacoes_ano(ano, ids):
     c_dep = col(votos, "deputado_id")
     nominais = set(votos[c_vid]) & set(plen[c_id])
     datas = {r[c_id]: str(r[c_data])[:10] for _, r in plen.iterrows() if r[c_id] in nominais}
-    sp = votos[votos[c_dep].isin({str(i) for i in ids}) & votos[c_vid].isin(nominais)]
+    c_uf = col(votos, "deputado_siglaUf")
+    sp = votos[(votos[c_uf] == "SP") & votos[c_vid].isin(nominais)]
     pares = sorted({(int(r[c_dep]), r[c_vid]) for _, r in sp.iterrows()})
     return {"datas": datas, "votos": [[d, v] for d, v in pares]}
 
 
 @protegido("camara_votacoes")
-def votacoes(ids):
+def votacoes():
     datas, votos = {}, []
     for ano in ANOS:
-        r = com_cache("camara_votacoes", ano, lambda a: _votacoes_ano(a, ids))
+        r = com_cache("camara_votacoes", ano, _votacoes_ano)
         if r:
             datas.update(r["datas"])
             votos += r["votos"]

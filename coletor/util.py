@@ -84,19 +84,25 @@ def baixar(url, nome=None, tentativas=4, timeout=600):
 
 
 def get_json(url, params=None, tentativas=5):
+    ultimo = ""
     for i in range(tentativas):
         try:
-            r = SESSAO.get(url, params=params, timeout=60, headers={"Accept": "application/json"})
+            r = SESSAO.get(url, params=params, timeout=90, headers={"Accept": "application/json"})
             if r.status_code == 429:
                 time.sleep(10 * (i + 1))
                 continue
-            r.raise_for_status()
+            if r.status_code >= 400:
+                ultimo = f"HTTP {r.status_code}: {r.text[:300]}"
+                if 400 <= r.status_code < 500 and r.status_code != 408:
+                    break
+                raise RuntimeError(ultimo)
             time.sleep(0.2)  # pausa entre requisições, como pede a equipe de Dados Abertos
             return r.json()
         except Exception as e:  # noqa: BLE001
+            ultimo = ultimo or str(e)
             log("falha", url, e, "tentativa", i + 1)
             time.sleep(3 * (i + 1))
-    raise RuntimeError(f"falha em {url}")
+    raise RuntimeError(f"falha em {url} ({ultimo})")
 
 
 def paginar(url, params=None):

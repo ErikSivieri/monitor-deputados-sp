@@ -10,20 +10,21 @@ def main():
     log("início; atualização completa:", FORCAR)
     cand = tse.candidaturas()
 
-    cad = camara.deputados()
+    desp = camara.despesas()
+    vots = camara.votacoes()
+    ids = {l[0] for l in (desp or {}).get("linhas", [])} | {v[0] for v in (vots or {}).get("votos", [])}
+    cad = camara.deputados(ids)
     fed = None
     if cad:
-        ids = [d["id"] for d in cad["deputados"]]
-        desp = camara.despesas(ids)
-        props = camara.proposicoes(ids)
-        vots = camara.votacoes(ids)
+        props = camara.proposicoes([d["id"] for d in cad["deputados"]])
         fed = montar.federal(cad, desp, props, vots, cand)
 
     ecad = alesp.cadastro()
     edesp = alesp.despesas()
     eprops = alesp.proposituras()
     epres = alesp.presencas()
-    est = montar.estadual(ecad, edesp, eprops, epres, cand)
+    enormas = alesp.normas()
+    est = montar.estadual(ecad, edesp, eprops, epres, cand, enormas)
 
     agora = dt.datetime.now(dt.timezone(dt.timedelta(hours=-3))).strftime("%Y-%m-%d %H:%M")
     resumo = {k: {"ok": v.get("ok", True), "erro": v.get("erro")} for k, v in STATUS.items()}
