@@ -4,7 +4,7 @@ import re
 
 from lxml import etree
 
-from .util import (ANO_ATUAL, INICIO, abrir_zip, baixar, iso, log, norm, num, protegido, registrar)
+from .util import (ANO_ATUAL, INICIO, abrir_zip, baixar, conferir, iso, log, norm, num, protegido, registrar)
 
 BASE = "https://www.al.sp.gov.br/repositorioDados"
 
@@ -84,6 +84,7 @@ def despesas():
         a[1] += 1
         forn[(m, ano, (r.get("fornecedor") or "")[:80], r.get("cnpj") or "")] += v
         n += 1
+    conferir("alesp_despesas", n)
     linhas = [[m, ano, mes, tipo, round(v, 2), c] for (m, ano, mes, tipo), (v, c) in agg.items()]
     fl = [[m, ano, nome, cnpj, round(v, 2)] for (m, ano, nome, cnpj), v in forn.items() if v > 0]
     registrar("alesp_despesas", registros=n, linhas=len(linhas), tipos=tipos.most_common(30),
@@ -114,6 +115,7 @@ def proposituras():
                                    "data": iso(r.get("dtentradasistema")),
                                    "ementa": (r.get("ementa") or "")[:400]}
     log("ALESP proposituras desde", INICIO, len(props))
+    conferir("alesp_proposituras", len(props))
     # último andamento de cada propositura
     ult = {}
     etapas = collections.Counter()
@@ -160,6 +162,7 @@ def presencas():
     linhas = collections.Counter()
     for nome, idd, reun, data in vistos:
         linhas[(nome, idd, int(data[:4]), int(data[5:7]))] += 1
+    conferir("alesp_presencas", len(vistos))
     registrar("alesp_presencas", presencas=len(vistos), exemplo=next(iter(vistos)) if vistos else None)
     return [[nome, idd, a, m, c] for (nome, idd, a, m), c in linhas.items()]
 
@@ -189,6 +192,7 @@ def normas():
         saida.append({"id": r.get("idnorma"), "tipo": tipos.get(r.get("idtipo"), r.get("idtipo")), "numero": r.get("numero"),
                       "ano": ano, "data": iso(r.get("data")), "autores": r.get("autores"),
                       "ementa": (r.get("ementa") or "")[:400], "url": r.get("urlficha"), "situacao": r.get("situacao")})
+    conferir("alesp_normas", len(saida))
     registrar("alesp_normas", normas=len(saida), tipos=dict(list(tipos.items())[:40]),
               ambito_promulg=[[list(k), v] for k, v in amb.most_common(10)],
               exemplo=saida[:3], registro_bruto_tipo=ex_tipo, registros_brutos=ex_norma)

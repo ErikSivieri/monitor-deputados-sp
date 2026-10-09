@@ -32,10 +32,17 @@ def main():
                        "sucessoras": montar.SUCESSORAS},
               "federal": fed, "estadual": est}
     antigo = DADOS / "painel.json"
-    if fed is None and antigo.exists():
-        # Câmara fora do ar: mantém a parte federal do último arquivo bom
-        painel["federal"] = json.loads(antigo.read_text(encoding="utf-8")).get("federal")
-        painel["meta"]["avisos"] = ["Dados federais não atualizados hoje (falha na fonte)."]
+    anterior = json.loads(antigo.read_text(encoding="utf-8")) if antigo.exists() else {}
+    falhou = lambda pref: any(k.startswith(pref) and not v.get("ok", True) for k, v in STATUS.items())
+    avisos = []
+    # Se alguma fonte de uma casa falhou, mantém a versão anterior inteira daquela casa (melhor um dia de atraso do que número errado)
+    if (fed is None or falhou("camara") or falhou("tse")) and anterior.get("federal"):
+        painel["federal"] = anterior["federal"]
+        avisos.append("Câmara: mantidos os dados da coleta anterior (falha em alguma fonte hoje).")
+    if (falhou("alesp") or falhou("tse")) and anterior.get("estadual"):
+        painel["estadual"] = anterior["estadual"]
+        avisos.append("ALESP: mantidos os dados da coleta anterior (falha em alguma fonte hoje).")
+    painel["meta"]["avisos"] = avisos
     antigo.write_text(json.dumps(painel, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     registrar("geral", geradoEm=agora, tamanho_painel_mb=round(antigo.stat().st_size / 1e6, 2))
     (DADOS / "status.json").write_text(json.dumps(STATUS, ensure_ascii=False, indent=1, default=str), encoding="utf-8")

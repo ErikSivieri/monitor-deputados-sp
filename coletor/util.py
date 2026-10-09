@@ -181,3 +181,17 @@ def iso(data):
     if m:
         return f"{m.group(3)}-{m.group(2)}-{m.group(1)}"
     return ""
+
+
+def conferir(nome, n, tolerancia=0.9):
+    """Protege contra downloads truncados: falha se o volume cair muito em relação à última coleta boa."""
+    arq = DADOS / "contagens.json"
+    try:
+        hist = json.loads(arq.read_text(encoding="utf-8"))
+    except Exception:  # noqa: BLE001
+        hist = {}
+    antes = hist.get(nome)
+    if antes and n < antes * tolerancia:
+        raise RuntimeError(f"{nome}: {n} registros contra {antes} na última coleta; possível arquivo incompleto")
+    hist[nome] = max(n, antes or 0) if antes and n < antes else n
+    arq.write_text(json.dumps(hist, indent=1), encoding="utf-8")
