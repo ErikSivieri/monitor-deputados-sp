@@ -36,6 +36,7 @@ jobs:
       - name: Coletar dados
         env:
           FORCAR: ${{ inputs.forcar && '1' || '0' }}
+          CGU_API_KEY: ${{ secrets.CGU_API_KEY }}
         run: python -m coletor 2>&1 | tee data/ultima_execucao.log
       - name: Salvar dados no repositório
         if: always()

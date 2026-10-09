@@ -169,8 +169,8 @@ const okP = name => !S.partido || name===S.partido;
 function agregar(){
   const h = H(); const leg = LEG[S.casa];
   const porP = new Map(), porD = new Map();
-  const P = n => {let o=porP.get(n); if(!o){o={nome:n,deps:new Set(),gasto:0,meses:new Set(),prop:0,normas:0,esp:0,reg:0,pres:0}; porP.set(n,o)} return o};
-  const D = i => {let o=porD.get(i); if(!o){o={i,gasto:0,meses:new Set(),prop:0,co:0,normas:0,aprov:0,esp:0,reg:0,pres:0,partidos:new Set(),cat:new Map(),ano:new Map()}; porD.set(i,o)} return o};
+  const P = n => {let o=porP.get(n); if(!o){o={nome:n,deps:new Set(),gasto:0,meses:new Set(),prop:0,normas:0,esp:0,reg:0,pres:0,emp:0,pago:0}; porP.set(n,o)} return o};
+  const D = i => {let o=porD.get(i); if(!o){o={i,gasto:0,meses:new Set(),prop:0,co:0,normas:0,aprov:0,esp:0,reg:0,pres:0,emp:0,pago:0,func:new Map(),partidos:new Set(),cat:new Map(),ano:new Map()}; porD.set(i,o)} return o};
   for(const [i,ano,mes,ci,pi,v] of h.desp){ if(!noAno(ano)) continue; const n=pn(pi); if(!okP(n)) continue;
     const p=P(n); p.deps.add(i); p.gasto+=v; p.meses.add(i+'|'+ano+'|'+mes);
     const d=D(i); d.gasto+=v; d.meses.add(ano+'|'+mes); d.partidos.add(n);
@@ -181,12 +181,15 @@ function agregar(){
     else d.co+=c; }
   if(h.normasAgg) for(const [i,ano,pi,c] of h.normasAgg){ if(!noAno(ano)) continue; const n=pn(pi); if(!okP(n)) continue;
     const p=P(n); p.deps.add(i); p.normas+=c; const d=D(i); d.normas+=c; d.partidos.add(n); }
+  if(h.emendas) for(const [i,ano,pi,fi,emp,liq,pago] of h.emendas){ if(!noAno(ano)) continue; const n=pn(pi); if(!okP(n)) continue;
+    const p=P(n); p.deps.add(i); p.emp+=emp; p.pago+=pago; const d=D(i); d.emp+=emp; d.pago+=pago; d.partidos.add(n);
+    const fn=h.funcoes[fi]; d.func.set(fn,(d.func.get(fn)||0)+pago); }
   if(h.vot) for(const [i,ano,mes,pi,e,r] of h.vot){ if(!noAno(ano)) continue; const n=pn(pi); if(!okP(n)) continue;
     const p=P(n); p.deps.add(i); p.esp+=e; p.reg+=r; const d=D(i); d.esp+=e; d.reg+=r; d.partidos.add(n); }
   if(h.pres) for(const [i,ano,mes,pi,c] of h.pres){ if(!noAno(ano)) continue; const n=pn(pi); if(!okP(n)) continue;
     const p=P(n); p.deps.add(i); p.pres+=c; const d=D(i); d.pres+=c; d.partidos.add(n); }
   const partidos=[...porP.values()].map(p=>({...p, n:p.deps.size, mediaMes:p.meses.size?p.gasto/p.meses.size:0,
-    propPorDep:p.deps.size?p.prop/p.deps.size:0, part:p.esp?p.reg/p.esp:null, presPorDep:p.deps.size?p.pres/p.deps.size:0}));
+    propPorDep:p.deps.size?p.prop/p.deps.size:0, pagoPorDep:p.deps.size?p.pago/p.deps.size:0, part:p.esp?p.reg/p.esp:null, presPorDep:p.deps.size?p.pres/p.deps.size:0}));
   const deps=[...porD.values()].map(d=>({...d, nome:h.parlamentares[d.i].nome, mediaMes:d.meses.size?d.gasto/d.meses.size:0,
     part:d.esp?d.reg/d.esp:null, partidoTxt:[...d.partidos].join(' / ')}));
   return {partidos, deps};
@@ -265,23 +268,25 @@ function renderPartidos(A){
     <div class="kpi"><div class="l">${fed?'Proposições como 1º autor':'Proposituras (autoria ou coautoria)'}</div><div class="v">${nf0.format(props)}</div><div class="h">${nf0.format(normas)} ${fed?'viraram norma':'normas com o deputado entre os autores'}</div></div>
     ${fed?`<div class="kpi"><div class="l">Participação em votações</div><div class="v">${pct(esp?reg/esp:null)}</div><div class="h">nominais do Plenário, em exercício</div></div>`:
     `<div class="kpi"><div class="l">Presenças em comissões</div><div class="v">${nf0.format(A.partidos.reduce((s,p)=>s+p.pres,0))}</div><div class="h">reuniões registradas</div></div>`}
+    ${fed&&H().emendas?`<div class="kpi"><div class="l">Emendas individuais pagas</div><div class="v">${fmtCurto(A.partidos.reduce((s,p)=>s+p.pago,0))}</div><div class="h">de ${fmtCurto(A.partidos.reduce((s,p)=>s+p.emp,0))} empenhados</div></div>`:''}
   </div>
   <div class="stack"><div class="card"><h2>Comparativo por partido</h2><div class="note">Clique no cabeçalho para ordenar. Valores médios por parlamentar evitam favorecer bancadas maiores.</div><div id="tabP"></div></div>
   <div class="card"><div class="row"><h2 style="flex:1">Ranking</h2><select id="metrica" aria-label="Métrica do ranking">
     <option value="mediaMes">Gasto médio por parlamentar/mês</option><option value="gasto">Gasto total</option>
     <option value="propPorDep">Proposições por parlamentar</option><option value="normas">Proposições que viraram norma</option>
-    ${fed?'<option value="part">Participação em votações</option>':'<option value="presPorDep">Presenças em comissões por deputado</option>'}
+    ${fed&&H().emendas?'<option value="pagoPorDep">Emendas pagas por parlamentar</option>':''}${fed?'<option value="part">Participação em votações</option>':'<option value="presPorDep">Presenças em comissões por deputado</option>'}
     <option value="n">Número de parlamentares</option></select></div><div class="note">Ao lado de cada partido, o número de parlamentares que atuaram por ele no período. Partidos com poucos parlamentares oscilam mais.</div><div class="chart" id="chP"></div></div></div>`;
   const cols=[{k:'nome',h:'Partido'},{k:'n',h:'Parl.',n:1,t:'Parlamentares distintos que atuaram pelo partido no período'},
     {k:'gasto',h:'Gasto total',n:1,f:v=>brl.format(v),bar:1},{k:'mediaMes',h:'Média/mês',n:1,f:v=>brl.format(v),t:'Gasto total dividido pelos meses com despesa lançada'},
     {k:'prop',h:fed?'Proposições':'Proposituras',n:1,t:fed?'PL, PLP, PEC, PDL e PRC como primeiro autor':'PL, PLC, PEC, PDL e PR, autoria ou coautoria'},
     {k:'normas',h:'Viraram norma',n:1}];
   if(fed) cols.push({k:'part',h:'Participação',n:1,f:v=>pct(v),t:'Votos registrados ÷ votações nominais do Plenário ocorridas enquanto em exercício'});
+  if(fed && H().emendas) cols.push({k:'pagoPorDep',h:'Emendas pagas/parl.',n:1,f:v=>brl.format(v),t:'Valor pago de emendas individuais dividido pelo número de parlamentares'});
   else cols.push({k:'presPorDep',h:'Presenças/dep.',n:1,f:v=>nf.format(v)});
   tabela($('tabP'), cols, A.partidos, S.sortP, s=>{S.sortP=s; render()}, r=>{S.partido=r.nome; syncControls(); render()});
   const sel=$('metrica'); if(![...sel.options].some(o=>o.value===S.metrica)) S.metrica='mediaMes'; sel.value=S.metrica;
   sel.onchange=()=>{S.metrica=sel.value; render()};
-  const fmt={mediaMes:v=>brl.format(v),gasto:v=>fmtCurto(v),propPorDep:v=>nf.format(v),normas:v=>nf0.format(v),part:v=>pct(v),presPorDep:v=>nf.format(v),n:v=>nf0.format(v)}[S.metrica];
+  const fmt={pagoPorDep:v=>fmtCurto(v),mediaMes:v=>brl.format(v),gasto:v=>fmtCurto(v),propPorDep:v=>nf.format(v),normas:v=>nf0.format(v),part:v=>pct(v),presPorDep:v=>nf.format(v),n:v=>nf0.format(v)}[S.metrica];
   const itens=A.partidos.filter(p=>p[S.metrica]!=null).map(p=>({l:p.nome+' · '+p.n,v:p[S.metrica]||0,nome:p.nome,extra:`${p.n} parlamentar(es)`})).sort((a,b)=>b.v-a.v).slice(0,30);
   barras($('chP'), itens, fmt, {aria:'Ranking de partidos', labW:170, onClick:d=>{S.partido=d.nome; syncControls(); render()}});
 }
@@ -296,6 +301,7 @@ function renderParl(A){
     {k:'partidoTxt',h:'Partido(s) no período'},{k:'gasto',h:'Gasto',n:1,f:v=>brl.format(v),bar:1},{k:'mediaMes',h:'Média/mês',n:1,f:v=>brl.format(v)},
     {k:'prop',h:fed?'1º autor':'Proposituras',n:1},{k:'normas',h:'Normas',n:1}];
   if(fed) cols.push({k:'part',h:'Participação',n:1,f:v=>pct(v)}); else cols.push({k:'pres',h:'Presenças',n:1});
+  if(fed && h.emendas) cols.push({k:'pago',h:'Emendas pagas',n:1,f:v=>fmtCurto(v)});
   tabela($('tabD'), cols, linhas, S.sortD, s=>{S.sortD=s; render()}, r=>abrirPerfil(r.i));
   const b=$('busca'); b.oninput=()=>{S.busca=b.value; const pos=b.selectionStart; render(); const nb=$('busca'); nb.focus(); nb.setSelectionRange(pos,pos)};
 }
@@ -348,9 +354,9 @@ function renderPerfil(A){
 
 function renderMet(){
   const f=META.fontes||{}; const nomes={tse:'TSE · candidaturas e bens',camara_deputados:'Câmara · cadastro e histórico',camara_despesas:'Câmara · cota parlamentar',
-    camara_proposicoes:'Câmara · proposições',camara_votacoes:'Câmara · votações nominais',alesp_cadastro:'ALESP · deputados e partidos',alesp_despesas:'ALESP · despesas de gabinete',
+    camara_proposicoes:'Câmara · proposições',camara_votacoes:'Câmara · votações nominais',cgu_emendas:'Portal da Transparência · emendas',alesp_cadastro:'ALESP · deputados e partidos',alesp_despesas:'ALESP · despesas de gabinete',
     alesp_proposituras:'ALESP · proposituras, autores e tramitação',alesp_presencas:'ALESP · presença em comissões'};
-  const st=Object.entries(nomes).map(([k,l])=>{const s=f[k]; return `<li>${l}: ${!s?'<span class="muted">não executado</span>':s.ok?'<span class="status-ok">coletado</span>':`<span class="status-erro">falhou</span> <span class="muted">(${esc(s.erro||'')})</span>`}</li>`}).join('');
+  const st=Object.entries(nomes).map(([k,l])=>{const s=f[k]; return `<li>${l}: ${!s?'<span class="muted">não executado</span>':s.aviso?`<span class="muted">não coletado (${esc(s.aviso)})</span>`:s.ok?'<span class="status-ok">coletado</span>':`<span class="status-erro">falhou</span> <span class="muted">(${esc(s.erro||'')})</span>`}</li>`}).join('');
   $('p-met').innerHTML=`<div class="card method">
   <h2>Como os números são calculados</h2>
   <h3>Situação das fontes nesta atualização</h3><ul>${st}</ul>
@@ -363,6 +369,8 @@ function renderMet(){
   <h3>Produção legislativa</h3>
   <p><b>Câmara:</b> contam-se PL, PLP, PEC, PDL (e PDC, nome anterior) e PRC em que o deputado é o primeiro signatário, pela data de apresentação. "Virou norma" usa a situação atual informada pela Câmara ("Transformado em Norma Jurídica"). Projetos apensados a outro que virou lei não recebem crédito. Requerimentos e indicações ficam de fora da contagem principal.</p>
   <p><b>ALESP:</b> o arquivo de autores não distingue o autor principal dos coautores, então conta-se autoria ou coautoria de PL, PLC, PEC, PDL e PR pela data de entrada. As normas vêm da base de legislação da ALESP, que informa os autores do projeto que originou cada norma; o nome é casado com o cadastro de deputados. Normas de autoria do Governador, da Mesa ou de comissões não entram.</p>
+  <h3>Emendas parlamentares (Câmara)</h3>
+  <p>Emendas individuais ao Orçamento da União de cada deputado federal de SP, pelo Portal da Transparência (CGU): valores empenhados e efetivamente pagos, por ano do orçamento e área de destino. A emenda de um ano é apresentada no ano anterior, por isso conta para o partido em que o deputado estava em novembro do ano anterior. Valores nominais, sem correção. Emendas de bancada, de comissão e de relator não entram, porque não têm autoria individual.</p>
   <h3>Participação e presença</h3>
   <p><b>Câmara:</b> participação = votos registrados (inclusive abstenção e obstrução) ÷ votações nominais do Plenário ocorridas enquanto o deputado estava em exercício. Não é a lista oficial de faltas: votações simbólicas não entram, e ausências justificadas (missão oficial, licença médica) não são separadas porque esse dado não está nos arquivos abertos. O presidente da Câmara não vota e teria participação artificialmente baixa.</p>
   <p><b>ALESP:</b> os dados abertos trazem presença apenas nas reuniões de comissões permanentes, sem a composição histórica das comissões, por isso o painel mostra o número de presenças e não uma taxa de faltas. Presença em Plenário não é publicada em formato aberto.</p>
@@ -371,6 +379,7 @@ function renderMet(){
   <h3>Fontes</h3>
   <p>BRASIL. Câmara dos Deputados. <i>Dados Abertos da Câmara dos Deputados</i>. Brasília, DF, [${ANO1}]. Disponível em: <a href="https://dadosabertos.camara.leg.br/" target="_blank" rel="noopener">https://dadosabertos.camara.leg.br/</a>.</p>
   <p>SÃO PAULO (Estado). Assembleia Legislativa. <i>Portal de Dados Abertos da Alesp</i>. São Paulo, [${ANO1}]. Disponível em: <a href="https://www.al.sp.gov.br/dados-abertos/" target="_blank" rel="noopener">https://www.al.sp.gov.br/dados-abertos/</a>.</p>
+  <p>BRASIL. Controladoria-Geral da União. <i>Portal da Transparência: API de dados</i>. Brasília, DF, [${ANO1}]. Disponível em: <a href="https://portaldatransparencia.gov.br/api-de-dados" target="_blank" rel="noopener">https://portaldatransparencia.gov.br/api-de-dados</a>.</p>
   <p>BRASIL. Tribunal Superior Eleitoral. <i>Portal de Dados Abertos do TSE</i>. Brasília, DF, [${ANO1}]. Disponível em: <a href="https://dadosabertos.tse.jus.br/" target="_blank" rel="noopener">https://dadosabertos.tse.jus.br/</a>.</p>
   <p class="muted">Código da coleta: <a href="https://github.com/ErikSivieri/monitor-deputados-sp" target="_blank" rel="noopener">github.com/ErikSivieri/monitor-deputados-sp</a>. Projeto de estudo pessoal.</p></div>`;
 }
@@ -378,7 +387,7 @@ function renderMet(){
 /* -------------------------------------------------- perfil individual */
 function abrirPerfil(i){
   const h=H(); const p=h.parlamentares[i]; const t=p.tse||{}; const fed=S.casa==='federal';
-  const A=agregar(); const d=A.deps.find(x=>x.i===i)||{gasto:0,meses:new Set(),cat:new Map(),ano:new Map(),prop:0,co:0,normas:0,aprov:0,esp:0,reg:0,pres:0};
+  const A=agregar(); const d=A.deps.find(x=>x.i===i)||{gasto:0,meses:new Set(),cat:new Map(),ano:new Map(),func:new Map(),prop:0,co:0,normas:0,aprov:0,esp:0,reg:0,pres:0,emp:0,pago:0};
   const normas=h.normas.filter(n=>n[0]===i && noAno(Number(n[3])||0)).sort((a,b)=>(+b[3])-(+a[3]));
   const link=n=> fed?`https://www.camara.leg.br/propostas-legislativas/${n[6]}`:(String(n[6]).startsWith('http')?n[6]:`https://www.al.sp.gov.br/norma/${n[6]}`);
   const forn=(h.forn[i]||h.forn[String(i)]||[]);
@@ -405,6 +414,7 @@ function abrirPerfil(i){
      ${fed?`<div class="kpi"><div class="l">Participação</div><div class="v">${pct(d.esp?d.reg/d.esp:null)}</div><div class="h">${nf0.format(d.reg)} de ${nf0.format(d.esp)} votações</div></div>`:
        `<div class="kpi"><div class="l">Presenças em comissões</div><div class="v">${nf0.format(d.pres)}</div><div class="h">reuniões</div></div>`}
    </div>
+   ${fed&&h.emendas?`<div class="card"><h3>Emendas individuais</h3><div class="note">${brl.format(d.pago)} pagos de ${brl.format(d.emp)} empenhados no período, por área de destino (valor pago).</div><div class="chart" id="dFunc"></div></div>`:''}
    <div class="card"><h3>Gasto por ano</h3><div class="chart" id="dAno"></div></div>
    <div class="card"><h3>Gasto por categoria</h3><div class="chart" id="dCat"></div></div>
    <div class="card"><h3>Maiores fornecedores desde ${ANO0}</h3>${forn.length?`<div class="tbl"><table><thead><tr><th>Fornecedor</th><th title="CPFs de pessoas físicas aparecem mascarados">CNPJ/CPF</th><th class="n">Valor</th></tr></thead><tbody>${forn.map(f=>`<tr><td>${esc(f[0])}</td><td class="num">${esc(docMask(f[1]))}</td><td class="n">${brl2.format(f[2])}</td></tr>`).join('')}</tbody></table></div>`:'<div class="muted">Sem registros.</div>'}</div>
@@ -412,6 +422,7 @@ function abrirPerfil(i){
    </div>`;
   $('drawer').hidden=false; $('fechar').focus();
   $('fechar').onclick=fecharPerfil;
+  if($('dFunc')) barras($('dFunc'), [...d.func].map(([l,v])=>({l,v})).sort((a,b)=>b.v-a.v).slice(0,10), v=>fmtCurto(v), {labW:170});
   barras($('dAno'), [...d.ano].map(([a,v])=>({l:String(a),v})).sort((a,b)=>a.l-b.l), v=>fmtCurto(v), {labW:50});
   barras($('dCat'), [...d.cat].map(([c,v])=>({l:h.categorias[c],v})).sort((a,b)=>b.v-a.v).slice(0,10), v=>fmtCurto(v), {labW:200});
 }

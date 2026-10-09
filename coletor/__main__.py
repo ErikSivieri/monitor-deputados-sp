@@ -2,7 +2,7 @@
 import json
 import datetime as dt
 
-from . import alesp, camara, montar, tse
+from . import alesp, camara, montar, transparencia, tse
 from .util import DADOS, FORCAR, STATUS, log, registrar
 
 
@@ -17,7 +17,8 @@ def main():
     fed = None
     if cad:
         props = camara.proposicoes([d["id"] for d in cad["deputados"]])
-        fed = montar.federal(cad, desp, props, vots, cand)
+        emds = transparencia.emendas(cad["deputados"])
+        fed = montar.federal(cad, desp, props, vots, cand, emds)
 
     ecad = alesp.cadastro()
     edesp = alesp.despesas()
@@ -27,7 +28,7 @@ def main():
     est = montar.estadual(ecad, edesp, eprops, epres, cand, enormas)
 
     agora = dt.datetime.now(dt.timezone(dt.timedelta(hours=-3))).strftime("%Y-%m-%d %H:%M")
-    resumo = {k: {"ok": v.get("ok", True), "erro": v.get("erro")} for k, v in STATUS.items()}
+    resumo = {k: {"ok": v.get("ok", True), "erro": v.get("erro"), "aviso": v.get("aviso")} for k, v in STATUS.items()}
     painel = {"meta": {"geradoEm": agora, "inicio": 2015, "fontes": resumo,
                        "sucessoras": montar.SUCESSORAS},
               "federal": fed, "estadual": est}
@@ -39,6 +40,20 @@ def main():
     if (fed is None or falhou("camara") or falhou("tse")) and anterior.get("federal"):
         painel["federal"] = anterior["federal"]
         avisos.append("Câmara: mantidos os dados da coleta anterior (falha em alguma fonte hoje).")
+    # emendas falharam ou sem chave: aproveita as da coleta anterior, se houver
+    if painel.get("federal") and painel["federal"].get("emendas") is None and (anterior.get("federal") or {}).get("emendas"):
+        novo, velho = painel["federal"], anterior["federal"]
+        ids_novos = {p["id"]: i for i, p in enumerate(novo["parlamentares"])}
+        rows = []
+        for pi_, ano, part, f, *vals in velho["emendas"]:
+            did = velho["parlamentares"][pi_]["id"]
+            if did not in ids_novos:
+                continue
+            nome_p = velho["partidos"][part]
+            if nome_p not in novo["partidos"]:
+                novo["partidos"].append(nome_p)
+            rows.append([ids_novos[did], ano, novo["partidos"].index(nome_p), f, *vals])
+        novo["emendas"], novo["funcoes"] = rows, velho["funcoes"]
     if (falhou("alesp") or falhou("tse")) and anterior.get("estadual"):
         painel["estadual"] = anterior["estadual"]
         avisos.append("ALESP: mantidos os dados da coleta anterior (falha em alguma fonte hoje).")

@@ -49,7 +49,7 @@ def _perfil_tse(regs):
     }
 
 
-def federal(cad, desp, props, vots, tse):
+def federal(cad, desp, props, vots, tse, emendas=None):
     deps = cad["deputados"]
     fim_legs = {int(l["id"]): l.get("dataFim") or HOJE.isoformat() for l in cad["legislaturas"]}
     linhas = {d["id"]: Linha(d, fim_legs) for d in deps}
@@ -134,10 +134,18 @@ def federal(cad, desp, props, vots, tse):
                     vot[k][1] += 1 if presente else 0
     votl = [[*k, e, r] for k, (e, r) in vot.items()]
 
-    registrar("montagem_federal", parlamentares=len(parl), sem_tse=sem_tse[:30], n_sem_tse=len(sem_tse),
+    # emendas individuais: partido do autor em novembro do ano anterior, quando a emenda ao orçamento é apresentada
+    F = Indice()
+    em = []
+    for did, ano, func, emp, liq, pago, n in emendas or []:
+        if did in pi:
+            em.append([pi[did], ano, P(linhas[did].partido(f"{ano-1}-11-01")), F(func), emp, liq, pago, n])
+
+    registrar("montagem_federal", emendas=len(em), parlamentares=len(parl), sem_tse=sem_tse[:30], n_sem_tse=len(sem_tse),
               divergencia_partido_arquivo_cota=divergencias, linhas_despesa=len(dl))
     return {"parlamentares": parl, "partidos": P.lista, "categorias": C.lista, "tipos": T.lista,
-            "desp": dl, "forn": forn_top, "prop": prop, "normas": normas, "vot": votl}
+            "desp": dl, "forn": forn_top, "prop": prop, "normas": normas, "vot": votl,
+            "emendas": em if emendas is not None else None, "funcoes": F.lista}
 
 
 LEG_ESTADUAL = [("2011-03-15", 2010), ("2015-03-15", 2014), ("2019-03-15", 2018), ("2023-03-15", 2022), ("2027-03-15", 2026)]
