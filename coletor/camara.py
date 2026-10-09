@@ -140,17 +140,18 @@ def _despesas_ano(ano):
     c_part = col(df, "sgPartido")
     df = df.assign(v=df[c_val].map(num))
     df = df[pd.to_numeric(df[c_mes], errors="coerce").notna()]
-    # Lançamentos negativos (estornos, compensações de bilhetes e desconto de auxílio-moradia) ficam fora,
-    # para coincidir com o total de "Cota parlamentar" exibido no portal da Câmara.
-    negativos = float(df.loc[df["v"] < 0, "v"].sum())
-    df = df[df["v"] > 0]
+    # O portal da Câmara não abate da cota os descontos de complementação do auxílio-moradia (lançamentos
+    # negativos dessa categoria). Estornos de passagens continuam abatidos, como no portal.
+    moradia_neg = df[c_cat].fillna("").str.upper().str.contains("AUXÍLIO-MORADIA|AUXILIO-MORADIA") & (df["v"] < 0)
+    negativos = float(df.loc[moradia_neg, "v"].sum())
+    df = df[~moradia_neg]
     agg = df.groupby([c_id, c_mes, c_cat, c_part], dropna=False)["v"].agg(["sum", "count"]).reset_index()
     linhas = [[int(r[c_id]), ano, int(float(r[c_mes])), r[c_cat], r[c_part], round(float(r["sum"]), 2), int(r["count"])]
               for _, r in agg.iterrows()]
     fa = df.groupby([c_id, c_forn, c_cnpj], dropna=False)["v"].sum().reset_index()
     forn = [[int(r[c_id]), ano, str(r[c_forn])[:80], str(r[c_cnpj]), round(float(r["v"]), 2)]
             for _, r in fa.iterrows() if r["v"] > 0]
-    return {"linhas": linhas, "forn": forn, "colunas": list(df.columns)[:40], "negativos_excluidos": round(negativos, 2)}
+    return {"linhas": linhas, "forn": forn, "colunas": list(df.columns)[:40], "descontos_moradia_excluidos": round(negativos, 2)}
 
 
 @protegido("camara_despesas")
