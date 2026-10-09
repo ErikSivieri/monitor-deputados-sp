@@ -48,7 +48,7 @@
   "votacoes_nominais_plenario": 3912,
   "votos_sp": 216144,
   "ok": true,
-  "segundos": 10
+  "segundos": 9
  },
  "camara_deputados": {
   "total": 192,
@@ -89,7 +89,7 @@
    }
   ],
   "ok": true,
-  "segundos": 151
+  "segundos": 143
  },
  "camara_proposicoes": {
   "linhas": 127341,
@@ -196,7 +196,7 @@
    ]
   ],
   "ok": true,
-  "segundos": 18
+  "segundos": 13
  },
  "cgu_emendas": {
   "chaves_2015": [
@@ -610,7 +610,7 @@
   "linhas": 3759,
   "deputados_com_emendas": 140,
   "ok": true,
-  "segundos": 2275
+  "segundos": 2211
  },
  "montagem_federal": {
   "emendas": 3759,
@@ -718,7 +718,7 @@
   "deputados": 238,
   "sem_matricula": [],
   "ok": true,
-  "segundos": 41
+  "segundos": 56
  },
  "alesp_proposituras": {
   "proposituras": 149887,
@@ -946,18 +946,18 @@
    ]
   ],
   "ok": true,
-  "segundos": 62
+  "segundos": 59
  },
  "alesp_presencas": {
   "presencas": 16459,
   "exemplo": [
-   "Márcio Camargo",
-   "13092",
-   "1000000185",
-   "2016-11-23"
+   "Rita Passos",
+   "10621",
+   "13228",
+   "2015-11-17"
   ],
   "ok": true,
-  "segundos": 14
+  "segundos": 5
  },
  "alesp_normas": {
   "normas": 2462,
@@ -1092,7 +1092,7 @@
    }
   ],
   "ok": true,
-  "segundos": 55
+  "segundos": 37
  },
  "montagem_estadual": {
   "parlamentares": 244,
@@ -1291,7 +1291,7 @@
   "normas_casadas": 3785
  },
  "geral": {
-  "geradoEm": "2026-10-09 12:46",
+  "geradoEm": "2026-10-09 13:30",
   "tamanho_painel_mb": 6.91
  }
 }
