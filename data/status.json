@@ -42,7 +42,7 @@
   ],
   "linhas": 68594,
   "ok": true,
-  "segundos": 40
+  "segundos": 6
  },
  "camara_votacoes": {
   "votacoes_nominais_plenario": 3912,
@@ -89,7 +89,7 @@
    }
   ],
   "ok": true,
-  "segundos": 139
+  "segundos": 150
  },
  "camara_proposicoes": {
   "linhas": 127341,
@@ -196,7 +196,7 @@
    ]
   ],
   "ok": true,
-  "segundos": 36
+  "segundos": 14
  },
  "montagem_federal": {
   "parlamentares": 192,
@@ -303,7 +303,7 @@
   "deputados": 238,
   "sem_matricula": [],
   "ok": true,
-  "segundos": 91
+  "segundos": 62
  },
  "alesp_proposituras": {
   "proposituras": 149887,
@@ -531,18 +531,18 @@
    ]
   ],
   "ok": true,
-  "segundos": 70
+  "segundos": 52
  },
  "alesp_presencas": {
   "presencas": 16459,
   "exemplo": [
-   "Murilo Felix",
-   "1000000623",
-   "1000004051",
-   "2021-05-12"
+   "Celso Giglio",
+   "139",
+   "12693",
+   "2015-05-06"
   ],
   "ok": true,
-  "segundos": 6
+  "segundos": 11
  },
  "alesp_normas": {
   "normas": 2462,
@@ -677,7 +677,7 @@
    }
   ],
   "ok": true,
-  "segundos": 28
+  "segundos": 46
  },
  "montagem_estadual": {
   "parlamentares": 244,
@@ -876,7 +876,7 @@
   "normas_casadas": 3785
  },
  "geral": {
-  "geradoEm": "2026-10-09 11:33",
+  "geradoEm": "2026-10-09 11:40",
   "tamanho_painel_mb": 6.74
  }
 }
