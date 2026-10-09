@@ -5,6 +5,7 @@ Coleta diária de dados públicos sobre a bancada paulista na Câmara dos Deputa
 **Fontes**
 - Câmara dos Deputados: API e arquivos de Dados Abertos (cadastro, histórico de partido e exercício, cota parlamentar, proposições, votações nominais).
 - ALESP: Portal de Dados Abertos (deputados, despesas de gabinete, proposituras, autores, tramitação, presença em comissões).
+- CGU: Portal da Transparência (emendas parlamentares individuais; chave de acesso guardada no segredo `CGU_API_KEY`).
 - TSE: Portal de Dados Abertos (candidaturas e bens declarados de 2014, 2018 e 2022).
 
 **Como funciona**
