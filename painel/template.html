@@ -153,9 +153,12 @@ const brl2 = new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL',maxi
 const nf = new Intl.NumberFormat('pt-BR',{maximumFractionDigits:1});
 const nf0 = new Intl.NumberFormat('pt-BR',{maximumFractionDigits:0});
 const pct = v => v==null||isNaN(v) ? '–' : nf.format(v*100)+'%';
+const docMask = d => { const x=String(d||'').replace(/\D/g,''); return x.length===11 ? '***.'+x.slice(3,6)+'.'+x.slice(6,9)+'-**' : (d||''); };
 const esc = s => String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const $ = id => document.getElementById(id);
 const H = () => RAW[S.casa];
+const titulo = n => (n && n===n.toUpperCase()) ? n.toLowerCase().replace(/(^|[\s'-])(\p{L})/gu,(m,a,b)=>a+b.toUpperCase()).replace(/ (Da|De|Do|Das|Dos|E) /g,m=>m.toLowerCase()) : n;
+['federal','estadual'].forEach(c=>{ if(RAW[c]) RAW[c].parlamentares.forEach(p=>{p.nome=titulo(p.nome); if(p.nomeCivil) p.nomeCivil=titulo(p.nomeCivil)}) });
 
 function sucessora(p){let x=p, n=0; while(SUC[x] && n<6){x=SUC[x]; n++} return x}
 function pn(idx){let p = H().partidos[idx] || 'N/I'; if(p==='S.PART.') p='Sem partido'; return S.agrupar ? sucessora(p) : p}
@@ -259,7 +262,7 @@ function renderPartidos(A){
   el.innerHTML=`<div class="kpis">
     <div class="kpi"><div class="l">Parlamentares no recorte</div><div class="v">${nf0.format(nDeps)}</div><div class="h">${S.ini}–${S.fim}${S.partido?' · '+esc(S.partido):''}</div></div>
     <div class="kpi"><div class="l">${fed?'Cota parlamentar':'Verba de gabinete'}</div><div class="v">${fmtCurto(tot)}</div><div class="h">${brl.format(meses?tot/meses:0)} por parlamentar/mês</div></div>
-    <div class="kpi"><div class="l">${fed?'Proposições como 1º autor':'Proposituras (autoria ou coautoria)'}</div><div class="v">${nf0.format(props)}</div><div class="h">${nf0.format(normas)} viraram norma</div></div>
+    <div class="kpi"><div class="l">${fed?'Proposições como 1º autor':'Proposituras (autoria ou coautoria)'}</div><div class="v">${nf0.format(props)}</div><div class="h">${nf0.format(normas)} ${fed?'viraram norma':'normas com o deputado entre os autores'}</div></div>
     ${fed?`<div class="kpi"><div class="l">Participação em votações</div><div class="v">${pct(esp?reg/esp:null)}</div><div class="h">nominais do Plenário, em exercício</div></div>`:
     `<div class="kpi"><div class="l">Presenças em comissões</div><div class="v">${nf0.format(A.partidos.reduce((s,p)=>s+p.pres,0))}</div><div class="h">reuniões registradas</div></div>`}
   </div>
@@ -404,7 +407,7 @@ function abrirPerfil(i){
    </div>
    <div class="card"><h3>Gasto por ano</h3><div class="chart" id="dAno"></div></div>
    <div class="card"><h3>Gasto por categoria</h3><div class="chart" id="dCat"></div></div>
-   <div class="card"><h3>Maiores fornecedores desde ${ANO0}</h3>${forn.length?`<div class="tbl"><table><thead><tr><th>Fornecedor</th><th>CNPJ/CPF</th><th class="n">Valor</th></tr></thead><tbody>${forn.map(f=>`<tr><td>${esc(f[0])}</td><td class="num">${esc(f[1])}</td><td class="n">${brl2.format(f[2])}</td></tr>`).join('')}</tbody></table></div>`:'<div class="muted">Sem registros.</div>'}</div>
+   <div class="card"><h3>Maiores fornecedores desde ${ANO0}</h3>${forn.length?`<div class="tbl"><table><thead><tr><th>Fornecedor</th><th title="CPFs de pessoas físicas aparecem mascarados">CNPJ/CPF</th><th class="n">Valor</th></tr></thead><tbody>${forn.map(f=>`<tr><td>${esc(f[0])}</td><td class="num">${esc(docMask(f[1]))}</td><td class="n">${brl2.format(f[2])}</td></tr>`).join('')}</tbody></table></div>`:'<div class="muted">Sem registros.</div>'}</div>
    <div class="card"><h3>${fed?'Proposições que viraram norma ou foram aprovadas na Câmara':'Normas de autoria do deputado (base de legislação da ALESP)'}</h3>${normas.length?`<ul class="normas">${normas.map(n=>`<li><b><a href="${link(n)}" target="_blank" rel="noopener">${esc(n[1])} ${esc(n[2])}/${esc(n[3])}</a></b> ${n[4]==='aprovada_camara'?'<span class="pill">aprovada na Câmara</span>':'<span class="pill on">norma</span>'} ${n[7]?'':(fed?'<span class="pill">coautoria</span>':'<span class="pill">coautor</span>')}<br>${esc(n[5])}</li>`).join('')}</ul>`:'<div class="muted">Nenhuma no período.</div>'}</div>
    </div>`;
   $('drawer').hidden=false; $('fechar').focus();
