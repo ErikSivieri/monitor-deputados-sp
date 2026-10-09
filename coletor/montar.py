@@ -141,7 +141,9 @@ def federal(cad, desp, props, vots, tse):
 
 
 LEG_ESTADUAL = [("2011-03-15", 2010), ("2015-03-15", 2014), ("2019-03-15", 2018), ("2023-03-15", 2022), ("2027-03-15", 2026)]
-PREFIXOS = {"DEPUTADO", "DEPUTADA", "DEP", "DR", "DRA"}
+PREFIXOS = {"DEPUTADO", "DEPUTADA", "DEP"}
+SINONIMOS = {"PROFA": "PROF", "PROFESSOR": "PROF", "PROFESSORA": "PROF", "DOUTOR": "DR", "DOUTORA": "DR", "DRA": "DR",
+             "DELEGADA": "DELEGADO", "DEL": "DELEGADO", "CEL": "CORONEL", "TEN": "TENENTE", "SGT": "SARGENTO"}
 
 
 def _eleicao_da_data(data):
@@ -153,7 +155,8 @@ def _eleicao_da_data(data):
 
 
 def _tokens(nome):
-    return frozenset(t for t in norm(nome).split() if len(t) > 1 and t not in PREFIXOS and t not in {"DA", "DE", "DO", "DOS", "DAS", "E"})
+    return frozenset(SINONIMOS.get(t, t) for t in norm(nome).split()
+                     if len(t) > 1 and t not in PREFIXOS and t not in {"DA", "DE", "DO", "DOS", "DAS", "E"})
 
 
 class Nomes:
@@ -193,8 +196,14 @@ def _match_tse(variantes, regs_e):
             exatos = []
             for r in regs:
                 tu, tn = _tokens(r["urna"]), _tokens(r["nome"])
-                if any((len(tu) >= 2 and tu <= t) or (len(t) >= 2 and t <= tn) for t in toks):
-                    exatos.append(r)
+                for t in toks:
+                    if (len(tu) >= 2 and tu <= t) or (len(t) >= 2 and (t <= tn or t <= tu)):
+                        exatos.append(r)
+                        break
+                    # nome de urna de uma palavra (ex.: "BARBA"): exige outra palavra em comum com o nome civil
+                    if len(tu) == 1 and tu <= t and (t - tu) & tn and "ELEITO" in (r["situacao"] or "").upper():
+                        exatos.append(r)
+                        break
         if not exatos:
             continue
         eleitos = [r for r in exatos if "ELEITO" in (r["situacao"] or "").upper()]

@@ -181,13 +181,13 @@ def _proposicoes_ano(ano, ids):
     p = baixar(f"{ARQ}/proposicoes/csv/proposicoes-{ano}.csv")
     if a is None or p is None:
         return None
-    au = ler_csv(a)
+    au = ler_csv(a).fillna("")
     c_dep = col(au, "idDeputadoAutor")
     au = au[au[c_dep].isin({str(i) for i in ids})]
     c_prop = col(au, "idProposicao")
     c_ord = col(au, "ordemAssinatura")
     c_prop2 = col(au, "proponente")
-    pr = ler_csv(p)
+    pr = ler_csv(p).fillna("")
     c_id = col(pr, "id")
     pr = pr[pr[c_id].isin(set(au[c_prop]))]
     situacoes = {}

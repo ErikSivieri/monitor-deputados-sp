@@ -167,15 +167,20 @@ def presencas():
 @protegido("alesp_normas")
 def normas():
     tipos = {}
+    ex_tipo = None
     f = _xml(f"{BASE}/legislacao/legislacao_tipo_normas.xml")
     if f is not None:
         for r in registros(f, ["idtipo", "id"]):
+            ex_tipo = ex_tipo or r
             k = r.get("idtipo") or r.get("id")
             tipos[k] = r.get("sigla") or r.get("nome") or r.get("descricao") or r.get("nmtipo") or r.get("sgtipo") or k
     saida = []
     amb = collections.Counter()
     f = _xml(f"{BASE}/legislacao/legislacao_normas.xml")
+    ex_norma = []
     for r in registros(f, ["idnorma", "autores"]):
+        if len(ex_norma) < 3:
+            ex_norma.append(r)
         try:
             ano = int(r.get("ano") or 0)
         except ValueError:
@@ -188,5 +193,5 @@ def normas():
                       "ementa": (r.get("ementa") or "")[:400], "url": r.get("urlficha"), "situacao": r.get("situacao")})
     registrar("alesp_normas", normas=len(saida), tipos=dict(list(tipos.items())[:40]),
               ambito_promulg=[[list(k), v] for k, v in amb.most_common(10)],
-              exemplo=saida[:3])
+              exemplo=saida[:3], registro_bruto_tipo=ex_tipo, registros_brutos=ex_norma)
     return saida
