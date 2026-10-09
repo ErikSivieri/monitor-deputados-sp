@@ -2,7 +2,7 @@
  "tse": {
   "registros": 12805,
   "ok": true,
-  "segundos": 6
+  "segundos": 0
  },
  "camara_despesas": {
   "colunas": [
@@ -42,13 +42,13 @@
   ],
   "linhas": 69746,
   "ok": true,
-  "segundos": 31
+  "segundos": 6
  },
  "camara_votacoes": {
   "votacoes_nominais_plenario": 3912,
   "votos_sp": 216144,
   "ok": true,
-  "segundos": 37
+  "segundos": 9
  },
  "camara_deputados": {
   "total": 192,
@@ -89,13 +89,114 @@
    }
   ],
   "ok": true,
-  "segundos": 144
+  "segundos": 152
  },
  "camara_proposicoes": {
-  "ok": false,
-  "erro": "AttributeError: 'float' object has no attribute 'lower'",
-  "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 48, in inner\n    r = func(*a, **kw)\n        ^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/camara.py\", line 216, in proposicoes\n    r = com_cache(\"camara_proposicoes\", ano, lambda a: _proposicoes_ano(a, ids))\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 156, in com_cache\n    r = func(ano)\n        ^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/camara.py\", line 216, in <lambda>\n    r = com_cache(\"camara_proposicoes\", ano, lambda a: _proposicoes_ano(a, ids))\n                                                       ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/camara.py\", line 199, in _proposicoes_ano\n    \"data\": (r.get(\"dataApresentacao\") or \"\")[:10], \"sit\": _situacao(sit),\n                                                           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/camara.py\", line 169, in _situacao\n    d = (desc or \"\").lower()\n        ^^^^^^^^^^^^^^^^^^\nAttributeError: 'float' object has no attribute 'lower'\n",
-  "segundos": 3
+  "linhas": 127341,
+  "situacoes_mais_comuns": [
+   [
+    "",
+    46204
+   ],
+   [
+    "Arquivada",
+    14234
+   ],
+   [
+    "Tramitação Finalizada",
+    4784
+   ],
+   [
+    "Aguardando Providências Internas",
+    4049
+   ],
+   [
+    "Tramitando em Conjunto",
+    3276
+   ],
+   [
+    "Aguardando Designação de Relator(a)",
+    1900
+   ],
+   [
+    "Pronta para Pauta",
+    1345
+   ],
+   [
+    "Aguardando Remessa ao Arquivo",
+    1334
+   ],
+   [
+    "Aguardando Despacho do Presidente da Câmara dos Deputados",
+    1323
+   ],
+   [
+    "Aguardando Parecer",
+    881
+   ],
+   [
+    "Devolvida ao(à) Autor(a)",
+    425
+   ],
+   [
+    "Retirado pelo(a) Autor(a)",
+    400
+   ],
+   [
+    "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
+    339
+   ],
+   [
+    "Transformado em Norma Jurídica",
+    221
+   ],
+   [
+    "Aguardando Encaminhamento",
+    212
+   ],
+   [
+    "Aguardando Resposta",
+    197
+   ],
+   [
+    "Aguardando Apreciação pelo Senado Federal",
+    194
+   ],
+   [
+    "Aguardando Autorização do Despacho",
+    133
+   ],
+   [
+    "Aguardando Designação - Aguardando Devolução de Relator(a) que deixou de ser Membro",
+    131
+   ],
+   [
+    "Aguardando Despacho do Presidente da Câmara dos Deputados (Análise)",
+    117
+   ],
+   [
+    "Aguardando Despacho do Presidente da Câmara dos Deputados (Autorização)",
+    59
+   ],
+   [
+    "Aguardando Deliberação",
+    54
+   ],
+   [
+    "Aguardando Criação de Comissão Temporária",
+    34
+   ],
+   [
+    "Aguardando Deliberação de Recurso",
+    30
+   ],
+   [
+    "Aguardando Definição Encaminhamento",
+    13
+   ]
+  ],
+  "ok": true,
+  "segundos": 49
  },
  "montagem_federal": {
   "parlamentares": 192,
@@ -120,89 +221,89 @@
    "aniversario": "26/08"
   },
   "ok": true,
-  "segundos": 3
+  "segundos": 4
  },
  "alesp_despesas": {
-  "registros": 112651,
-  "linhas": 47037,
+  "registros": 249563,
+  "linhas": 100765,
   "tipos": [
    [
     "A - COMBUSTÍVEIS E LUBRIFICANTES",
-    26498
+    61416
    ],
    [
     "I - HOSPEDAGEM, ALIMENTAÇÃO E DESPESAS DE LOCOMOÇÃO",
-    16599
+    39211
    ],
    [
     "H - SERV.UTIL.PÚBLICA (TELEF.MÓVEL/FIXA, ENERGIA, ÁGUA, GÁS ETC)",
-    13479
+    28177
    ],
    [
     "E - MATERIAIS DE ESCRITÓRIO E OUTROS MATERIAIS DE CONSUMO",
-    10545
+    22494
    ],
    [
     "G - ASSINATURAS DE PERIÓDICOS, PUBLICAÇÕES, INTERNET E SOFTWARES",
-    8159
-   ],
-   [
-    "K - LOCAÇÃO DE BENS MÓVEIS",
-    7834
+    18708
    ],
    [
     "M - MANUTENÇÃO DE BENS MÓVEIS, IMÓVEIS, CONDOMÍNIOS E OUTROS",
-    7286
+    15591
+   ],
+   [
+    "K - LOCAÇÃO DE BENS MÓVEIS",
+    15411
    ],
    [
     "L - LOCAÇÃO DE BENS IMÓVEIS",
-    6114
+    12700
    ],
    [
     "D - MATERIAIS E SERVIÇOS GRÁFICOS, DE CÓPIAS E REPRODUÇÃO DE DOCS",
-    3756
+    7947
    ],
    [
     "F - SERVIÇOS TÉCNICOS PROFISSIONAIS (CONSULTORIA, PESQUISAS ETC)",
-    2637
-   ],
-   [
-    "C - MATERIAIS E SERVIÇOS DE MANUT E CONSERV DE VEÍCULOS ; PEDÁGIOS",
-    2482
+    5702
    ],
    [
     "O - LOCAÇÃO DE VEÍCULO DE REPRESENTAÇÃO",
-    2392
+    5298
+   ],
+   [
+    "C - MATERIAIS E SERVIÇOS DE MANUT E CONSERV DE VEÍCULOS ; PEDÁGIOS",
+    5169
    ],
    [
     "J - SERVIÇOS DE COMUNICAÇÃO",
-    1688
+    4538
    ],
    [
     "P - DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR",
-    1542
+    3594
    ],
    [
     "N - MORADIA",
-    1203
+    2808
    ],
    [
     "B - PEDÁGIOS",
-    306
+    587
    ],
    [
     "Q - LOCAÇÃO DE VEÍCULO DE APOIO",
-    128
+    206
    ],
    [
     "C - MATERIAIS E SERVIÇOS DE MANUT E CONSERV DE VEÍCULOS",
-    3
+    6
    ]
   ],
-  "deputados": 116,
+  "deputados": 238,
   "sem_matricula": [],
   "ok": true,
-  "segundos": 44
+  "segundos": 73
  },
  "alesp_proposituras": {
   "proposituras": 149887,
@@ -430,18 +531,18 @@
    ]
   ],
   "ok": true,
-  "segundos": 60
+  "segundos": 47
  },
  "alesp_presencas": {
   "presencas": 16459,
   "exemplo": [
-   "Heni Ozi Cukier",
-   "1000000337",
-   "1000004129",
-   "2021-06-17"
+   "Marina Helou",
+   "1000000349",
+   "1000002562",
+   "2019-06-25"
   ],
   "ok": true,
-  "segundos": 11
+  "segundos": 9
  },
  "alesp_normas": {
   "normas": 0,
@@ -492,23 +593,66 @@
    ]
   ],
   "exemplo": [],
+  "registro_bruto_tipo": {
+   "idtipo": "9",
+   "dstipo": "Lei"
+  },
+  "registros_brutos": [
+   {
+    "data": "2021-03-31T00:00:00-03:00",
+    "ementa": "Autoriza o Poder Executivo a construir o Hospital Veterinário Público Metropolitano no Município de Ribeirão Preto, destinado aos animais domésticos de famílias comprovadamente de baixa renda",
+    "idnorma": "197700",
+    "idtema": "356",
+    "autores": "Léo Oliveira",
+    "caddo": "DOE-I",
+    "datado": "2023-05-05 16:38:29",
+    "numero": "17349",
+    "pagdo": "1",
+    "idtipo": "9",
+    "promulg": "E",
+    "situacao": "1",
+    "urlficha": "http://www.al.sp.gov.br/norma/197700"
+   },
+   {
+    "data": "2021-04-16T00:00:00-03:00",
+    "ementa": "Autoriza a Fazenda do Estado a permitir o uso, a título precário e gratuito e por prazo indeterminado, em favor do Município de Franco da Rocha, do imóvel que especifica, e dá providências correlatas",
+    "idnorma": "197883",
+    "idtema": "353",
+    "caddo": "DOE-I",
+    "datado": "2023-05-05 16:38:29",
+    "numero": "65637",
+    "pagdo": "1",
+    "idtipo": "3",
+    "promulg": "E",
+    "situacao": "1",
+    "urlficha": "http://www.al.sp.gov.br/norma/197883"
+   },
+   {
+    "data": "2021-04-16T00:00:00-03:00",
+    "ementa": "Autoriza a Fazenda do Estado a receber, mediante doação, sem ônus ou encargos, do Município de Mauá, o imóvel que especifica",
+    "idnorma": "197885",
+    "idtema": "353",
+    "caddo": "DOE-I",
+    "datado": "2023-05-05 16:38:29",
+    "numero": "65639",
+    "pagdo": "3",
+    "idtipo": "3",
+    "promulg": "E",
+    "situacao": "1",
+    "urlficha": "http://www.al.sp.gov.br/norma/197885"
+   }
+  ],
   "ok": true,
-  "segundos": 69
+  "segundos": 46
  },
  "montagem_estadual": {
-  "parlamentares": 235,
-  "n_sem_tse": 11,
+  "parlamentares": 244,
+  "n_sem_tse": 5,
   "sem_tse": [
-   "Celino Cardoso",
-   "Doutor Ulysses",
+   "Heroilma Soares",
    "Francisco Campos Tito",
    "Cezinha De Madureira",
-   "Teonilio Barba",
-   "Erica Malunguinho",
    "Fabiana Bolsonaro",
-   "Profª Camila Godoi",
-   "Heroilma Soares Tavares",
-   "Professor Auriel",
    "Ricardo Trípoli"
   ],
   "autores_nao_casados": [
@@ -577,19 +721,7 @@
     7
    ],
    [
-    "Marco Aurélio de Souza",
-    6
-   ],
-   [
-    "Ulisses Sales",
-    6
-   ],
-   [
     "Comissão de Infraestrutura",
-    6
-   ],
-   [
-    "Major Mauro",
     6
    ],
    [
@@ -611,13 +743,25 @@
    [
     "Coronel Helena",
     4
+   ],
+   [
+    "CPI - Violência Sexual Contra Estudantes de Ensino Superior",
+    3
+   ],
+   [
+    "Conselho de Ética e Decoro Parlamentar",
+    3
+   ],
+   [
+    "CPI Violações dos Direitos Humanos nas Faculdades Paulistas",
+    2
    ]
   ],
   "normas_autores_nao_casados": [],
   "normas_casadas": 0
  },
  "geral": {
-  "geradoEm": "2026-10-09 11:02",
-  "tamanho_painel_mb": 4.01
+  "geradoEm": "2026-10-09 11:11",
+  "tamanho_painel_mb": 6.03
  }
 }
