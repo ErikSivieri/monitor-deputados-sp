@@ -42,13 +42,13 @@
   ],
   "linhas": 68712,
   "ok": true,
-  "segundos": 6
+  "segundos": 8
  },
  "camara_votacoes": {
   "votacoes_nominais_plenario": 3912,
   "votos_sp": 216144,
   "ok": true,
-  "segundos": 9
+  "segundos": 11
  },
  "camara_deputados": {
   "total": 192,
@@ -89,7 +89,7 @@
    }
   ],
   "ok": true,
-  "segundos": 153
+  "segundos": 167
  },
  "camara_proposicoes": {
   "linhas": 127343,
@@ -196,7 +196,7 @@
    ]
   ],
   "ok": true,
-  "segundos": 36
+  "segundos": 16
  },
  "cgu_emendas": {
   "chaves_2025": [
@@ -270,7 +270,7 @@
   "linhas": 3761,
   "deputados_com_emendas": 140,
   "ok": true,
-  "segundos": 430
+  "segundos": 426
  },
  "montagem_federal": {
   "emendas": 3761,
@@ -296,7 +296,7 @@
    "aniversario": "26/08"
   },
   "ok": true,
-  "segundos": 4
+  "segundos": 5
  },
  "alesp_despesas": {
   "registros": 249563,
@@ -378,7 +378,7 @@
   "deputados": 238,
   "sem_matricula": [],
   "ok": true,
-  "segundos": 78
+  "segundos": 49
  },
  "alesp_proposituras": {
   "proposituras": 149887,
@@ -449,7 +449,7 @@
      "Publicacao",
      "E"
     ],
-    22456
+    22437
    ],
    [
     [
@@ -463,14 +463,14 @@
      "Não Identificada",
      "E"
     ],
-    1707
+    1706
    ],
    [
     [
      "Comissao",
      "S"
     ],
-    1423
+    1419
    ],
    [
     [
@@ -505,7 +505,7 @@
      "Distribuicao",
      "S"
     ],
-    40
+    39
    ],
    [
     [
@@ -606,18 +606,18 @@
    ]
   ],
   "ok": true,
-  "segundos": 53
+  "segundos": 79
  },
  "alesp_presencas": {
   "presencas": 16459,
   "exemplo": [
-   "Wellington Moura",
-   "13098",
-   "1000001095",
-   "2017-12-20"
+   "Caio França",
+   "13080",
+   "1000002369",
+   "2019-05-15"
   ],
   "ok": true,
-  "segundos": 6
+  "segundos": 9
  },
  "alesp_normas": {
   "normas": 2462,
@@ -752,7 +752,7 @@
    }
   ],
   "ok": true,
-  "segundos": 37
+  "segundos": 47
  },
  "montagem_estadual": {
   "parlamentares": 244,
@@ -951,7 +951,7 @@
   "normas_casadas": 3785
  },
  "geral": {
-  "geradoEm": "2026-10-12 06:24",
+  "geradoEm": "2026-10-13 06:24",
   "tamanho_painel_mb": 7.02
  }
 }
