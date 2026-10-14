@@ -40,15 +40,15 @@
    "urlDocumento",
    "v"
   ],
-  "linhas": 68712,
+  "linhas": 68726,
   "ok": true,
-  "segundos": 8
+  "segundos": 7
  },
  "camara_votacoes": {
   "votacoes_nominais_plenario": 3912,
   "votos_sp": 216144,
   "ok": true,
-  "segundos": 11
+  "segundos": 10
  },
  "camara_deputados": {
   "total": 192,
@@ -89,14 +89,14 @@
    }
   ],
   "ok": true,
-  "segundos": 167
+  "segundos": 148
  },
  "camara_proposicoes": {
-  "linhas": 127343,
+  "linhas": 127351,
   "situacoes_mais_comuns": [
    [
     "",
-    46207
+    46206
    ],
    [
     "Arquivada",
@@ -104,7 +104,7 @@
    ],
    [
     "Tramitação Finalizada",
-    4784
+    4788
    ],
    [
     "Aguardando Providências Internas",
@@ -112,27 +112,27 @@
    ],
    [
     "Tramitando em Conjunto",
-    3276
+    3277
    ],
    [
     "Aguardando Designação de Relator(a)",
-    1900
-   ],
-   [
-    "Pronta para Pauta",
-    1340
+    1902
    ],
    [
     "Aguardando Remessa ao Arquivo",
+    1335
+   ],
+   [
+    "Pronta para Pauta",
     1334
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados",
-    1321
+    1326
    ],
    [
     "Aguardando Parecer",
-    880
+    879
    ],
    [
     "Devolvida ao(à) Autor(a)",
@@ -144,7 +144,7 @@
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
-    339
+    338
    ],
    [
     "Transformado em Norma Jurídica",
@@ -152,11 +152,11 @@
    ],
    [
     "Aguardando Encaminhamento",
-    212
+    215
    ],
    [
     "Aguardando Resposta",
-    197
+    196
    ],
    [
     "Aguardando Apreciação pelo Senado Federal",
@@ -176,7 +176,7 @@
    ],
    [
     "Aguardando Deliberação",
-    60
+    62
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Autorização)",
@@ -196,7 +196,7 @@
    ]
   ],
   "ok": true,
-  "segundos": 16
+  "segundos": 14
  },
  "cgu_emendas": {
   "chaves_2025": [
@@ -270,7 +270,7 @@
   "linhas": 3761,
   "deputados_com_emendas": 140,
   "ok": true,
-  "segundos": 426
+  "segundos": 345
  },
  "montagem_federal": {
   "emendas": 3761,
@@ -281,7 +281,7 @@
   ],
   "n_sem_tse": 2,
   "divergencia_partido_arquivo_cota": 15825,
-  "linhas_despesa": 68712
+  "linhas_despesa": 68726
  },
  "alesp_cadastro": {
   "deputados": 94,
@@ -296,7 +296,7 @@
    "aniversario": "26/08"
   },
   "ok": true,
-  "segundos": 5
+  "segundos": 3
  },
  "alesp_despesas": {
   "registros": 249563,
@@ -378,7 +378,7 @@
   "deputados": 238,
   "sem_matricula": [],
   "ok": true,
-  "segundos": 49
+  "segundos": 40
  },
  "alesp_proposituras": {
   "proposituras": 149887,
@@ -449,7 +449,7 @@
      "Publicacao",
      "E"
     ],
-    22437
+    22245
    ],
    [
     [
@@ -463,14 +463,14 @@
      "Não Identificada",
      "E"
     ],
-    1706
+    1701
    ],
    [
     [
      "Comissao",
      "S"
     ],
-    1419
+    1417
    ],
    [
     [
@@ -606,18 +606,18 @@
    ]
   ],
   "ok": true,
-  "segundos": 79
+  "segundos": 58
  },
  "alesp_presencas": {
   "presencas": 16459,
   "exemplo": [
-   "Caio França",
-   "13080",
-   "1000002369",
-   "2019-05-15"
+   "Paulo Mansur",
+   "1000000993",
+   "1000005678",
+   "2023-09-13"
   ],
   "ok": true,
-  "segundos": 9
+  "segundos": 7
  },
  "alesp_normas": {
   "normas": 2462,
@@ -752,7 +752,7 @@
    }
   ],
   "ok": true,
-  "segundos": 47
+  "segundos": 24
  },
  "montagem_estadual": {
   "parlamentares": 244,
@@ -951,7 +951,7 @@
   "normas_casadas": 3785
  },
  "geral": {
-  "geradoEm": "2026-10-13 06:24",
+  "geradoEm": "2026-10-14 06:33",
   "tamanho_painel_mb": 7.02
  }
 }
