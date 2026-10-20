@@ -40,7 +40,7 @@
    "urlDocumento",
    "v"
   ],
-  "linhas": 68777,
+  "linhas": 68786,
   "ok": true,
   "segundos": 7
  },
@@ -89,14 +89,14 @@
    }
   ],
   "ok": true,
-  "segundos": 154
+  "segundos": 186
  },
  "camara_proposicoes": {
-  "linhas": 127386,
+  "linhas": 127391,
   "situacoes_mais_comuns": [
    [
     "",
-    46218
+    46217
    ],
    [
     "Arquivada",
@@ -120,7 +120,7 @@
    ],
    [
     "Pronta para Pauta",
-    1338
+    1341
    ],
    [
     "Aguardando Remessa ao Arquivo",
@@ -128,11 +128,11 @@
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados",
-    1328
+    1334
    ],
    [
     "Aguardando Parecer",
-    876
+    875
    ],
    [
     "Devolvida ao(à) Autor(a)",
@@ -152,7 +152,7 @@
    ],
    [
     "Aguardando Encaminhamento",
-    216
+    214
    ],
    [
     "Aguardando Resposta",
@@ -196,7 +196,7 @@
    ]
   ],
   "ok": true,
-  "segundos": 16
+  "segundos": 15
  },
  "cgu_emendas": {
   "chaves_2025": [
@@ -270,7 +270,7 @@
   "linhas": 3761,
   "deputados_com_emendas": 140,
   "ok": true,
-  "segundos": 359
+  "segundos": 384
  },
  "montagem_federal": {
   "emendas": 3761,
@@ -281,7 +281,7 @@
   ],
   "n_sem_tse": 2,
   "divergencia_partido_arquivo_cota": 15825,
-  "linhas_despesa": 68777
+  "linhas_despesa": 68786
  },
  "alesp_cadastro": {
   "deputados": 94,
@@ -296,13 +296,89 @@
    "aniversario": "26/08"
   },
   "ok": true,
-  "segundos": 3
+  "segundos": 2
  },
  "alesp_despesas": {
-  "ok": false,
-  "erro": "RuntimeError: alesp_despesas: 154921 registros contra 249563 na última coleta; possível arquivo incompleto",
-  "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 48, in inner\n    r = func(*a, **kw)\n        ^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 87, in despesas\n    conferir(\"alesp_despesas\", n)\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 195, in conferir\n    raise RuntimeError(f\"{nome}: {n} registros contra {antes} na última coleta; possível arquivo incompleto\")\nRuntimeError: alesp_despesas: 154921 registros contra 249563 na última coleta; possível arquivo incompleto\n",
-  "segundos": 16
+  "registros": 249563,
+  "linhas": 100765,
+  "tipos": [
+   [
+    "A - COMBUSTÍVEIS E LUBRIFICANTES",
+    61416
+   ],
+   [
+    "I - HOSPEDAGEM, ALIMENTAÇÃO E DESPESAS DE LOCOMOÇÃO",
+    39211
+   ],
+   [
+    "H - SERV.UTIL.PÚBLICA (TELEF.MÓVEL/FIXA, ENERGIA, ÁGUA, GÁS ETC)",
+    28177
+   ],
+   [
+    "E - MATERIAIS DE ESCRITÓRIO E OUTROS MATERIAIS DE CONSUMO",
+    22494
+   ],
+   [
+    "G - ASSINATURAS DE PERIÓDICOS, PUBLICAÇÕES, INTERNET E SOFTWARES",
+    18708
+   ],
+   [
+    "M - MANUTENÇÃO DE BENS MÓVEIS, IMÓVEIS, CONDOMÍNIOS E OUTROS",
+    15591
+   ],
+   [
+    "K - LOCAÇÃO DE BENS MÓVEIS",
+    15411
+   ],
+   [
+    "L - LOCAÇÃO DE BENS IMÓVEIS",
+    12700
+   ],
+   [
+    "D - MATERIAIS E SERVIÇOS GRÁFICOS, DE CÓPIAS E REPRODUÇÃO DE DOCS",
+    7947
+   ],
+   [
+    "F - SERVIÇOS TÉCNICOS PROFISSIONAIS (CONSULTORIA, PESQUISAS ETC)",
+    5702
+   ],
+   [
+    "O - LOCAÇÃO DE VEÍCULO DE REPRESENTAÇÃO",
+    5298
+   ],
+   [
+    "C - MATERIAIS E SERVIÇOS DE MANUT E CONSERV DE VEÍCULOS ; PEDÁGIOS",
+    5169
+   ],
+   [
+    "J - SERVIÇOS DE COMUNICAÇÃO",
+    4538
+   ],
+   [
+    "P - DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR",
+    3594
+   ],
+   [
+    "N - MORADIA",
+    2808
+   ],
+   [
+    "B - PEDÁGIOS",
+    587
+   ],
+   [
+    "Q - LOCAÇÃO DE VEÍCULO DE APOIO",
+    206
+   ],
+   [
+    "C - MATERIAIS E SERVIÇOS DE MANUT E CONSERV DE VEÍCULOS",
+    6
+   ]
+  ],
+  "deputados": 238,
+  "sem_matricula": [],
+  "ok": true,
+  "segundos": 38
  },
  "alesp_proposituras": {
   "proposituras": 149887,
@@ -373,21 +449,21 @@
      "Publicacao",
      "E"
     ],
-    21965
+    21917
    ],
    [
     [
      "Comissao",
      "E"
     ],
-    1816
+    1810
    ],
    [
     [
      "Não Identificada",
      "E"
     ],
-    1687
+    1685
    ],
    [
     [
@@ -429,7 +505,7 @@
      "Distribuicao",
      "S"
     ],
-    39
+    40
    ],
    [
     [
@@ -530,18 +606,18 @@
    ]
   ],
   "ok": true,
-  "segundos": 61
+  "segundos": 66
  },
  "alesp_presencas": {
   "presencas": 16459,
   "exemplo": [
-   "Roberto Morais",
-   "232",
-   "1000004283",
-   "2021-09-14"
+   "Hélio Nishimoto",
+   "11155",
+   "12640",
+   "2015-03-11"
   ],
   "ok": true,
-  "segundos": 7
+  "segundos": 6
  },
  "alesp_normas": {
   "normas": 2462,
@@ -676,16 +752,16 @@
    }
   ],
   "ok": true,
-  "segundos": 24
+  "segundos": 22
  },
  "montagem_estadual": {
-  "parlamentares": 222,
+  "parlamentares": 244,
   "n_sem_tse": 5,
   "sem_tse": [
-   "Fabiana Bolsonaro",
-   "Cezinha de Madureira",
+   "Heroilma Soares",
    "Francisco Campos Tito",
-   "Heroilma Soares Tavares",
+   "Cezinha De Madureira",
+   "Fabiana Bolsonaro",
    "Ricardo Trípoli"
   ],
   "autores_nao_casados": [
@@ -696,10 +772,6 @@
    [
     "Mesa Diretora",
     241
-   ],
-   [
-    "Angelo Perugini",
-    82
    ],
    [
     "Tribunal de Justiça",
@@ -722,16 +794,8 @@
     20
    ],
    [
-    "Dr. Itamar",
-    20
-   ],
-   [
     "Tenente Carmelidia",
     20
-   ],
-   [
-    "Daniela Braga",
-    19
    ],
    [
     "Comissão de Educação e Cultura",
@@ -750,10 +814,6 @@
     13
    ],
    [
-    "Dr. Raul",
-    11
-   ],
-   [
     "CPI Trabalho Escravo",
     10
    ],
@@ -770,24 +830,40 @@
     7
    ],
    [
-    "Marco Aurélio de Souza",
-    6
-   ],
-   [
-    "Ulisses Sales",
-    6
-   ],
-   [
     "Comissão de Infraestrutura",
     6
    ],
    [
-    "Major Mauro",
-    6
+    "Uebe Rezeck",
+    5
    ],
    [
-    "Alexandre da Farmácia",
+    "Comissão de Segurança Pública e Assuntos Penitenciários",
     5
+   ],
+   [
+    "Comissão de Administração Pública e Relações do Trabalho",
+    5
+   ],
+   [
+    "CPI Obesidade Infantil",
+    4
+   ],
+   [
+    "Coronel Helena",
+    4
+   ],
+   [
+    "CPI - Violência Sexual Contra Estudantes de Ensino Superior",
+    3
+   ],
+   [
+    "Conselho de Ética e Decoro Parlamentar",
+    3
+   ],
+   [
+    "CPI Violações dos Direitos Humanos nas Faculdades Paulistas",
+    2
    ]
   ],
   "normas_autores_nao_casados": [
@@ -798,10 +874,6 @@
    [
     "Mesa",
     61
-   ],
-   [
-    "Afonso Lobato",
-    43
    ],
    [
     "Tribunal de Justiça",
@@ -840,10 +912,6 @@
     7
    ],
    [
-    "Bruno Covas",
-    5
-   ],
-   [
     "outros",
     5
    ],
@@ -852,50 +920,38 @@
     4
    ],
    [
-    "Marco Aurélio de Souza",
-    4
-   ],
-   [
-    "Alexandre da Farmácia",
-    3
-   ],
-   [
-    "Samuel Moreira",
-    3
-   ],
-   [
-    "Luiz Moura",
-    2
-   ],
-   [
-    "Alex Manente",
-    2
-   ],
-   [
-    "Rui Falcão",
-    2
-   ],
-   [
-    "Edinho Silva",
-    2
-   ],
-   [
     "Sebastião Almeida",
-    2
-   ],
-   [
-    "Dr. Itamar",
     2
    ],
    [
     "MESA",
     2
+   ],
+   [
+    "CCTI",
+    2
+   ],
+   [
+    "CSPAP",
+    1
+   ],
+   [
+    "Donisete Braga",
+    1
+   ],
+   [
+    "Paulo Alexandre Barbosa",
+    1
+   ],
+   [
+    "CEDP",
+    1
    ]
   ],
-  "normas_casadas": 3712
+  "normas_casadas": 3785
  },
  "geral": {
-  "geradoEm": "2026-10-19 06:37",
+  "geradoEm": "2026-10-20 06:35",
   "tamanho_painel_mb": 7.03
  }
 }
