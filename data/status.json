@@ -40,15 +40,15 @@
    "urlDocumento",
    "v"
   ],
-  "linhas": 68786,
+  "linhas": 68806,
   "ok": true,
-  "segundos": 7
+  "segundos": 5
  },
  "camara_votacoes": {
   "votacoes_nominais_plenario": 3915,
   "votos_sp": 216317,
   "ok": true,
-  "segundos": 10
+  "segundos": 8
  },
  "camara_deputados": {
   "total": 192,
@@ -89,14 +89,14 @@
    }
   ],
   "ok": true,
-  "segundos": 186
+  "segundos": 147
  },
  "camara_proposicoes": {
-  "linhas": 127391,
+  "linhas": 127397,
   "situacoes_mais_comuns": [
    [
     "",
-    46217
+    46215
    ],
    [
     "Arquivada",
@@ -116,11 +116,11 @@
    ],
    [
     "Aguardando Designação de Relator(a)",
-    1904
+    1917
    ],
    [
     "Pronta para Pauta",
-    1341
+    1342
    ],
    [
     "Aguardando Remessa ao Arquivo",
@@ -132,7 +132,7 @@
    ],
    [
     "Aguardando Parecer",
-    875
+    871
    ],
    [
     "Devolvida ao(à) Autor(a)",
@@ -164,7 +164,7 @@
    ],
    [
     "Aguardando Designação - Aguardando Devolução de Relator(a) que deixou de ser Membro",
-    135
+    133
    ],
    [
     "Aguardando Autorização do Despacho",
@@ -196,7 +196,7 @@
    ]
   ],
   "ok": true,
-  "segundos": 15
+  "segundos": 12
  },
  "cgu_emendas": {
   "chaves_2025": [
@@ -270,7 +270,7 @@
   "linhas": 3761,
   "deputados_com_emendas": 140,
   "ok": true,
-  "segundos": 384
+  "segundos": 405
  },
  "montagem_federal": {
   "emendas": 3761,
@@ -281,7 +281,7 @@
   ],
   "n_sem_tse": 2,
   "divergencia_partido_arquivo_cota": 15825,
-  "linhas_despesa": 68786
+  "linhas_despesa": 68806
  },
  "alesp_cadastro": {
   "deputados": 94,
@@ -296,7 +296,7 @@
    "aniversario": "26/08"
   },
   "ok": true,
-  "segundos": 2
+  "segundos": 3
  },
  "alesp_despesas": {
   "registros": 249563,
@@ -378,7 +378,7 @@
   "deputados": 238,
   "sem_matricula": [],
   "ok": true,
-  "segundos": 38
+  "segundos": 52
  },
  "alesp_proposituras": {
   "proposituras": 149887,
@@ -449,7 +449,7 @@
      "Publicacao",
      "E"
     ],
-    21917
+    21764
    ],
    [
     [
@@ -463,14 +463,14 @@
      "Não Identificada",
      "E"
     ],
-    1685
+    1682
    ],
    [
     [
      "Comissao",
      "S"
     ],
-    1411
+    1410
    ],
    [
     [
@@ -505,7 +505,7 @@
      "Distribuicao",
      "S"
     ],
-    40
+    39
    ],
    [
     [
@@ -606,15 +606,15 @@
    ]
   ],
   "ok": true,
-  "segundos": 66
+  "segundos": 39
  },
  "alesp_presencas": {
   "presencas": 16459,
   "exemplo": [
-   "Hélio Nishimoto",
-   "11155",
-   "12640",
-   "2015-03-11"
+   "Letícia Aguiar",
+   "1000000340",
+   "1000002520",
+   "2019-06-25"
   ],
   "ok": true,
   "segundos": 6
@@ -752,7 +752,7 @@
    }
   ],
   "ok": true,
-  "segundos": 22
+  "segundos": 29
  },
  "montagem_estadual": {
   "parlamentares": 244,
@@ -951,7 +951,7 @@
   "normas_casadas": 3785
  },
  "geral": {
-  "geradoEm": "2026-10-20 06:35",
+  "geradoEm": "2026-10-21 06:35",
   "tamanho_painel_mb": 7.03
  }
 }
