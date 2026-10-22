@@ -40,9 +40,9 @@
    "urlDocumento",
    "v"
   ],
-  "linhas": 68806,
+  "linhas": 68336,
   "ok": true,
-  "segundos": 5
+  "segundos": 6
  },
  "camara_votacoes": {
   "votacoes_nominais_plenario": 3915,
@@ -89,14 +89,14 @@
    }
   ],
   "ok": true,
-  "segundos": 147
+  "segundos": 183
  },
  "camara_proposicoes": {
-  "linhas": 127397,
+  "linhas": 127408,
   "situacoes_mais_comuns": [
    [
     "",
-    46215
+    46221
    ],
    [
     "Arquivada",
@@ -116,7 +116,7 @@
    ],
    [
     "Aguardando Designação de Relator(a)",
-    1917
+    1914
    ],
    [
     "Pronta para Pauta",
@@ -128,7 +128,7 @@
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados",
-    1334
+    1332
    ],
    [
     "Aguardando Parecer",
@@ -163,11 +163,11 @@
     194
    ],
    [
-    "Aguardando Designação - Aguardando Devolução de Relator(a) que deixou de ser Membro",
-    133
+    "Aguardando Autorização do Despacho",
+    136
    ],
    [
-    "Aguardando Autorização do Despacho",
+    "Aguardando Designação - Aguardando Devolução de Relator(a) que deixou de ser Membro",
     133
    ],
    [
@@ -196,7 +196,7 @@
    ]
   ],
   "ok": true,
-  "segundos": 12
+  "segundos": 15
  },
  "cgu_emendas": {
   "chaves_2025": [
@@ -260,28 +260,28 @@
    "localidadeDoGasto": "SÃO PAULO (UF)",
    "funcao": "Desporto e lazer",
    "subfuncao": "Desporto comunitário",
-   "valorEmpenhado": "203.014,40",
+   "valorEmpenhado": "200.000,00",
    "valorLiquidado": "4.000,00",
    "valorPago": "4.000,00",
    "valorRestoInscrito": "0,00",
    "valorRestoCancelado": "0,00",
    "valorRestoPago": "0,00"
   },
-  "linhas": 3761,
+  "linhas": 3767,
   "deputados_com_emendas": 140,
   "ok": true,
-  "segundos": 405
+  "segundos": 390
  },
  "montagem_federal": {
-  "emendas": 3761,
+  "emendas": 3767,
   "parlamentares": 192,
   "sem_tse": [
    "ABELARDO CAMARINHA",
    "OTONIEL LIMA"
   ],
   "n_sem_tse": 2,
-  "divergencia_partido_arquivo_cota": 15825,
-  "linhas_despesa": 68806
+  "divergencia_partido_arquivo_cota": 15700,
+  "linhas_despesa": 68336
  },
  "alesp_cadastro": {
   "deputados": 94,
@@ -378,7 +378,7 @@
   "deputados": 238,
   "sem_matricula": [],
   "ok": true,
-  "segundos": 52
+  "segundos": 41
  },
  "alesp_proposituras": {
   "proposituras": 149887,
@@ -449,28 +449,28 @@
      "Publicacao",
      "E"
     ],
-    21764
+    21753
    ],
    [
     [
      "Comissao",
      "E"
     ],
-    1810
+    1807
    ],
    [
     [
      "Não Identificada",
      "E"
     ],
-    1682
+    1679
    ],
    [
     [
      "Comissao",
      "S"
     ],
-    1410
+    1352
    ],
    [
     [
@@ -505,7 +505,7 @@
      "Distribuicao",
      "S"
     ],
-    39
+    40
    ],
    [
     [
@@ -606,15 +606,15 @@
    ]
   ],
   "ok": true,
-  "segundos": 39
+  "segundos": 58
  },
  "alesp_presencas": {
   "presencas": 16459,
   "exemplo": [
-   "Letícia Aguiar",
-   "1000000340",
-   "1000002520",
-   "2019-06-25"
+   "Gilmaci Santos",
+   "10603",
+   "12832",
+   "2015-06-30"
   ],
   "ok": true,
   "segundos": 6
@@ -752,7 +752,7 @@
    }
   ],
   "ok": true,
-  "segundos": 29
+  "segundos": 37
  },
  "montagem_estadual": {
   "parlamentares": 244,
@@ -951,7 +951,7 @@
   "normas_casadas": 3785
  },
  "geral": {
-  "geradoEm": "2026-10-21 06:35",
-  "tamanho_painel_mb": 7.03
+  "geradoEm": "2026-10-22 06:37",
+  "tamanho_painel_mb": 7.01
  }
 }
