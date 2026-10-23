@@ -40,15 +40,15 @@
    "urlDocumento",
    "v"
   ],
-  "linhas": 68336,
+  "linhas": 68843,
   "ok": true,
-  "segundos": 6
+  "segundos": 7
  },
  "camara_votacoes": {
   "votacoes_nominais_plenario": 3915,
   "votos_sp": 216317,
   "ok": true,
-  "segundos": 8
+  "segundos": 10
  },
  "camara_deputados": {
   "total": 192,
@@ -89,18 +89,18 @@
    }
   ],
   "ok": true,
-  "segundos": 183
+  "segundos": 159
  },
  "camara_proposicoes": {
-  "linhas": 127408,
+  "linhas": 127416,
   "situacoes_mais_comuns": [
    [
     "",
-    46221
+    46227
    ],
    [
     "Arquivada",
-    14234
+    14236
    ],
    [
     "Tramitação Finalizada",
@@ -120,7 +120,7 @@
    ],
    [
     "Pronta para Pauta",
-    1342
+    1340
    ],
    [
     "Aguardando Remessa ao Arquivo",
@@ -128,7 +128,7 @@
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados",
-    1332
+    1330
    ],
    [
     "Aguardando Parecer",
@@ -144,7 +144,7 @@
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
-    347
+    348
    ],
    [
     "Transformado em Norma Jurídica",
@@ -164,7 +164,7 @@
    ],
    [
     "Aguardando Autorização do Despacho",
-    136
+    142
    ],
    [
     "Aguardando Designação - Aguardando Devolução de Relator(a) que deixou de ser Membro",
@@ -175,12 +175,12 @@
     119
    ],
    [
-    "Aguardando Despacho do Presidente da Câmara dos Deputados (Autorização)",
+    "Aguardando Deliberação",
     59
    ],
    [
-    "Aguardando Deliberação",
-    57
+    "Aguardando Despacho do Presidente da Câmara dos Deputados (Autorização)",
+    59
    ],
    [
     "Aguardando Criação de Comissão Temporária",
@@ -267,21 +267,21 @@
    "valorRestoCancelado": "0,00",
    "valorRestoPago": "0,00"
   },
-  "linhas": 3767,
+  "linhas": 3768,
   "deputados_com_emendas": 140,
   "ok": true,
-  "segundos": 390
+  "segundos": 414
  },
  "montagem_federal": {
-  "emendas": 3767,
+  "emendas": 3768,
   "parlamentares": 192,
   "sem_tse": [
    "ABELARDO CAMARINHA",
    "OTONIEL LIMA"
   ],
   "n_sem_tse": 2,
-  "divergencia_partido_arquivo_cota": 15700,
-  "linhas_despesa": 68336
+  "divergencia_partido_arquivo_cota": 15825,
+  "linhas_despesa": 68843
  },
  "alesp_cadastro": {
   "deputados": 94,
@@ -378,7 +378,7 @@
   "deputados": 238,
   "sem_matricula": [],
   "ok": true,
-  "segundos": 41
+  "segundos": 47
  },
  "alesp_proposituras": {
   "proposituras": 149887,
@@ -449,21 +449,21 @@
      "Publicacao",
      "E"
     ],
-    21753
+    21712
    ],
    [
     [
      "Comissao",
      "E"
     ],
-    1807
+    1797
    ],
    [
     [
      "Não Identificada",
      "E"
     ],
-    1679
+    1676
    ],
    [
     [
@@ -606,18 +606,18 @@
    ]
   ],
   "ok": true,
-  "segundos": 58
+  "segundos": 76
  },
  "alesp_presencas": {
   "presencas": 16459,
   "exemplo": [
-   "Gilmaci Santos",
-   "10603",
-   "12832",
-   "2015-06-30"
+   "Fernando Cury",
+   "13082",
+   "13638",
+   "2016-06-01"
   ],
   "ok": true,
-  "segundos": 6
+  "segundos": 8
  },
  "alesp_normas": {
   "normas": 2462,
@@ -752,7 +752,7 @@
    }
   ],
   "ok": true,
-  "segundos": 37
+  "segundos": 25
  },
  "montagem_estadual": {
   "parlamentares": 244,
@@ -951,7 +951,7 @@
   "normas_casadas": 3785
  },
  "geral": {
-  "geradoEm": "2026-10-22 06:37",
-  "tamanho_painel_mb": 7.01
+  "geradoEm": "2026-10-23 06:36",
+  "tamanho_painel_mb": 7.03
  }
 }
