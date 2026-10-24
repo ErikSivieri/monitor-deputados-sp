@@ -42,13 +42,13 @@
   ],
   "linhas": 68843,
   "ok": true,
-  "segundos": 7
+  "segundos": 6
  },
  "camara_votacoes": {
   "votacoes_nominais_plenario": 3915,
   "votos_sp": 216317,
   "ok": true,
-  "segundos": 10
+  "segundos": 8
  },
  "camara_deputados": {
   "total": 192,
@@ -89,14 +89,14 @@
    }
   ],
   "ok": true,
-  "segundos": 159
+  "segundos": 157
  },
  "camara_proposicoes": {
-  "linhas": 127416,
+  "linhas": 127417,
   "situacoes_mais_comuns": [
    [
     "",
-    46227
+    46226
    ],
    [
     "Arquivada",
@@ -120,7 +120,7 @@
    ],
    [
     "Pronta para Pauta",
-    1340
+    1339
    ],
    [
     "Aguardando Remessa ao Arquivo",
@@ -128,7 +128,7 @@
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados",
-    1330
+    1329
    ],
    [
     "Aguardando Parecer",
@@ -164,7 +164,7 @@
    ],
    [
     "Aguardando Autorização do Despacho",
-    142
+    145
    ],
    [
     "Aguardando Designação - Aguardando Devolução de Relator(a) que deixou de ser Membro",
@@ -176,7 +176,7 @@
    ],
    [
     "Aguardando Deliberação",
-    59
+    60
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Autorização)",
@@ -196,7 +196,7 @@
    ]
   ],
   "ok": true,
-  "segundos": 15
+  "segundos": 14
  },
  "cgu_emendas": {
   "chaves_2025": [
@@ -270,7 +270,7 @@
   "linhas": 3768,
   "deputados_com_emendas": 140,
   "ok": true,
-  "segundos": 414
+  "segundos": 354
  },
  "montagem_federal": {
   "emendas": 3768,
@@ -296,7 +296,7 @@
    "aniversario": "26/08"
   },
   "ok": true,
-  "segundos": 3
+  "segundos": 4
  },
  "alesp_despesas": {
   "registros": 249563,
@@ -378,7 +378,7 @@
   "deputados": 238,
   "sem_matricula": [],
   "ok": true,
-  "segundos": 47
+  "segundos": 58
  },
  "alesp_proposituras": {
   "proposituras": 149887,
@@ -449,7 +449,7 @@
      "Publicacao",
      "E"
     ],
-    21712
+    21687
    ],
    [
     [
@@ -463,7 +463,7 @@
      "Não Identificada",
      "E"
     ],
-    1676
+    1670
    ],
    [
     [
@@ -505,7 +505,7 @@
      "Distribuicao",
      "S"
     ],
-    40
+    39
    ],
    [
     [
@@ -606,18 +606,18 @@
    ]
   ],
   "ok": true,
-  "segundos": 76
+  "segundos": 40
  },
  "alesp_presencas": {
   "presencas": 16459,
   "exemplo": [
-   "Fernando Cury",
-   "13082",
-   "13638",
-   "2016-06-01"
+   "Gilmaci Santos",
+   "10603",
+   "13463",
+   "2016-03-23"
   ],
   "ok": true,
-  "segundos": 8
+  "segundos": 13
  },
  "alesp_normas": {
   "normas": 2462,
@@ -752,7 +752,7 @@
    }
   ],
   "ok": true,
-  "segundos": 25
+  "segundos": 23
  },
  "montagem_estadual": {
   "parlamentares": 244,
@@ -951,7 +951,7 @@
   "normas_casadas": 3785
  },
  "geral": {
-  "geradoEm": "2026-10-23 06:36",
+  "geradoEm": "2026-10-24 06:28",
   "tamanho_painel_mb": 7.03
  }
 }
