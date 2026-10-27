@@ -40,15 +40,15 @@
    "urlDocumento",
    "v"
   ],
-  "linhas": 68847,
+  "linhas": 68858,
   "ok": true,
-  "segundos": 6
+  "segundos": 8
  },
  "camara_votacoes": {
   "votacoes_nominais_plenario": 3915,
   "votos_sp": 216317,
   "ok": true,
-  "segundos": 9
+  "segundos": 10
  },
  "camara_deputados": {
   "total": 192,
@@ -89,14 +89,14 @@
    }
   ],
   "ok": true,
-  "segundos": 162
+  "segundos": 160
  },
  "camara_proposicoes": {
-  "linhas": 127417,
+  "linhas": 127426,
   "situacoes_mais_comuns": [
    [
     "",
-    46226
+    46235
    ],
    [
     "Arquivada",
@@ -119,16 +119,16 @@
     1915
    ],
    [
-    "Pronta para Pauta",
-    1342
+    "Aguardando Despacho do Presidente da Câmara dos Deputados",
+    1349
    ],
    [
     "Aguardando Remessa ao Arquivo",
     1335
    ],
    [
-    "Aguardando Despacho do Presidente da Câmara dos Deputados",
-    1328
+    "Pronta para Pauta",
+    1330
    ],
    [
     "Aguardando Parecer",
@@ -144,7 +144,7 @@
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
-    348
+    316
    ],
    [
     "Transformado em Norma Jurídica",
@@ -164,7 +164,7 @@
    ],
    [
     "Aguardando Autorização do Despacho",
-    146
+    153
    ],
    [
     "Aguardando Designação - Aguardando Devolução de Relator(a) que deixou de ser Membro",
@@ -176,11 +176,11 @@
    ],
    [
     "Aguardando Deliberação",
-    60
+    75
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Autorização)",
-    59
+    60
    ],
    [
     "Aguardando Criação de Comissão Temporária",
@@ -196,7 +196,7 @@
    ]
   ],
   "ok": true,
-  "segundos": 13
+  "segundos": 16
  },
  "cgu_emendas": {
   "chaves_2025": [
@@ -270,7 +270,7 @@
   "linhas": 3768,
   "deputados_com_emendas": 140,
   "ok": true,
-  "segundos": 355
+  "segundos": 428
  },
  "montagem_federal": {
   "emendas": 3768,
@@ -281,7 +281,7 @@
   ],
   "n_sem_tse": 2,
   "divergencia_partido_arquivo_cota": 15825,
-  "linhas_despesa": 68847
+  "linhas_despesa": 68858
  },
  "alesp_cadastro": {
   "deputados": 94,
@@ -296,7 +296,7 @@
    "aniversario": "26/08"
   },
   "ok": true,
-  "segundos": 3
+  "segundos": 4
  },
  "alesp_despesas": {
   "registros": 249563,
@@ -378,7 +378,7 @@
   "deputados": 238,
   "sem_matricula": [],
   "ok": true,
-  "segundos": 29
+  "segundos": 43
  },
  "alesp_proposituras": {
   "proposituras": 149887,
@@ -456,7 +456,7 @@
      "Comissao",
      "E"
     ],
-    1797
+    1796
    ],
    [
     [
@@ -505,7 +505,7 @@
      "Distribuicao",
      "S"
     ],
-    39
+    40
    ],
    [
     [
@@ -606,18 +606,18 @@
    ]
   ],
   "ok": true,
-  "segundos": 39
+  "segundos": 65
  },
  "alesp_presencas": {
   "presencas": 16459,
   "exemplo": [
-   "Rodrigo Moraes",
-   "12414",
-   "13417",
-   "2016-03-02"
+   "Delegado Olim",
+   "13077",
+   "1000002370",
+   "2019-05-15"
   ],
   "ok": true,
-  "segundos": 6
+  "segundos": 8
  },
  "alesp_normas": {
   "normas": 2462,
@@ -752,7 +752,7 @@
    }
   ],
   "ok": true,
-  "segundos": 19
+  "segundos": 32
  },
  "montagem_estadual": {
   "parlamentares": 244,
@@ -951,7 +951,7 @@
   "normas_casadas": 3785
  },
  "geral": {
-  "geradoEm": "2026-10-26 06:41",
+  "geradoEm": "2026-10-27 06:41",
   "tamanho_painel_mb": 7.03
  }
 }
