@@ -40,15 +40,15 @@
    "urlDocumento",
    "v"
   ],
-  "linhas": 68858,
+  "linhas": 68874,
   "ok": true,
-  "segundos": 8
+  "segundos": 6
  },
  "camara_votacoes": {
   "votacoes_nominais_plenario": 3915,
   "votos_sp": 216317,
   "ok": true,
-  "segundos": 10
+  "segundos": 8
  },
  "camara_deputados": {
   "total": 192,
@@ -89,14 +89,14 @@
    }
   ],
   "ok": true,
-  "segundos": 160
+  "segundos": 145
  },
  "camara_proposicoes": {
-  "linhas": 127426,
+  "linhas": 127453,
   "situacoes_mais_comuns": [
    [
     "",
-    46235
+    46307
    ],
    [
     "Arquivada",
@@ -108,27 +108,27 @@
    ],
    [
     "Aguardando Providências Internas",
-    4056
+    4059
    ],
    [
     "Tramitando em Conjunto",
-    3277
+    3279
    ],
    [
     "Aguardando Designação de Relator(a)",
-    1915
+    1913
    ],
    [
-    "Aguardando Despacho do Presidente da Câmara dos Deputados",
-    1349
+    "Pronta para Pauta",
+    1336
    ],
    [
     "Aguardando Remessa ao Arquivo",
     1335
    ],
    [
-    "Pronta para Pauta",
-    1330
+    "Aguardando Despacho do Presidente da Câmara dos Deputados",
+    1287
    ],
    [
     "Aguardando Parecer",
@@ -144,7 +144,7 @@
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
-    316
+    297
    ],
    [
     "Transformado em Norma Jurídica",
@@ -152,7 +152,7 @@
    ],
    [
     "Aguardando Encaminhamento",
-    214
+    216
    ],
    [
     "Aguardando Apreciação pelo Senado Federal",
@@ -164,7 +164,7 @@
    ],
    [
     "Aguardando Autorização do Despacho",
-    153
+    162
    ],
    [
     "Aguardando Designação - Aguardando Devolução de Relator(a) que deixou de ser Membro",
@@ -176,7 +176,7 @@
    ],
    [
     "Aguardando Deliberação",
-    75
+    72
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Autorização)",
@@ -196,7 +196,7 @@
    ]
   ],
   "ok": true,
-  "segundos": 16
+  "segundos": 13
  },
  "cgu_emendas": {
   "chaves_2025": [
@@ -270,7 +270,7 @@
   "linhas": 3768,
   "deputados_com_emendas": 140,
   "ok": true,
-  "segundos": 428
+  "segundos": 378
  },
  "montagem_federal": {
   "emendas": 3768,
@@ -281,7 +281,7 @@
   ],
   "n_sem_tse": 2,
   "divergencia_partido_arquivo_cota": 15825,
-  "linhas_despesa": 68858
+  "linhas_despesa": 68874
  },
  "alesp_cadastro": {
   "deputados": 94,
@@ -296,7 +296,7 @@
    "aniversario": "26/08"
   },
   "ok": true,
-  "segundos": 4
+  "segundos": 3
  },
  "alesp_despesas": {
   "registros": 249563,
@@ -378,7 +378,7 @@
   "deputados": 238,
   "sem_matricula": [],
   "ok": true,
-  "segundos": 43
+  "segundos": 38
  },
  "alesp_proposituras": {
   "proposituras": 149887,
@@ -449,14 +449,14 @@
      "Publicacao",
      "E"
     ],
-    21687
+    21674
    ],
    [
     [
      "Comissao",
      "E"
     ],
-    1796
+    1792
    ],
    [
     [
@@ -470,7 +470,7 @@
      "Comissao",
      "S"
     ],
-    1352
+    1348
    ],
    [
     [
@@ -540,7 +540,7 @@
      "Não Identificada",
      "I"
     ],
-    1
+    2
    ]
   ],
   "autores_mais_comuns": [
@@ -606,18 +606,18 @@
    ]
   ],
   "ok": true,
-  "segundos": 65
+  "segundos": 64
  },
  "alesp_presencas": {
   "presencas": 16459,
   "exemplo": [
-   "Delegado Olim",
-   "13077",
-   "1000002370",
-   "2019-05-15"
+   "Rômulo Fernandes",
+   "1000001003",
+   "1000007057",
+   "2025-08-27"
   ],
   "ok": true,
-  "segundos": 8
+  "segundos": 5
  },
  "alesp_normas": {
   "normas": 2462,
@@ -752,7 +752,7 @@
    }
   ],
   "ok": true,
-  "segundos": 32
+  "segundos": 20
  },
  "montagem_estadual": {
   "parlamentares": 244,
@@ -951,7 +951,7 @@
   "normas_casadas": 3785
  },
  "geral": {
-  "geradoEm": "2026-10-27 06:41",
+  "geradoEm": "2026-10-28 06:46",
   "tamanho_painel_mb": 7.03
  }
 }
