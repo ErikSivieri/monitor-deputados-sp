@@ -40,7 +40,7 @@
    "urlDocumento",
    "v"
   ],
-  "linhas": 68874,
+  "linhas": 68435,
   "ok": true,
   "segundos": 6
  },
@@ -48,7 +48,7 @@
   "votacoes_nominais_plenario": 3915,
   "votos_sp": 216317,
   "ok": true,
-  "segundos": 8
+  "segundos": 10
  },
  "camara_deputados": {
   "total": 192,
@@ -89,14 +89,14 @@
    }
   ],
   "ok": true,
-  "segundos": 145
+  "segundos": 165
  },
  "camara_proposicoes": {
-  "linhas": 127453,
+  "linhas": 127474,
   "situacoes_mais_comuns": [
    [
     "",
-    46307
+    46236
    ],
    [
     "Arquivada",
@@ -108,19 +108,19 @@
    ],
    [
     "Aguardando Providências Internas",
-    4059
+    4064
    ],
    [
     "Tramitando em Conjunto",
-    3279
+    3282
    ],
    [
     "Aguardando Designação de Relator(a)",
-    1913
+    1903
    ],
    [
     "Pronta para Pauta",
-    1336
+    1346
    ],
    [
     "Aguardando Remessa ao Arquivo",
@@ -128,11 +128,11 @@
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados",
-    1287
+    1279
    ],
    [
     "Aguardando Parecer",
-    869
+    876
    ],
    [
     "Devolvida ao(à) Autor(a)",
@@ -140,11 +140,11 @@
    ],
    [
     "Retirado pelo(a) Autor(a)",
-    400
+    402
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
-    297
+    338
    ],
    [
     "Transformado em Norma Jurídica",
@@ -152,7 +152,7 @@
    ],
    [
     "Aguardando Encaminhamento",
-    216
+    221
    ],
    [
     "Aguardando Apreciação pelo Senado Federal",
@@ -164,7 +164,7 @@
    ],
    [
     "Aguardando Autorização do Despacho",
-    162
+    135
    ],
    [
     "Aguardando Designação - Aguardando Devolução de Relator(a) que deixou de ser Membro",
@@ -175,12 +175,16 @@
     119
    ],
    [
-    "Aguardando Deliberação",
-    72
+    "Aguardando Envio ao Executivo",
+    75
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Autorização)",
     60
+   ],
+   [
+    "Aguardando Deliberação",
+    57
    ],
    [
     "Aguardando Criação de Comissão Temporária",
@@ -189,14 +193,10 @@
    [
     "Aguardando Deliberação de Recurso",
     30
-   ],
-   [
-    "Aguardando Definição Encaminhamento",
-    13
    ]
   ],
   "ok": true,
-  "segundos": 13
+  "segundos": 17
  },
  "cgu_emendas": {
   "chaves_2025": [
@@ -267,21 +267,21 @@
    "valorRestoCancelado": "0,00",
    "valorRestoPago": "0,00"
   },
-  "linhas": 3768,
+  "linhas": 3769,
   "deputados_com_emendas": 140,
   "ok": true,
-  "segundos": 378
+  "segundos": 437
  },
  "montagem_federal": {
-  "emendas": 3768,
+  "emendas": 3769,
   "parlamentares": 192,
   "sem_tse": [
    "ABELARDO CAMARINHA",
    "OTONIEL LIMA"
   ],
   "n_sem_tse": 2,
-  "divergencia_partido_arquivo_cota": 15825,
-  "linhas_despesa": 68874
+  "divergencia_partido_arquivo_cota": 15703,
+  "linhas_despesa": 68435
  },
  "alesp_cadastro": {
   "deputados": 94,
@@ -296,7 +296,7 @@
    "aniversario": "26/08"
   },
   "ok": true,
-  "segundos": 3
+  "segundos": 7
  },
  "alesp_despesas": {
   "registros": 249563,
@@ -378,7 +378,7 @@
   "deputados": 238,
   "sem_matricula": [],
   "ok": true,
-  "segundos": 38
+  "segundos": 56
  },
  "alesp_proposituras": {
   "proposituras": 149887,
@@ -449,28 +449,28 @@
      "Publicacao",
      "E"
     ],
-    21674
+    21487
    ],
    [
     [
      "Comissao",
      "E"
     ],
-    1792
+    1786
    ],
    [
     [
      "Não Identificada",
      "E"
     ],
-    1670
+    1665
    ],
    [
     [
      "Comissao",
      "S"
     ],
-    1348
+    1336
    ],
    [
     [
@@ -606,18 +606,18 @@
    ]
   ],
   "ok": true,
-  "segundos": 64
+  "segundos": 74
  },
  "alesp_presencas": {
   "presencas": 16459,
   "exemplo": [
-   "Rômulo Fernandes",
-   "1000001003",
-   "1000007057",
-   "2025-08-27"
+   "Geraldo Cruz",
+   "12407",
+   "1000000185",
+   "2016-11-23"
   ],
   "ok": true,
-  "segundos": 5
+  "segundos": 10
  },
  "alesp_normas": {
   "normas": 2462,
@@ -752,7 +752,7 @@
    }
   ],
   "ok": true,
-  "segundos": 20
+  "segundos": 28
  },
  "montagem_estadual": {
   "parlamentares": 244,
@@ -951,7 +951,7 @@
   "normas_casadas": 3785
  },
  "geral": {
-  "geradoEm": "2026-10-28 06:46",
-  "tamanho_painel_mb": 7.03
+  "geradoEm": "2026-10-29 06:51",
+  "tamanho_painel_mb": 7.02
  }
 }
