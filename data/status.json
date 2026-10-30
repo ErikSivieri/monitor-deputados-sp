@@ -40,20 +40,61 @@
    "urlDocumento",
    "v"
   ],
-  "linhas": 68435,
+  "linhas": 68916,
   "ok": true,
-  "segundos": 6
+  "segundos": 4
  },
  "camara_votacoes": {
   "votacoes_nominais_plenario": 3915,
   "votos_sp": 216317,
   "ok": true,
-  "segundos": 10
+  "segundos": 8
  },
  "camara_deputados": {
-  "total": 192,
-  "falhas": [],
-  "n_falhas": 0,
+  "total": 164,
+  "falhas": [
+   [
+    73434,
+    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73434 (HTTP 504: upstream request timeout)"
+   ],
+   [
+    73535,
+    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73535 (HTTP 504: upstream request timeout)"
+   ],
+   [
+    73536,
+    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73536 (HTTP 504: upstream request timeout)"
+   ],
+   [
+    73553,
+    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73553 (HTTP 504: upstream request timeout)"
+   ],
+   [
+    73805,
+    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73805 (HTTP 504: upstream request timeout)"
+   ],
+   [
+    74119,
+    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/74119 (HTTP 504: upstream request timeout)"
+   ],
+   [
+    74264,
+    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/74264 (HTTP 504: upstream request timeout)"
+   ],
+   [
+    74270,
+    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/74270 (HTTP 504: upstream request timeout)"
+   ],
+   [
+    74275,
+    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/74275 (HTTP 504: upstream request timeout)"
+   ],
+   [
+    74277,
+    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/74277 (HTTP 504: upstream request timeout)"
+   ]
+  ],
+  "n_falhas": 28,
   "legislaturas": [
    57,
    56,
@@ -89,50 +130,50 @@
    }
   ],
   "ok": true,
-  "segundos": 165
+  "segundos": 4834
  },
  "camara_proposicoes": {
-  "linhas": 127474,
+  "linhas": 127205,
   "situacoes_mais_comuns": [
    [
     "",
-    46236
+    46277
    ],
    [
     "Arquivada",
-    14236
+    14231
    ],
    [
     "Tramitação Finalizada",
-    4788
+    4777
    ],
    [
     "Aguardando Providências Internas",
-    4064
+    4055
    ],
    [
     "Tramitando em Conjunto",
-    3282
+    3279
    ],
    [
     "Aguardando Designação de Relator(a)",
-    1903
+    1898
    ],
    [
     "Pronta para Pauta",
-    1346
-   ],
-   [
-    "Aguardando Remessa ao Arquivo",
     1335
    ],
    [
+    "Aguardando Remessa ao Arquivo",
+    1334
+   ],
+   [
     "Aguardando Despacho do Presidente da Câmara dos Deputados",
-    1279
+    1230
    ],
    [
     "Aguardando Parecer",
-    876
+    875
    ],
    [
     "Devolvida ao(à) Autor(a)",
@@ -144,7 +185,7 @@
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
-    338
+    301
    ],
    [
     "Transformado em Norma Jurídica",
@@ -152,23 +193,23 @@
    ],
    [
     "Aguardando Encaminhamento",
-    221
+    211
    ],
    [
     "Aguardando Apreciação pelo Senado Federal",
-    196
+    197
    ],
    [
     "Aguardando Resposta",
-    196
-   ],
-   [
-    "Aguardando Autorização do Despacho",
-    135
+    193
    ],
    [
     "Aguardando Designação - Aguardando Devolução de Relator(a) que deixou de ser Membro",
     131
+   ],
+   [
+    "Aguardando Autorização do Despacho",
+    129
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Análise)",
@@ -176,15 +217,15 @@
    ],
    [
     "Aguardando Envio ao Executivo",
-    75
+    74
+   ],
+   [
+    "Aguardando Deliberação",
+    66
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Autorização)",
     60
-   ],
-   [
-    "Aguardando Deliberação",
-    57
    ],
    [
     "Aguardando Criação de Comissão Temporária",
@@ -196,7 +237,7 @@
    ]
   ],
   "ok": true,
-  "segundos": 17
+  "segundos": 13
  },
  "cgu_emendas": {
   "chaves_2025": [
@@ -267,21 +308,21 @@
    "valorRestoCancelado": "0,00",
    "valorRestoPago": "0,00"
   },
-  "linhas": 3769,
+  "linhas": 3739,
   "deputados_com_emendas": 140,
   "ok": true,
-  "segundos": 437
+  "segundos": 401
  },
  "montagem_federal": {
-  "emendas": 3769,
-  "parlamentares": 192,
+  "emendas": 3373,
+  "parlamentares": 164,
   "sem_tse": [
    "ABELARDO CAMARINHA",
    "OTONIEL LIMA"
   ],
   "n_sem_tse": 2,
-  "divergencia_partido_arquivo_cota": 15703,
-  "linhas_despesa": 68435
+  "divergencia_partido_arquivo_cota": 15010,
+  "linhas_despesa": 61481
  },
  "alesp_cadastro": {
   "deputados": 94,
@@ -296,7 +337,7 @@
    "aniversario": "26/08"
   },
   "ok": true,
-  "segundos": 7
+  "segundos": 5
  },
  "alesp_despesas": {
   "registros": 249563,
@@ -378,7 +419,7 @@
   "deputados": 238,
   "sem_matricula": [],
   "ok": true,
-  "segundos": 56
+  "segundos": 34
  },
  "alesp_proposituras": {
   "proposituras": 149887,
@@ -449,28 +490,28 @@
      "Publicacao",
      "E"
     ],
-    21487
+    21330
    ],
    [
     [
      "Comissao",
      "E"
     ],
-    1786
+    1783
    ],
    [
     [
      "Não Identificada",
      "E"
     ],
-    1665
+    1662
    ],
    [
     [
      "Comissao",
      "S"
     ],
-    1336
+    1324
    ],
    [
     [
@@ -606,18 +647,18 @@
    ]
   ],
   "ok": true,
-  "segundos": 74
+  "segundos": 46
  },
  "alesp_presencas": {
   "presencas": 16459,
   "exemplo": [
-   "Geraldo Cruz",
-   "12407",
-   "1000000185",
-   "2016-11-23"
+   "Delegado Olim",
+   "13077",
+   "1000006020",
+   "2024-03-20"
   ],
   "ok": true,
-  "segundos": 10
+  "segundos": 7
  },
  "alesp_normas": {
   "normas": 2462,
@@ -752,7 +793,7 @@
    }
   ],
   "ok": true,
-  "segundos": 28
+  "segundos": 24
  },
  "montagem_estadual": {
   "parlamentares": 244,
@@ -951,7 +992,7 @@
   "normas_casadas": 3785
  },
  "geral": {
-  "geradoEm": "2026-10-29 06:51",
-  "tamanho_painel_mb": 7.02
+  "geradoEm": "2026-10-30 08:08",
+  "tamanho_painel_mb": 6.69
  }
 }
