@@ -42,7 +42,7 @@
   ],
   "linhas": 68916,
   "ok": true,
-  "segundos": 4
+  "segundos": 5
  },
  "camara_votacoes": {
   "votacoes_nominais_plenario": 3915,
@@ -51,50 +51,22 @@
   "segundos": 8
  },
  "camara_deputados": {
-  "total": 164,
+  "total": 189,
   "falhas": [
    [
-    73434,
-    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73434 (HTTP 504: upstream request timeout)"
+    204532,
+    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/204532 (HTTP 504: upstream request timeout)"
    ],
    [
-    73535,
-    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73535 (HTTP 504: upstream request timeout)"
+    204537,
+    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/204537 (HTTP 504: upstream request timeout)"
    ],
    [
-    73536,
-    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73536 (HTTP 504: upstream request timeout)"
-   ],
-   [
-    73553,
-    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73553 (HTTP 504: upstream request timeout)"
-   ],
-   [
-    73805,
-    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73805 (HTTP 504: upstream request timeout)"
-   ],
-   [
-    74119,
-    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/74119 (HTTP 504: upstream request timeout)"
-   ],
-   [
-    74264,
-    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/74264 (HTTP 504: upstream request timeout)"
-   ],
-   [
-    74270,
-    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/74270 (HTTP 504: upstream request timeout)"
-   ],
-   [
-    74275,
-    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/74275 (HTTP 504: upstream request timeout)"
-   ],
-   [
-    74277,
-    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/74277 (HTTP 504: upstream request timeout)"
+    204543,
+    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/204543 (HTTP 504: upstream request timeout)"
    ]
   ],
-  "n_falhas": 28,
+  "n_falhas": 3,
   "legislaturas": [
    57,
    56,
@@ -130,50 +102,50 @@
    }
   ],
   "ok": true,
-  "segundos": 4834
+  "segundos": 677
  },
  "camara_proposicoes": {
-  "linhas": 127205,
+  "linhas": 127501,
   "situacoes_mais_comuns": [
    [
     "",
-    46277
+    46325
    ],
    [
     "Arquivada",
-    14231
+    14237
    ],
    [
     "Tramitação Finalizada",
-    4777
+    4788
    ],
    [
     "Aguardando Providências Internas",
-    4055
+    4064
    ],
    [
     "Tramitando em Conjunto",
-    3279
+    3284
    ],
    [
     "Aguardando Designação de Relator(a)",
-    1898
+    1905
    ],
    [
     "Pronta para Pauta",
-    1335
+    1337
    ],
    [
     "Aguardando Remessa ao Arquivo",
-    1334
+    1335
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados",
-    1230
+    1238
    ],
    [
     "Aguardando Parecer",
-    875
+    878
    ],
    [
     "Devolvida ao(à) Autor(a)",
@@ -185,7 +157,7 @@
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
-    301
+    304
    ],
    [
     "Transformado em Norma Jurídica",
@@ -193,7 +165,7 @@
    ],
    [
     "Aguardando Encaminhamento",
-    211
+    216
    ],
    [
     "Aguardando Apreciação pelo Senado Federal",
@@ -201,15 +173,15 @@
    ],
    [
     "Aguardando Resposta",
-    193
+    196
+   ],
+   [
+    "Aguardando Autorização do Despacho",
+    137
    ],
    [
     "Aguardando Designação - Aguardando Devolução de Relator(a) que deixou de ser Membro",
     131
-   ],
-   [
-    "Aguardando Autorização do Despacho",
-    129
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Análise)",
@@ -217,11 +189,11 @@
    ],
    [
     "Aguardando Envio ao Executivo",
-    74
+    75
    ],
    [
     "Aguardando Deliberação",
-    66
+    70
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Autorização)",
@@ -237,7 +209,7 @@
    ]
   ],
   "ok": true,
-  "segundos": 13
+  "segundos": 14
  },
  "cgu_emendas": {
   "chaves_2025": [
@@ -308,21 +280,21 @@
    "valorRestoCancelado": "0,00",
    "valorRestoPago": "0,00"
   },
-  "linhas": 3739,
+  "linhas": 3769,
   "deputados_com_emendas": 140,
   "ok": true,
-  "segundos": 401
+  "segundos": 423
  },
  "montagem_federal": {
-  "emendas": 3373,
-  "parlamentares": 164,
+  "emendas": 3731,
+  "parlamentares": 189,
   "sem_tse": [
    "ABELARDO CAMARINHA",
    "OTONIEL LIMA"
   ],
   "n_sem_tse": 2,
-  "divergencia_partido_arquivo_cota": 15010,
-  "linhas_despesa": 61481
+  "divergencia_partido_arquivo_cota": 15513,
+  "linhas_despesa": 68218
  },
  "alesp_cadastro": {
   "deputados": 94,
@@ -337,7 +309,7 @@
    "aniversario": "26/08"
   },
   "ok": true,
-  "segundos": 5
+  "segundos": 3
  },
  "alesp_despesas": {
   "registros": 249563,
@@ -419,7 +391,7 @@
   "deputados": 238,
   "sem_matricula": [],
   "ok": true,
-  "segundos": 34
+  "segundos": 32
  },
  "alesp_proposituras": {
   "proposituras": 149887,
@@ -490,35 +462,35 @@
      "Publicacao",
      "E"
     ],
-    21330
+    21104
    ],
    [
     [
      "Comissao",
      "E"
     ],
-    1783
+    1777
    ],
    [
     [
      "Não Identificada",
      "E"
     ],
-    1662
+    1659
    ],
    [
     [
      "Comissao",
      "S"
     ],
-    1324
+    1317
    ],
    [
     [
      "Arquivo",
      "I"
     ],
-    858
+    857
    ],
    [
     [
@@ -532,7 +504,7 @@
      "Publicacao",
      "S"
     ],
-    103
+    102
    ],
    [
     [
@@ -647,18 +619,18 @@
    ]
   ],
   "ok": true,
-  "segundos": 46
+  "segundos": 42
  },
  "alesp_presencas": {
   "presencas": 16459,
   "exemplo": [
-   "Delegado Olim",
-   "13077",
-   "1000006020",
-   "2024-03-20"
+   "Gilmaci Santos",
+   "10603",
+   "1000002119",
+   "2018-12-13"
   ],
   "ok": true,
-  "segundos": 7
+  "segundos": 6
  },
  "alesp_normas": {
   "normas": 2462,
@@ -793,7 +765,7 @@
    }
   ],
   "ok": true,
-  "segundos": 24
+  "segundos": 20
  },
  "montagem_estadual": {
   "parlamentares": 244,
@@ -992,7 +964,7 @@
   "normas_casadas": 3785
  },
  "geral": {
-  "geradoEm": "2026-10-30 08:08",
-  "tamanho_painel_mb": 6.69
+  "geradoEm": "2026-10-31 06:48",
+  "tamanho_painel_mb": 7.0
  }
 }
