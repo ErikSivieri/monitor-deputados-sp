@@ -1,101 +1,187 @@
-09:28:05 início; atualização completa: False
-09:28:05 despesas 2015 ok
-09:28:05 despesas 2016 ok
-09:28:05 despesas 2017 ok
-09:28:05 despesas 2018 ok
-09:28:05 despesas 2019 ok
-09:28:05 despesas 2020 ok
-09:28:05 despesas 2021 ok
-09:28:05 despesas 2022 ok
-09:28:05 despesas 2023 ok
-09:28:05 despesas 2024 ok
-09:28:08 baixado https://www.camara.leg.br/cotas/Ano-2025.csv.zip 6.9 MB
-09:28:09 despesas 2025 ok
-09:28:10 baixado https://www.camara.leg.br/cotas/Ano-2026.csv.zip 4.5 MB
-09:28:11 despesas 2026 ok
-09:28:11 votações 2015 ok
-09:28:11 votações 2016 ok
-09:28:11 votações 2017 ok
-09:28:11 votações 2018 ok
-09:28:11 votações 2019 ok
-09:28:11 votações 2020 ok
-09:28:11 votações 2021 ok
-09:28:11 votações 2022 ok
-09:28:11 votações 2023 ok
-09:28:11 votações 2024 ok
-09:28:14 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2025.csv 8.8 MB
-09:28:16 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2025.csv 58.2 MB
-09:28:17 votações 2025 ok
-09:28:18 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2026.csv 4.6 MB
-09:28:18 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2026.csv 17.6 MB
-09:28:19 votações 2026 ok
-09:28:19 federais SP desde 2015 : 192
-09:28:20 detalhes 0 / 192
-09:28:42 detalhes 20 / 192
-09:29:02 detalhes 40 / 192
-09:29:22 detalhes 60 / 192
-09:29:42 detalhes 80 / 192
-09:30:03 detalhes 100 / 192
-09:30:29 detalhes 120 / 192
-09:31:18 detalhes 140 / 192
-09:31:55 falha https://dadosabertos.camara.leg.br/api/v2/deputados/204532 HTTP 504: upstream request timeout tentativa 1
-09:32:13 falha https://dadosabertos.camara.leg.br/api/v2/deputados/204532 HTTP 504: upstream request timeout tentativa 2
-09:32:34 falha https://dadosabertos.camara.leg.br/api/v2/deputados/204532 HTTP 504: upstream request timeout tentativa 3
-09:32:58 falha https://dadosabertos.camara.leg.br/api/v2/deputados/204532 HTTP 504: upstream request timeout tentativa 4
-09:33:26 falha https://dadosabertos.camara.leg.br/api/v2/deputados/204532 HTTP 504: upstream request timeout tentativa 5
-09:34:00 falha https://dadosabertos.camara.leg.br/api/v2/deputados/204537 HTTP 504: upstream request timeout tentativa 1
-09:34:18 falha https://dadosabertos.camara.leg.br/api/v2/deputados/204537 HTTP 504: upstream request timeout tentativa 2
-09:34:39 falha https://dadosabertos.camara.leg.br/api/v2/deputados/204537 HTTP 504: upstream request timeout tentativa 3
-09:35:03 falha https://dadosabertos.camara.leg.br/api/v2/deputados/204537 HTTP 504: upstream request timeout tentativa 4
-09:35:30 falha https://dadosabertos.camara.leg.br/api/v2/deputados/204537 HTTP 504: upstream request timeout tentativa 5
-09:36:01 falha https://dadosabertos.camara.leg.br/api/v2/deputados/204543 HTTP 504: upstream request timeout tentativa 1
-09:36:19 falha https://dadosabertos.camara.leg.br/api/v2/deputados/204543 HTTP 504: upstream request timeout tentativa 2
-09:36:40 falha https://dadosabertos.camara.leg.br/api/v2/deputados/204543 HTTP 504: upstream request timeout tentativa 3
-09:37:05 falha https://dadosabertos.camara.leg.br/api/v2/deputados/204543 HTTP 504: upstream request timeout tentativa 4
-09:37:32 falha https://dadosabertos.camara.leg.br/api/v2/deputados/204543 HTTP 504: upstream request timeout tentativa 5
-09:38:03 falha https://dadosabertos.camara.leg.br/api/v2/deputados/204546 HTTP 504: upstream request timeout tentativa 1
-09:38:21 falha https://dadosabertos.camara.leg.br/api/v2/deputados/204546 HTTP 504: upstream request timeout tentativa 2
-09:38:34 detalhes 160 / 192
-09:38:50 detalhes 180 / 192
-09:39:10 falha https://dadosabertos.camara.leg.br/api/v2/deputados/227433 HTTP 504: upstream request timeout tentativa 1
-09:39:29 falha https://dadosabertos.camara.leg.br/api/v2/deputados/228941 HTTP 504: upstream request timeout tentativa 1
-09:39:36 proposições 2015 ok
-09:39:36 proposições 2016 ok
-09:39:36 proposições 2017 ok
-09:39:36 proposições 2018 ok
-09:39:36 proposições 2019 ok
-09:39:36 proposições 2020 ok
-09:39:36 proposições 2021 ok
-09:39:36 proposições 2022 ok
-09:39:36 proposições 2023 ok
-09:39:36 proposições 2024 ok
-09:39:39 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2025.csv 38.9 MB
-09:39:44 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2025.csv 90.2 MB
-09:39:45 proposições 2025 ok
-09:39:47 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2026.csv 14.9 MB
-09:39:49 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2026.csv 41.3 MB
-09:39:50 proposições 2026 ok
-09:39:50 emendas 2015 140
-09:39:50 emendas 2016 289
-09:39:50 emendas 2017 274
-09:39:50 emendas 2018 320
-09:39:50 emendas 2019 297
-09:39:50 emendas 2020 336
-09:39:50 emendas 2021 349
-09:39:50 emendas 2022 322
-09:39:50 emendas 2023 286
-09:39:50 emendas 2024 395
-09:43:27 emendas 2025 383
-09:46:53 emendas 2026 378
-09:46:55 baixado https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml 0.0 MB
-09:46:57 baixado https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml 0.3 MB
-09:47:14 baixado https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml 172.0 MB
-09:47:31 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml 0.0 MB
-09:47:38 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/proposituras.zip 17.6 MB
-09:47:44 ALESP proposituras desde 2015 149887
-09:47:48 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/documento_andamento_atual.zip 1.8 MB
-09:48:00 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/documento_autor.zip 6.5 MB
-09:48:16 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml 8.2 MB
-09:48:17 baixado https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml 0.0 MB
-09:48:30 baixado https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_normas.xml 95.3 MB
-09:48:43 fim
+09:30:37 início; atualização completa: True
+09:30:37 baixado https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2010.zip 4.9 MB
+09:30:38 baixado https://cdn.tse.jus.br/estatistica/sead/odsele/bem_candidato/bem_candidato_2010.zip 5.1 MB
+09:30:38 TSE 2010 2558 eleitos/suplentes
+09:30:38 baixado https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2014.zip 4.5 MB
+09:30:38 baixado https://cdn.tse.jus.br/estatistica/sead/odsele/bem_candidato/bem_candidato_2014.zip 6.3 MB
+09:30:38 TSE 2014 3196 eleitos/suplentes
+09:30:38 baixado https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2018.zip 4.7 MB
+09:30:39 baixado https://cdn.tse.jus.br/estatistica/sead/odsele/bem_candidato/bem_candidato_2018.zip 5.1 MB
+09:30:39 TSE 2018 3633 eleitos/suplentes
+09:30:39 baixado https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2022.zip 4.4 MB
+09:30:39 baixado https://cdn.tse.jus.br/estatistica/sead/odsele/bem_candidato/bem_candidato_2022.zip 5.7 MB
+09:30:39 TSE 2022 3418 eleitos/suplentes
+09:30:41 baixado https://www.camara.leg.br/cotas/Ano-2015.csv.zip 11.4 MB
+09:30:45 despesas 2015 ok
+09:30:46 baixado https://www.camara.leg.br/cotas/Ano-2016.csv.zip 10.7 MB
+09:30:49 despesas 2016 ok
+09:30:51 baixado https://www.camara.leg.br/cotas/Ano-2017.csv.zip 10.4 MB
+09:30:54 despesas 2017 ok
+09:30:55 baixado https://www.camara.leg.br/cotas/Ano-2018.csv.zip 8.9 MB
+09:30:57 despesas 2018 ok
+09:30:59 baixado https://www.camara.leg.br/cotas/Ano-2019.csv.zip 9.1 MB
+09:31:01 despesas 2019 ok
+09:31:02 baixado https://www.camara.leg.br/cotas/Ano-2020.csv.zip 5.4 MB
+09:31:04 despesas 2020 ok
+09:31:05 baixado https://www.camara.leg.br/cotas/Ano-2021.csv.zip 6.9 MB
+09:31:07 despesas 2021 ok
+09:31:08 baixado https://www.camara.leg.br/cotas/Ano-2022.csv.zip 6.6 MB
+09:31:09 despesas 2022 ok
+09:31:10 baixado https://www.camara.leg.br/cotas/Ano-2023.csv.zip 7.5 MB
+09:31:12 despesas 2023 ok
+09:31:13 baixado https://www.camara.leg.br/cotas/Ano-2024.csv.zip 7.5 MB
+09:31:15 despesas 2024 ok
+09:31:16 baixado https://www.camara.leg.br/cotas/Ano-2025.csv.zip 6.9 MB
+09:31:18 despesas 2025 ok
+09:31:19 baixado https://www.camara.leg.br/cotas/Ano-2026.csv.zip 4.5 MB
+09:31:20 despesas 2026 ok
+09:31:23 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2015.csv 6.7 MB
+09:31:24 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2015.csv 37.6 MB
+09:31:25 votações 2015 ok
+09:31:26 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2016.csv 3.8 MB
+09:31:27 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2016.csv 24.0 MB
+09:31:27 votações 2016 ok
+09:31:28 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2017.csv 4.9 MB
+09:31:29 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2017.csv 25.4 MB
+09:31:29 votações 2017 ok
+09:31:30 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2018.csv 2.5 MB
+09:31:30 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2018.csv 15.3 MB
+09:31:31 votações 2018 ok
+09:31:31 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2019.csv 5.8 MB
+09:31:33 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2019.csv 40.3 MB
+09:31:34 votações 2019 ok
+09:31:34 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2020.csv 1.3 MB
+09:31:36 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2020.csv 53.1 MB
+09:31:38 votações 2020 ok
+09:31:38 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2021.csv 6.4 MB
+09:31:42 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2021.csv 107.2 MB
+09:31:45 votações 2021 ok
+09:31:46 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2022.csv 3.7 MB
+09:31:48 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2022.csv 65.6 MB
+09:31:50 votações 2022 ok
+09:31:51 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2023.csv 6.7 MB
+09:31:52 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2023.csv 42.8 MB
+09:31:54 votações 2023 ok
+09:31:54 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2024.csv 6.3 MB
+09:31:56 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2024.csv 38.7 MB
+09:31:57 votações 2024 ok
+09:31:57 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2025.csv 8.8 MB
+09:32:00 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2025.csv 58.2 MB
+09:32:01 votações 2025 ok
+09:32:02 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2026.csv 4.6 MB
+09:32:03 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2026.csv 17.6 MB
+09:32:03 votações 2026 ok
+09:32:18 falha https://dadosabertos.camara.leg.br/api/v2/legislaturas HTTP 504: upstream request timeout tentativa 1
+09:32:37 falha https://dadosabertos.camara.leg.br/api/v2/deputados HTTP 504: upstream request timeout tentativa 1
+09:32:45 federais SP desde 2015 : 192
+09:33:01 falha https://dadosabertos.camara.leg.br/api/v2/deputados/66828 HTTP 504: upstream request timeout tentativa 1
+09:33:19 falha https://dadosabertos.camara.leg.br/api/v2/deputados/66828 HTTP 504: upstream request timeout tentativa 2
+09:33:40 falha https://dadosabertos.camara.leg.br/api/v2/deputados/66828 HTTP 504: upstream request timeout tentativa 3
+09:34:04 falha https://dadosabertos.camara.leg.br/api/v2/deputados/66828 HTTP 504: upstream request timeout tentativa 4
+09:34:31 falha https://dadosabertos.camara.leg.br/api/v2/deputados/66828 HTTP 504: upstream request timeout tentativa 5
+09:35:02 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73434 HTTP 504: upstream request timeout tentativa 1
+09:35:20 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73434 HTTP 504: upstream request timeout tentativa 2
+09:35:41 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73434 HTTP 504: upstream request timeout tentativa 3
+09:36:05 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73434 HTTP 504: upstream request timeout tentativa 4
+09:36:32 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73434 HTTP 504: upstream request timeout tentativa 5
+09:37:03 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73437 HTTP 504: upstream request timeout tentativa 1
+09:37:21 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73437 HTTP 504: upstream request timeout tentativa 2
+09:37:42 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73437 HTTP 504: upstream request timeout tentativa 3
+09:38:06 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73437 HTTP 504: upstream request timeout tentativa 4
+09:38:33 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73437 HTTP 504: upstream request timeout tentativa 5
+09:39:06 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73447 HTTP 504: upstream request timeout tentativa 1
+09:39:25 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73447 HTTP 504: upstream request timeout tentativa 2
+09:39:46 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73447 HTTP 504: upstream request timeout tentativa 3
+09:40:10 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73447 HTTP 504: upstream request timeout tentativa 4
+09:40:38 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73531 HTTP 504: upstream request timeout tentativa 1
+09:40:56 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73531 HTTP 504: upstream request timeout tentativa 2
+09:41:17 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73531 HTTP 504: upstream request timeout tentativa 3
+09:41:42 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73531 HTTP 504: upstream request timeout tentativa 4
+09:42:09 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73531 HTTP 504: upstream request timeout tentativa 5
+09:42:39 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73535 HTTP 504: upstream request timeout tentativa 1
+09:42:57 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73535 HTTP 504: upstream request timeout tentativa 2
+09:43:18 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73535 HTTP 504: upstream request timeout tentativa 3
+09:44:12 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73536 HTTP 504: upstream request timeout tentativa 1
+09:45:05 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73560/historico HTTP 504: upstream request timeout tentativa 1
+09:45:23 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73560/historico HTTP 504: upstream request timeout tentativa 2
+09:46:12 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73604 HTTP 504: upstream request timeout tentativa 1
+09:46:47 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73682/historico HTTP 504: upstream request timeout tentativa 1
+09:48:03 detalhes 20 / 192
+09:49:05 falha https://dadosabertos.camara.leg.br/api/v2/deputados/74784 HTTP 504: upstream request timeout tentativa 1
+09:49:38 falha https://dadosabertos.camara.leg.br/api/v2/deputados/80920 HTTP 504: upstream request timeout tentativa 1
+09:49:58 falha https://dadosabertos.camara.leg.br/api/v2/deputados/88950 HTTP 504: upstream request timeout tentativa 1
+09:51:21 falha https://dadosabertos.camara.leg.br/api/v2/deputados/141396 HTTP 504: upstream request timeout tentativa 1
+09:51:39 falha https://dadosabertos.camara.leg.br/api/v2/deputados/141396 HTTP 504: upstream request timeout tentativa 2
+09:52:00 falha https://dadosabertos.camara.leg.br/api/v2/deputados/141396 HTTP 504: upstream request timeout tentativa 3
+09:52:25 falha https://dadosabertos.camara.leg.br/api/v2/deputados/141396 HTTP 504: upstream request timeout tentativa 4
+09:52:46 detalhes 40 / 192
+09:54:12 detalhes 60 / 192
+09:55:11 detalhes 80 / 192
+09:55:43 detalhes 100 / 192
+09:56:30 falha https://dadosabertos.camara.leg.br/api/v2/deputados/178991 HTTP 504: upstream request timeout tentativa 1
+09:56:50 falha https://dadosabertos.camara.leg.br/api/v2/deputados/178992 HTTP 504: upstream request timeout tentativa 1
+09:57:09 falha https://dadosabertos.camara.leg.br/api/v2/deputados/179382 HTTP 504: upstream request timeout tentativa 1
+09:57:23 detalhes 120 / 192
+09:57:47 detalhes 140 / 192
+09:58:09 detalhes 160 / 192
+09:58:29 detalhes 180 / 192
+09:58:43 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2015.csv 14.4 MB
+09:58:44 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2015.csv 34.2 MB
+09:58:45 proposições 2015 ok
+09:58:46 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2016.csv 8.8 MB
+09:58:47 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2016.csv 21.4 MB
+09:58:48 proposições 2016 ok
+09:58:48 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2017.csv 16.2 MB
+09:58:50 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2017.csv 27.7 MB
+09:58:51 proposições 2017 ok
+09:58:51 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2018.csv 5.6 MB
+09:58:52 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2018.csv 16.3 MB
+09:58:52 proposições 2018 ok
+09:58:54 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2019.csv 32.9 MB
+09:58:55 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2019.csv 33.3 MB
+09:58:57 proposições 2019 ok
+09:58:58 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2020.csv 14.2 MB
+09:58:59 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2020.csv 25.3 MB
+09:59:00 proposições 2020 ok
+09:59:01 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2021.csv 19.4 MB
+09:59:03 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2021.csv 34.6 MB
+09:59:04 proposições 2021 ok
+09:59:05 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2022.csv 11.1 MB
+09:59:06 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2022.csv 23.2 MB
+09:59:07 proposições 2022 ok
+09:59:09 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2023.csv 42.3 MB
+09:59:11 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2023.csv 52.3 MB
+09:59:14 proposições 2023 ok
+09:59:16 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2024.csv 24.4 MB
+09:59:18 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2024.csv 53.1 MB
+09:59:20 proposições 2024 ok
+09:59:22 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2025.csv 38.9 MB
+09:59:26 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2025.csv 90.2 MB
+09:59:29 proposições 2025 ok
+09:59:31 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2026.csv 14.9 MB
+09:59:32 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2026.csv 41.3 MB
+09:59:34 proposições 2026 ok
+10:01:27 emendas 2015 131
+10:04:05 emendas 2016 270
+10:06:41 emendas 2017 260
+10:09:16 emendas 2018 298
+10:12:51 emendas 2019 275
+10:15:40 emendas 2020 325
+10:18:27 emendas 2021 336
+10:21:06 emendas 2022 316
+10:24:28 emendas 2023 281
+10:27:31 emendas 2024 386
+10:30:30 emendas 2025 370
+10:33:25 emendas 2026 366
+10:33:27 baixado https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml 0.0 MB
+10:33:29 baixado https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml 0.3 MB
+10:33:41 baixado https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml 172.0 MB
+10:34:08 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml 0.0 MB
+10:34:15 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/proposituras.zip 17.3 MB
+10:34:27 ALESP proposituras desde 2015 149887
+10:34:29 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/documento_andamento_atual.zip 1.8 MB
+10:34:45 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/documento_autor.zip 6.5 MB
+10:35:09 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml 8.2 MB
+10:35:10 baixado https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml 0.0 MB
+10:35:20 baixado https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_normas.xml 95.3 MB
+10:35:42 fim
