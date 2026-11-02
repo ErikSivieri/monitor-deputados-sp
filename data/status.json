@@ -2,7 +2,7 @@
  "tse": {
   "registros": 12805,
   "ok": true,
-  "segundos": 2
+  "segundos": 0
  },
  "camara_despesas": {
   "colunas": [
@@ -42,35 +42,18 @@
   ],
   "linhas": 68916,
   "ok": true,
-  "segundos": 41
+  "segundos": 6
  },
  "camara_votacoes": {
   "votacoes_nominais_plenario": 3915,
   "votos_sp": 216317,
   "ok": true,
-  "segundos": 43
+  "segundos": 8
  },
  "camara_deputados": {
-  "total": 188,
-  "falhas": [
-   [
-    66828,
-    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/66828 (HTTP 504: upstream request timeout)"
-   ],
-   [
-    73434,
-    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73434 (HTTP 504: upstream request timeout)"
-   ],
-   [
-    73437,
-    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73437 (HTTP 504: upstream request timeout)"
-   ],
-   [
-    73531,
-    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73531 (HTTP 504: upstream request timeout)"
-   ]
-  ],
-  "n_falhas": 4,
+  "total": 192,
+  "falhas": [],
+  "n_falhas": 0,
   "legislaturas": [
    57,
    56,
@@ -79,16 +62,7 @@
   "exemplo_historico": [
    {
     "data": "2023-02-01T00:00",
-    "partido": "PT",
-    "uf": "SP",
-    "situacao": null,
-    "condicao": null,
-    "leg": 58,
-    "desc": "Nome no início da legislatura / Partido no início da legislatura"
-   },
-   {
-    "data": "2023-02-01T00:00",
-    "partido": "PT",
+    "partido": "PP",
     "uf": "SP",
     "situacao": null,
     "condicao": null,
@@ -97,59 +71,68 @@
    },
    {
     "data": "2023-02-01T12:05",
-    "partido": "PT",
+    "partido": "PP",
     "uf": "SP",
     "situacao": "Exercício",
     "condicao": "Titular",
     "leg": 57,
     "desc": "Entrada - Posse de Eleito Titular - Posse na Sessão Preparatória"
+   },
+   {
+    "data": "2026-04-29T22:10",
+    "partido": "UNIÃO",
+    "uf": "SP",
+    "situacao": "Exercício",
+    "condicao": "Titular",
+    "leg": 57,
+    "desc": "Alteração de partido"
    }
   ],
   "ok": true,
-  "segundos": 1598
+  "segundos": 189
  },
  "camara_proposicoes": {
-  "linhas": 122359,
+  "linhas": 122776,
   "situacoes_mais_comuns": [
    [
     "",
-    44610
+    44762
    ],
    [
     "Arquivada",
-    13584
+    13603
    ],
    [
     "Tramitação Finalizada",
-    4537
+    4549
    ],
    [
     "Aguardando Providências Internas",
-    4021
+    4041
    ],
    [
     "Tramitando em Conjunto",
-    3211
+    3215
    ],
    [
     "Aguardando Designação de Relator(a)",
-    1850
+    1860
    ],
    [
     "Aguardando Remessa ao Arquivo",
-    1311
+    1321
    ],
    [
     "Pronta para Pauta",
-    1297
+    1311
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados",
-    1230
+    1235
    ],
    [
     "Aguardando Parecer",
-    862
+    867
    ],
    [
     "Devolvida ao(à) Autor(a)",
@@ -157,11 +140,11 @@
    ],
    [
     "Retirado pelo(a) Autor(a)",
-    387
+    388
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
-    297
+    303
    ],
    [
     "Transformado em Norma Jurídica",
@@ -169,19 +152,19 @@
    ],
    [
     "Aguardando Encaminhamento",
-    211
+    213
+   ],
+   [
+    "Aguardando Resposta",
+    196
    ],
    [
     "Aguardando Apreciação pelo Senado Federal",
     193
    ],
    [
-    "Aguardando Resposta",
-    185
-   ],
-   [
     "Aguardando Autorização do Despacho",
-    133
+    135
    ],
    [
     "Aguardando Designação - Aguardando Devolução de Relator(a) que deixou de ser Membro",
@@ -193,11 +176,11 @@
    ],
    [
     "Aguardando Deliberação",
-    78
+    79
    ],
    [
     "Aguardando Envio ao Executivo",
-    73
+    75
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Autorização)",
@@ -213,349 +196,9 @@
    ]
   ],
   "ok": true,
-  "segundos": 52
+  "segundos": 14
  },
  "cgu_emendas": {
-  "chaves_2015": [
-   "ano",
-   "autor",
-   "codigoEmenda",
-   "funcao",
-   "localidadeDoGasto",
-   "nomeAutor",
-   "numeroEmenda",
-   "subfuncao",
-   "tipoEmenda",
-   "valorEmpenhado",
-   "valorLiquidado",
-   "valorPago",
-   "valorRestoCancelado",
-   "valorRestoInscrito",
-   "valorRestoPago"
-  ],
-  "exemplo_2015": {
-   "codigoEmenda": "201527960008",
-   "ano": 2015,
-   "tipoEmenda": "Emenda Individual - Transferências com Finalidade Definida",
-   "autor": "ALEXANDRE LEITE",
-   "nomeAutor": "ALEXANDRE LEITE",
-   "numeroEmenda": "0008",
-   "localidadeDoGasto": "SÃO PAULO - SP",
-   "funcao": "Saúde",
-   "subfuncao": "Administração geral",
-   "valorEmpenhado": "99.909,36",
-   "valorLiquidado": "0,00",
-   "valorPago": "0,00",
-   "valorRestoInscrito": "0,00",
-   "valorRestoCancelado": "99.909,36",
-   "valorRestoPago": "0,00"
-  },
-  "chaves_2016": [
-   "ano",
-   "autor",
-   "codigoEmenda",
-   "funcao",
-   "localidadeDoGasto",
-   "nomeAutor",
-   "numeroEmenda",
-   "subfuncao",
-   "tipoEmenda",
-   "valorEmpenhado",
-   "valorLiquidado",
-   "valorPago",
-   "valorRestoCancelado",
-   "valorRestoInscrito",
-   "valorRestoPago"
-  ],
-  "exemplo_2016": {
-   "codigoEmenda": "201630370003",
-   "ano": 2016,
-   "tipoEmenda": "Emenda Individual - Transferências com Finalidade Definida",
-   "autor": "ALEX MANENTE",
-   "nomeAutor": "ALEX MANENTE",
-   "numeroEmenda": "0003",
-   "localidadeDoGasto": "MÚLTIPLO",
-   "funcao": "Comércio e serviços",
-   "subfuncao": "Turismo",
-   "valorEmpenhado": "650.000,00",
-   "valorLiquidado": "649.072,01",
-   "valorPago": "649.072,01",
-   "valorRestoInscrito": "0,00",
-   "valorRestoCancelado": "927,99",
-   "valorRestoPago": "0,00"
-  },
-  "chaves_2017": [
-   "ano",
-   "autor",
-   "codigoEmenda",
-   "funcao",
-   "localidadeDoGasto",
-   "nomeAutor",
-   "numeroEmenda",
-   "subfuncao",
-   "tipoEmenda",
-   "valorEmpenhado",
-   "valorLiquidado",
-   "valorPago",
-   "valorRestoCancelado",
-   "valorRestoInscrito",
-   "valorRestoPago"
-  ],
-  "exemplo_2017": {
-   "codigoEmenda": "201730370001",
-   "ano": 2017,
-   "tipoEmenda": "Emenda Individual - Transferências com Finalidade Definida",
-   "autor": "ALEX MANENTE",
-   "nomeAutor": "ALEX MANENTE",
-   "numeroEmenda": "0001",
-   "localidadeDoGasto": "MÚLTIPLO",
-   "funcao": "Urbanismo",
-   "subfuncao": "infra-estrutura urbana",
-   "valorEmpenhado": "6.043.799,20",
-   "valorLiquidado": "0,00",
-   "valorPago": "0,00",
-   "valorRestoInscrito": "0,00",
-   "valorRestoCancelado": "1.029.518,20",
-   "valorRestoPago": "5.014.281,00"
-  },
-  "chaves_2018": [
-   "ano",
-   "autor",
-   "codigoEmenda",
-   "funcao",
-   "localidadeDoGasto",
-   "nomeAutor",
-   "numeroEmenda",
-   "subfuncao",
-   "tipoEmenda",
-   "valorEmpenhado",
-   "valorLiquidado",
-   "valorPago",
-   "valorRestoCancelado",
-   "valorRestoInscrito",
-   "valorRestoPago"
-  ],
-  "exemplo_2018": {
-   "codigoEmenda": "201830370003",
-   "ano": 2018,
-   "tipoEmenda": "Emenda Individual - Transferências com Finalidade Definida",
-   "autor": "ALEX MANENTE",
-   "nomeAutor": "ALEX MANENTE",
-   "numeroEmenda": "0003",
-   "localidadeDoGasto": "RIO GRANDE DA SERRA - SP",
-   "funcao": "Saúde",
-   "subfuncao": "Administração geral",
-   "valorEmpenhado": "300.000,00",
-   "valorLiquidado": "300.000,00",
-   "valorPago": "300.000,00",
-   "valorRestoInscrito": "0,00",
-   "valorRestoCancelado": "0,00",
-   "valorRestoPago": "0,00"
-  },
-  "chaves_2019": [
-   "ano",
-   "autor",
-   "codigoEmenda",
-   "funcao",
-   "localidadeDoGasto",
-   "nomeAutor",
-   "numeroEmenda",
-   "subfuncao",
-   "tipoEmenda",
-   "valorEmpenhado",
-   "valorLiquidado",
-   "valorPago",
-   "valorRestoCancelado",
-   "valorRestoInscrito",
-   "valorRestoPago"
-  ],
-  "exemplo_2019": {
-   "codigoEmenda": "201930370001",
-   "ano": 2019,
-   "tipoEmenda": "Emenda Individual - Transferências com Finalidade Definida",
-   "autor": "ALEX MANENTE",
-   "nomeAutor": "ALEX MANENTE",
-   "numeroEmenda": "0001",
-   "localidadeDoGasto": "MÚLTIPLO",
-   "funcao": "Saúde",
-   "subfuncao": "Assistência hospitalar e ambulatorial",
-   "valorEmpenhado": "5.230.525,00",
-   "valorLiquidado": "5.230.525,00",
-   "valorPago": "5.230.525,00",
-   "valorRestoInscrito": "0,00",
-   "valorRestoCancelado": "0,00",
-   "valorRestoPago": "0,00"
-  },
-  "chaves_2020": [
-   "ano",
-   "autor",
-   "codigoEmenda",
-   "funcao",
-   "localidadeDoGasto",
-   "nomeAutor",
-   "numeroEmenda",
-   "subfuncao",
-   "tipoEmenda",
-   "valorEmpenhado",
-   "valorLiquidado",
-   "valorPago",
-   "valorRestoCancelado",
-   "valorRestoInscrito",
-   "valorRestoPago"
-  ],
-  "exemplo_2020": {
-   "codigoEmenda": "202038960001",
-   "ano": 2020,
-   "tipoEmenda": "Emenda Individual - Transferências com Finalidade Definida",
-   "autor": "ABOU ANNI",
-   "nomeAutor": "ABOU ANNI",
-   "numeroEmenda": "0001",
-   "localidadeDoGasto": "ZACARIAS - SP",
-   "funcao": "Saúde",
-   "subfuncao": "Atenção básica",
-   "valorEmpenhado": "199.978,00",
-   "valorLiquidado": "199.978,00",
-   "valorPago": "199.978,00",
-   "valorRestoInscrito": "0,00",
-   "valorRestoCancelado": "0,00",
-   "valorRestoPago": "0,00"
-  },
-  "chaves_2021": [
-   "ano",
-   "autor",
-   "codigoEmenda",
-   "funcao",
-   "localidadeDoGasto",
-   "nomeAutor",
-   "numeroEmenda",
-   "subfuncao",
-   "tipoEmenda",
-   "valorEmpenhado",
-   "valorLiquidado",
-   "valorPago",
-   "valorRestoCancelado",
-   "valorRestoInscrito",
-   "valorRestoPago"
-  ],
-  "exemplo_2021": {
-   "codigoEmenda": "202138960004",
-   "ano": 2021,
-   "tipoEmenda": "Emenda Individual - Transferências com Finalidade Definida",
-   "autor": "ABOU ANNI",
-   "nomeAutor": "ABOU ANNI",
-   "numeroEmenda": "0004",
-   "localidadeDoGasto": "SÃO PAULO (UF)",
-   "funcao": "Saúde",
-   "subfuncao": "Assistência hospitalar e ambulatorial",
-   "valorEmpenhado": "100.000,00",
-   "valorLiquidado": "0,00",
-   "valorPago": "0,00",
-   "valorRestoInscrito": "200.000,00",
-   "valorRestoCancelado": "22.666,67",
-   "valorRestoPago": "77.333,33"
-  },
-  "chaves_2022": [
-   "ano",
-   "autor",
-   "codigoEmenda",
-   "funcao",
-   "localidadeDoGasto",
-   "nomeAutor",
-   "numeroEmenda",
-   "subfuncao",
-   "tipoEmenda",
-   "valorEmpenhado",
-   "valorLiquidado",
-   "valorPago",
-   "valorRestoCancelado",
-   "valorRestoInscrito",
-   "valorRestoPago"
-  ],
-  "exemplo_2022": {
-   "codigoEmenda": "202238960001",
-   "ano": 2022,
-   "tipoEmenda": "Emenda Individual - Transferências com Finalidade Definida",
-   "autor": "ABOU ANNI",
-   "nomeAutor": "ABOU ANNI",
-   "numeroEmenda": "0001",
-   "localidadeDoGasto": "SÃO PAULO (UF)",
-   "funcao": "Saúde",
-   "subfuncao": "Assistência hospitalar e ambulatorial",
-   "valorEmpenhado": "811.695,00",
-   "valorLiquidado": "99.962,00",
-   "valorPago": "99.962,00",
-   "valorRestoInscrito": "711.733,00",
-   "valorRestoCancelado": "711.733,00",
-   "valorRestoPago": "0,00"
-  },
-  "chaves_2023": [
-   "ano",
-   "autor",
-   "codigoEmenda",
-   "funcao",
-   "localidadeDoGasto",
-   "nomeAutor",
-   "numeroEmenda",
-   "subfuncao",
-   "tipoEmenda",
-   "valorEmpenhado",
-   "valorLiquidado",
-   "valorPago",
-   "valorRestoCancelado",
-   "valorRestoInscrito",
-   "valorRestoPago"
-  ],
-  "exemplo_2023": {
-   "codigoEmenda": "202338960005",
-   "ano": 2023,
-   "tipoEmenda": "Emenda Individual - Transferências Especiais",
-   "autor": "ABOU ANNI",
-   "nomeAutor": "ABOU ANNI",
-   "numeroEmenda": "0005",
-   "localidadeDoGasto": "MÚLTIPLO",
-   "funcao": "Encargos especiais",
-   "subfuncao": "Outras transferências",
-   "valorEmpenhado": "1.551.007,00",
-   "valorLiquidado": "1.551.007,00",
-   "valorPago": "1.551.007,00",
-   "valorRestoInscrito": "0,00",
-   "valorRestoCancelado": "0,00",
-   "valorRestoPago": "0,00"
-  },
-  "chaves_2024": [
-   "ano",
-   "autor",
-   "codigoEmenda",
-   "funcao",
-   "localidadeDoGasto",
-   "nomeAutor",
-   "numeroEmenda",
-   "subfuncao",
-   "tipoEmenda",
-   "valorEmpenhado",
-   "valorLiquidado",
-   "valorPago",
-   "valorRestoCancelado",
-   "valorRestoInscrito",
-   "valorRestoPago"
-  ],
-  "exemplo_2024": {
-   "codigoEmenda": "202442920011",
-   "ano": 2024,
-   "tipoEmenda": "Emenda Individual - Transferências com Finalidade Definida",
-   "autor": "ADILSON BARROSO",
-   "nomeAutor": "ADILSON BARROSO",
-   "numeroEmenda": "0011",
-   "localidadeDoGasto": "Nacional",
-   "funcao": "Defesa nacional",
-   "subfuncao": "Controle ambiental",
-   "valorEmpenhado": "149.939,50",
-   "valorLiquidado": "0,00",
-   "valorPago": "0,00",
-   "valorRestoInscrito": "149.939,50",
-   "valorRestoCancelado": "86.250,00",
-   "valorRestoPago": "63.689,50"
-  },
   "chaves_2025": [
    "ano",
    "autor",
@@ -624,21 +267,21 @@
    "valorRestoCancelado": "0,00",
    "valorRestoPago": "0,00"
   },
-  "linhas": 3614,
-  "deputados_com_emendas": 136,
+  "linhas": 3639,
+  "deputados_com_emendas": 138,
   "ok": true,
-  "segundos": 2031
+  "segundos": 372
  },
  "montagem_federal": {
-  "emendas": 3614,
-  "parlamentares": 188,
+  "emendas": 3639,
+  "parlamentares": 192,
   "sem_tse": [
    "ABELARDO CAMARINHA",
    "OTONIEL LIMA"
   ],
   "n_sem_tse": 2,
-  "divergencia_partido_arquivo_cota": 15057,
-  "linhas_despesa": 66576
+  "divergencia_partido_arquivo_cota": 15825,
+  "linhas_despesa": 68916
  },
  "alesp_cadastro": {
   "deputados": 94,
@@ -735,7 +378,7 @@
   "deputados": 238,
   "sem_matricula": [],
   "ok": true,
-  "segundos": 38
+  "segundos": 53
  },
  "alesp_proposituras": {
   "proposituras": 149887,
@@ -813,7 +456,7 @@
      "Comissao",
      "E"
     ],
-    1776
+    1777
    ],
    [
     [
@@ -862,7 +505,7 @@
      "Distribuicao",
      "S"
     ],
-    40
+    39
    ],
    [
     [
@@ -963,15 +606,15 @@
    ]
   ],
   "ok": true,
-  "segundos": 57
+  "segundos": 55
  },
  "alesp_presencas": {
   "presencas": 16459,
   "exemplo": [
-   "Ricardo Mellão",
-   "1000000360",
-   "1000002614",
-   "2019-08-14"
+   "Maria Lúcia Amary",
+   "436",
+   "1000000298",
+   "2016-12-20"
   ],
   "ok": true,
   "segundos": 6
@@ -1109,7 +752,7 @@
    }
   ],
   "ok": true,
-  "segundos": 23
+  "segundos": 28
  },
  "montagem_estadual": {
   "parlamentares": 244,
@@ -1308,7 +951,7 @@
   "normas_casadas": 3785
  },
  "geral": {
-  "geradoEm": "2026-11-01 07:35",
-  "tamanho_painel_mb": 6.93
+  "geradoEm": "2026-11-02 07:01",
+  "tamanho_painel_mb": 7.01
  }
 }
