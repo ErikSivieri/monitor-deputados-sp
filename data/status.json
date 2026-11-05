@@ -40,15 +40,15 @@
    "urlDocumento",
    "v"
   ],
-  "linhas": 68916,
+  "linhas": 68453,
   "ok": true,
-  "segundos": 6
+  "segundos": 5
  },
  "camara_votacoes": {
   "votacoes_nominais_plenario": 3915,
   "votos_sp": 216317,
   "ok": true,
-  "segundos": 9
+  "segundos": 8
  },
  "camara_deputados": {
   "total": 192,
@@ -89,34 +89,34 @@
    }
   ],
   "ok": true,
-  "segundos": 152
+  "segundos": 166
  },
  "camara_proposicoes": {
-  "linhas": 122776,
+  "linhas": 123020,
   "situacoes_mais_comuns": [
    [
     "",
-    44762
+    44969
    ],
    [
     "Arquivada",
-    13603
+    13606
    ],
    [
     "Tramitação Finalizada",
-    4549
+    4550
    ],
    [
     "Aguardando Providências Internas",
-    4041
+    4053
    ],
    [
     "Tramitando em Conjunto",
-    3215
+    3216
    ],
    [
     "Aguardando Designação de Relator(a)",
-    1860
+    1869
    ],
    [
     "Aguardando Remessa ao Arquivo",
@@ -128,11 +128,11 @@
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados",
-    1235
+    1233
    ],
    [
     "Aguardando Parecer",
-    867
+    869
    ],
    [
     "Devolvida ao(à) Autor(a)",
@@ -144,7 +144,7 @@
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
-    303
+    302
    ],
    [
     "Transformado em Norma Jurídica",
@@ -152,7 +152,7 @@
    ],
    [
     "Aguardando Encaminhamento",
-    213
+    215
    ],
    [
     "Aguardando Resposta",
@@ -164,7 +164,7 @@
    ],
    [
     "Aguardando Autorização do Despacho",
-    135
+    152
    ],
    [
     "Aguardando Designação - Aguardando Devolução de Relator(a) que deixou de ser Membro",
@@ -175,12 +175,12 @@
     117
    ],
    [
-    "Aguardando Deliberação",
-    79
-   ],
-   [
     "Aguardando Envio ao Executivo",
     75
+   ],
+   [
+    "Aguardando Deliberação",
+    69
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Autorização)",
@@ -196,7 +196,7 @@
    ]
   ],
   "ok": true,
-  "segundos": 14
+  "segundos": 13
  },
  "cgu_emendas": {
   "chaves_2025": [
@@ -267,21 +267,21 @@
    "valorRestoCancelado": "0,00",
    "valorRestoPago": "0,00"
   },
-  "linhas": 3639,
+  "linhas": 3641,
   "deputados_com_emendas": 138,
   "ok": true,
-  "segundos": 403
+  "segundos": 390
  },
  "montagem_federal": {
-  "emendas": 3639,
+  "emendas": 3641,
   "parlamentares": 192,
   "sem_tse": [
    "ABELARDO CAMARINHA",
    "OTONIEL LIMA"
   ],
   "n_sem_tse": 2,
-  "divergencia_partido_arquivo_cota": 15825,
-  "linhas_despesa": 68916
+  "divergencia_partido_arquivo_cota": 15699,
+  "linhas_despesa": 68453
  },
  "alesp_cadastro": {
   "deputados": 94,
@@ -299,52 +299,52 @@
   "segundos": 3
  },
  "alesp_despesas": {
-  "registros": 249563,
-  "linhas": 100765,
+  "registros": 250870,
+  "linhas": 101323,
   "tipos": [
    [
     "A - COMBUSTÍVEIS E LUBRIFICANTES",
-    61416
+    61754
    ],
    [
     "I - HOSPEDAGEM, ALIMENTAÇÃO E DESPESAS DE LOCOMOÇÃO",
-    39211
+    39402
    ],
    [
     "H - SERV.UTIL.PÚBLICA (TELEF.MÓVEL/FIXA, ENERGIA, ÁGUA, GÁS ETC)",
-    28177
+    28290
    ],
    [
     "E - MATERIAIS DE ESCRITÓRIO E OUTROS MATERIAIS DE CONSUMO",
-    22494
+    22593
    ],
    [
     "G - ASSINATURAS DE PERIÓDICOS, PUBLICAÇÕES, INTERNET E SOFTWARES",
-    18708
+    18850
    ],
    [
     "M - MANUTENÇÃO DE BENS MÓVEIS, IMÓVEIS, CONDOMÍNIOS E OUTROS",
-    15591
+    15631
    ],
    [
     "K - LOCAÇÃO DE BENS MÓVEIS",
-    15411
+    15538
    ],
    [
     "L - LOCAÇÃO DE BENS IMÓVEIS",
-    12700
+    12767
    ],
    [
     "D - MATERIAIS E SERVIÇOS GRÁFICOS, DE CÓPIAS E REPRODUÇÃO DE DOCS",
-    7947
+    7967
    ],
    [
     "F - SERVIÇOS TÉCNICOS PROFISSIONAIS (CONSULTORIA, PESQUISAS ETC)",
-    5702
+    5738
    ],
    [
     "O - LOCAÇÃO DE VEÍCULO DE REPRESENTAÇÃO",
-    5298
+    5314
    ],
    [
     "C - MATERIAIS E SERVIÇOS DE MANUT E CONSERV DE VEÍCULOS ; PEDÁGIOS",
@@ -352,23 +352,23 @@
    ],
    [
     "J - SERVIÇOS DE COMUNICAÇÃO",
-    4538
+    4551
    ],
    [
     "P - DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR",
-    3594
+    3645
    ],
    [
     "N - MORADIA",
-    2808
+    2830
    ],
    [
     "B - PEDÁGIOS",
-    587
+    605
    ],
    [
     "Q - LOCAÇÃO DE VEÍCULO DE APOIO",
-    206
+    220
    ],
    [
     "C - MATERIAIS E SERVIÇOS DE MANUT E CONSERV DE VEÍCULOS",
@@ -378,7 +378,7 @@
   "deputados": 238,
   "sem_matricula": [],
   "ok": true,
-  "segundos": 41
+  "segundos": 37
  },
  "alesp_proposituras": {
   "proposituras": 149887,
@@ -449,35 +449,35 @@
      "Publicacao",
      "E"
     ],
-    20991
+    20642
    ],
    [
     [
      "Comissao",
      "E"
     ],
-    1776
+    1766
    ],
    [
     [
      "Não Identificada",
      "E"
     ],
-    1658
+    1644
    ],
    [
     [
      "Comissao",
      "S"
     ],
-    1317
+    1307
    ],
    [
     [
      "Arquivo",
      "I"
     ],
-    856
+    855
    ],
    [
     [
@@ -491,7 +491,7 @@
      "Publicacao",
      "S"
     ],
-    102
+    100
    ],
    [
     [
@@ -606,18 +606,18 @@
    ]
   ],
   "ok": true,
-  "segundos": 61
+  "segundos": 60
  },
  "alesp_presencas": {
   "presencas": 16459,
   "exemplo": [
-   "Vinicius Camarinha",
-   "448",
-   "1000003616",
-   "2020-09-29"
+   "Lucas Bove",
+   "1000000987",
+   "1000007323",
+   "2025-12-09"
   ],
   "ok": true,
-  "segundos": 7
+  "segundos": 6
  },
  "alesp_normas": {
   "normas": 2462,
@@ -752,7 +752,7 @@
    }
   ],
   "ok": true,
-  "segundos": 26
+  "segundos": 23
  },
  "montagem_estadual": {
   "parlamentares": 244,
@@ -951,7 +951,7 @@
   "normas_casadas": 3785
  },
  "geral": {
-  "geradoEm": "2026-11-03 06:57",
+  "geradoEm": "2026-11-05 07:00",
   "tamanho_painel_mb": 7.01
  }
 }
