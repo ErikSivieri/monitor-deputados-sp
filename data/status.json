@@ -40,9 +40,9 @@
    "urlDocumento",
    "v"
   ],
-  "linhas": 68453,
+  "linhas": 68964,
   "ok": true,
-  "segundos": 5
+  "segundos": 6
  },
  "camara_votacoes": {
   "votacoes_nominais_plenario": 3915,
@@ -89,18 +89,18 @@
    }
   ],
   "ok": true,
-  "segundos": 166
+  "segundos": 179
  },
  "camara_proposicoes": {
-  "linhas": 123020,
+  "linhas": 123035,
   "situacoes_mais_comuns": [
    [
     "",
-    44969
+    44923
    ],
    [
     "Arquivada",
-    13606
+    13607
    ],
    [
     "Tramitação Finalizada",
@@ -116,23 +116,23 @@
    ],
    [
     "Aguardando Designação de Relator(a)",
-    1869
+    1874
    ],
    [
     "Aguardando Remessa ao Arquivo",
-    1321
+    1323
    ],
    [
     "Pronta para Pauta",
-    1311
+    1313
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados",
-    1233
+    1229
    ],
    [
     "Aguardando Parecer",
-    869
+    867
    ],
    [
     "Devolvida ao(à) Autor(a)",
@@ -152,7 +152,7 @@
    ],
    [
     "Aguardando Encaminhamento",
-    215
+    214
    ],
    [
     "Aguardando Resposta",
@@ -164,23 +164,23 @@
    ],
    [
     "Aguardando Autorização do Despacho",
-    152
+    157
    ],
    [
     "Aguardando Designação - Aguardando Devolução de Relator(a) que deixou de ser Membro",
     127
    ],
    [
+    "Aguardando Envio ao Executivo",
+    125
+   ],
+   [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Análise)",
     117
    ],
    [
-    "Aguardando Envio ao Executivo",
-    75
-   ],
-   [
     "Aguardando Deliberação",
-    69
+    72
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Autorização)",
@@ -196,7 +196,7 @@
    ]
   ],
   "ok": true,
-  "segundos": 13
+  "segundos": 14
  },
  "cgu_emendas": {
   "chaves_2025": [
@@ -270,7 +270,7 @@
   "linhas": 3641,
   "deputados_com_emendas": 138,
   "ok": true,
-  "segundos": 390
+  "segundos": 409
  },
  "montagem_federal": {
   "emendas": 3641,
@@ -280,8 +280,8 @@
    "OTONIEL LIMA"
   ],
   "n_sem_tse": 2,
-  "divergencia_partido_arquivo_cota": 15699,
-  "linhas_despesa": 68453
+  "divergencia_partido_arquivo_cota": 15825,
+  "linhas_despesa": 68964
  },
  "alesp_cadastro": {
   "deputados": 94,
@@ -449,28 +449,28 @@
      "Publicacao",
      "E"
     ],
-    20642
+    20560
    ],
    [
     [
      "Comissao",
      "E"
     ],
-    1766
+    1763
    ],
    [
     [
      "Não Identificada",
      "E"
     ],
-    1644
+    1639
    ],
    [
     [
      "Comissao",
      "S"
     ],
-    1307
+    1301
    ],
    [
     [
@@ -505,7 +505,7 @@
      "Distribuicao",
      "S"
     ],
-    40
+    39
    ],
    [
     [
@@ -606,15 +606,15 @@
    ]
   ],
   "ok": true,
-  "segundos": 60
+  "segundos": 53
  },
  "alesp_presencas": {
   "presencas": 16459,
   "exemplo": [
-   "Lucas Bove",
-   "1000000987",
-   "1000007323",
-   "2025-12-09"
+   "Clarice Ganem",
+   "1000000958",
+   "1000005351",
+   "2023-05-16"
   ],
   "ok": true,
   "segundos": 6
@@ -951,7 +951,7 @@
   "normas_casadas": 3785
  },
  "geral": {
-  "geradoEm": "2026-11-05 07:00",
-  "tamanho_painel_mb": 7.01
+  "geradoEm": "2026-11-06 07:02",
+  "tamanho_painel_mb": 7.03
  }
 }
