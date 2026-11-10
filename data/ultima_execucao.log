@@ -1,82 +1,849 @@
-09:48:24 início; atualização completa: False
-09:48:24 despesas 2015 ok
-09:48:24 despesas 2016 ok
-09:48:24 despesas 2017 ok
-09:48:24 despesas 2018 ok
-09:48:24 despesas 2019 ok
-09:48:24 despesas 2020 ok
-09:48:24 despesas 2021 ok
-09:48:24 despesas 2022 ok
-09:48:24 despesas 2023 ok
-09:48:24 despesas 2024 ok
-09:48:27 baixado https://www.camara.leg.br/cotas/Ano-2025.csv.zip 6.9 MB
-09:48:29 despesas 2025 ok
-09:48:30 baixado https://www.camara.leg.br/cotas/Ano-2026.csv.zip 4.6 MB
-09:48:31 despesas 2026 ok
-09:48:31 votações 2015 ok
-09:48:31 votações 2016 ok
-09:48:31 votações 2017 ok
-09:48:31 votações 2018 ok
-09:48:31 votações 2019 ok
-09:48:31 votações 2020 ok
-09:48:31 votações 2021 ok
-09:48:31 votações 2022 ok
-09:48:31 votações 2023 ok
-09:48:31 votações 2024 ok
-09:48:34 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2025.csv 8.8 MB
-09:48:36 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2025.csv 58.2 MB
-09:48:38 votações 2025 ok
-09:48:39 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2026.csv 4.9 MB
-09:48:40 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2026.csv 17.7 MB
-09:48:40 votações 2026 ok
-09:48:41 federais SP desde 2015 : 192
-09:48:42 detalhes 0 / 192
-09:49:00 detalhes 20 / 192
-09:49:17 detalhes 40 / 192
-09:49:34 detalhes 60 / 192
-09:49:52 detalhes 80 / 192
-09:50:10 detalhes 100 / 192
-09:50:27 detalhes 120 / 192
-09:50:44 detalhes 140 / 192
-09:51:01 detalhes 160 / 192
-09:51:17 detalhes 180 / 192
-09:51:26 proposições 2015 ok
-09:51:26 proposições 2016 ok
-09:51:26 proposições 2017 ok
-09:51:26 proposições 2018 ok
-09:51:26 proposições 2019 ok
-09:51:26 proposições 2020 ok
-09:51:26 proposições 2021 ok
-09:51:26 proposições 2022 ok
-09:51:26 proposições 2023 ok
-09:51:26 proposições 2024 ok
-09:51:29 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2025.csv 38.9 MB
-09:51:35 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2025.csv 90.2 MB
-09:51:38 proposições 2025 ok
-09:51:40 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2026.csv 15.3 MB
-09:51:44 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2026.csv 42.6 MB
-09:51:45 proposições 2026 ok
-09:51:45 emendas 2015 140
-09:51:45 emendas 2016 289
-09:51:45 emendas 2017 274
-09:51:45 emendas 2018 320
-09:51:45 emendas 2019 297
-09:51:45 emendas 2020 336
-09:51:45 emendas 2021 349
-09:51:45 emendas 2022 322
-09:51:45 emendas 2023 286
-09:51:45 emendas 2024 395
-09:55:13 emendas 2025 383
-09:58:37 emendas 2026 380
-09:58:40 baixado https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml 0.0 MB
-09:58:45 baixado https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml 0.3 MB
-09:59:02 baixado https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml 172.3 MB
-09:59:29 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml 0.0 MB
-09:59:38 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/proposituras.zip 17.5 MB
-09:59:49 ALESP proposituras desde 2015 149887
-09:59:53 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/documento_andamento_atual.zip 1.8 MB
-10:00:14 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/documento_autor.zip 6.5 MB
-10:00:40 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml 8.2 MB
-10:00:42 baixado https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml 0.0 MB
-10:00:54 baixado https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_normas.xml 95.3 MB
-10:01:15 fim
+16:43:13 início; atualização completa: False
+16:43:13 despesas 2015 ok
+16:43:13 despesas 2016 ok
+16:43:13 despesas 2017 ok
+16:43:13 despesas 2018 ok
+16:43:13 despesas 2019 ok
+16:43:13 despesas 2020 ok
+16:43:13 despesas 2021 ok
+16:43:13 despesas 2022 ok
+16:43:13 despesas 2023 ok
+16:43:13 despesas 2024 ok
+16:43:15 baixado https://www.camara.leg.br/cotas/Ano-2025.csv.zip 6.9 MB
+16:43:17 despesas 2025 ok
+16:43:17 baixado https://www.camara.leg.br/cotas/Ano-2026.csv.zip 4.6 MB
+16:43:19 despesas 2026 ok
+16:43:19 votações 2015 ok
+16:43:19 votações 2016 ok
+16:43:19 votações 2017 ok
+16:43:19 votações 2018 ok
+16:43:19 votações 2019 ok
+16:43:19 votações 2020 ok
+16:43:19 votações 2021 ok
+16:43:19 votações 2022 ok
+16:43:19 votações 2023 ok
+16:43:19 votações 2024 ok
+16:43:21 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2025.csv 8.8 MB
+16:43:23 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2025.csv 58.2 MB
+16:43:25 votações 2025 ok
+16:43:25 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2026.csv 4.9 MB
+16:43:26 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2026.csv 17.7 MB
+16:43:27 votações 2026 ok
+16:43:27 falha https://dadosabertos.camara.leg.br/api/v2/legislaturas HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 1
+16:43:30 falha https://dadosabertos.camara.leg.br/api/v2/legislaturas HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 2
+16:43:36 falha https://dadosabertos.camara.leg.br/api/v2/legislaturas HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 3
+16:43:46 falha https://dadosabertos.camara.leg.br/api/v2/legislaturas HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 4
+16:43:58 falha https://dadosabertos.camara.leg.br/api/v2/legislaturas HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 5
+16:44:13 falha https://dadosabertos.camara.leg.br/api/v2/deputados HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 1
+16:44:16 falha https://dadosabertos.camara.leg.br/api/v2/deputados HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 2
+16:44:22 falha https://dadosabertos.camara.leg.br/api/v2/deputados HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 3
+16:44:32 falha https://dadosabertos.camara.leg.br/api/v2/deputados HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 4
+16:44:44 falha https://dadosabertos.camara.leg.br/api/v2/deputados HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 5
+16:44:59 lista atual indisponível: falha em https://dadosabertos.camara.leg.br/api/v2/deputados (HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+)
+16:44:59 federais SP desde 2015 : 192
+16:44:59 falha https://dadosabertos.camara.leg.br/api/v2/deputados/66828 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 1
+16:45:02 falha https://dadosabertos.camara.leg.br/api/v2/deputados/66828 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 2
+16:45:08 falha https://dadosabertos.camara.leg.br/api/v2/deputados/66828 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 3
+16:45:18 falha https://dadosabertos.camara.leg.br/api/v2/deputados/66828 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 4
+16:45:30 falha https://dadosabertos.camara.leg.br/api/v2/deputados/66828 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 5
+16:45:45 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73433 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 1
+16:45:49 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73433 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 2
+16:45:55 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73433 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 3
+16:46:04 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73433 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 4
+16:46:16 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73433 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 5
+16:46:31 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73434 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 1
+16:46:34 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73434 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 2
+16:46:41 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73434 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 3
+16:46:50 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73434 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 4
+16:47:02 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73434 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 5
+16:47:17 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73437 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 1
+16:47:21 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73437 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 2
+16:47:27 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73437 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 3
+16:47:36 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73437 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 4
+16:47:48 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73437 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 5
+16:48:04 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73441 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 1
+16:48:07 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73441 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 2
+16:48:13 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73441 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 3
+16:48:22 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73441 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 4
+16:48:35 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73441 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 5
+16:48:50 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73447 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 1
+16:48:53 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73447 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 2
+16:49:00 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73447 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 3
+16:49:09 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73447 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 4
+16:49:22 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73447 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 5
+16:49:37 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73531 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 1
+16:49:40 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73531 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 2
+16:49:46 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73531 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 3
+16:49:55 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73531 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 4
+16:50:08 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73531 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 5
+16:50:23 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73535 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 1
+16:50:26 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73535 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 2
+16:50:33 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73535 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 3
+16:50:42 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73535 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 4
+16:50:54 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73535 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 5
+16:51:10 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73536 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 1
+16:51:13 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73536 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 2
+16:51:19 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73536 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 3
+16:51:28 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73536 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 4
+16:51:41 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73536 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 5
+16:51:56 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73553 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 1
+16:52:00 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73553 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 2
+16:52:06 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73553 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 3
+16:52:15 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73553 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 4
+16:52:27 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73553 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 5
+16:52:42 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73559 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 1
+16:52:46 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73559 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 2
+16:52:52 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73559 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 3
+16:53:01 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73559 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 4
+16:53:14 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73559 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 5
+16:53:30 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73560 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 1
+16:53:33 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73560 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 2
+16:53:39 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73560 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 3
+16:53:49 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73560 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 4
+16:54:01 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73560 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 5
+16:54:16 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73584 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 1
+16:54:20 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73584 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 2
+16:54:26 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73584 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 3
+16:54:35 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73584 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 4
+16:54:48 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73584 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 5
+16:55:03 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73604 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 1
+16:55:06 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73604 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 2
+16:55:13 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73604 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 3
+16:55:22 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73604 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 4
+16:55:34 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73604 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 5
+16:55:49 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73682 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 1
+16:55:52 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73682 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 2
+16:55:58 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73682 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 3
+16:56:08 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73682 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 4
+16:56:20 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73682 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 5
+16:56:35 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73805 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 1
+16:56:39 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73805 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 2
+16:56:45 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73805 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 3
+16:56:54 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73805 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 4
+16:57:06 falha https://dadosabertos.camara.leg.br/api/v2/deputados/73805 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 5
+16:57:22 falha https://dadosabertos.camara.leg.br/api/v2/deputados/74119 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 1
+16:57:25 falha https://dadosabertos.camara.leg.br/api/v2/deputados/74119 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 2
+16:57:31 falha https://dadosabertos.camara.leg.br/api/v2/deputados/74119 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 3
+16:57:40 falha https://dadosabertos.camara.leg.br/api/v2/deputados/74119 HTTP 502: <html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 4
+16:57:52 falha https://dadosabertos.camara.leg.br/api/v2/deputados/74119 HTTP 503: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+ tentativa 5
+16:58:14 detalhes 20 / 192
+16:58:37 detalhes 40 / 192
+16:58:54 detalhes 60 / 192
+16:59:11 detalhes 80 / 192
+16:59:28 detalhes 100 / 192
+16:59:44 detalhes 120 / 192
+17:00:01 detalhes 140 / 192
+17:00:48 detalhes 160 / 192
+17:01:58 detalhes 180 / 192
+17:02:29 proposições 2015 ok
+17:02:29 proposições 2016 ok
+17:02:29 proposições 2017 ok
+17:02:29 proposições 2018 ok
+17:02:29 proposições 2019 ok
+17:02:29 proposições 2020 ok
+17:02:29 proposições 2021 ok
+17:02:29 proposições 2022 ok
+17:02:29 proposições 2023 ok
+17:02:29 proposições 2024 ok
+17:02:32 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2025.csv 38.9 MB
+17:02:36 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2025.csv 90.2 MB
+17:02:39 proposições 2025 ok
+17:02:41 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2026.csv 15.5 MB
+17:02:43 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2026.csv 43.1 MB
+17:02:44 proposições 2026 ok
+17:02:44 emendas 2015 140
+17:02:44 emendas 2016 289
+17:02:44 emendas 2017 274
+17:02:44 emendas 2018 320
+17:02:44 emendas 2019 297
+17:02:44 emendas 2020 336
+17:02:44 emendas 2021 349
+17:02:44 emendas 2022 322
+17:02:44 emendas 2023 286
+17:02:44 emendas 2024 395
+17:05:27 emendas 2025 350
+17:08:07 emendas 2026 344
+17:08:10 baixado https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml 0.0 MB
+17:08:12 baixado https://www.al.sp.gov.br/repositorioDados/deputados/deputados.xml 0.3 MB
+17:10:15 baixado https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml 172.3 MB
+17:10:41 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml 0.0 MB
+17:10:57 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/proposituras.zip 17.5 MB
+17:11:08 ALESP proposituras desde 2015 149887
+17:11:11 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/documento_andamento_atual.zip 1.8 MB
+17:11:29 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/documento_autor.zip 6.5 MB
+17:11:55 baixado https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml 8.2 MB
+17:11:57 baixado https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml 0.0 MB
+17:12:41 baixado https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_normas.xml 95.3 MB
+17:13:03 fim

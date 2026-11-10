@@ -40,29 +40,79 @@
    "urlDocumento",
    "v"
   ],
-  "linhas": 68982,
+  "linhas": 68996,
   "ok": true,
-  "segundos": 7
+  "segundos": 6
  },
  "camara_votacoes": {
   "votacoes_nominais_plenario": 3915,
   "votos_sp": 216317,
   "ok": true,
-  "segundos": 10
+  "segundos": 8
  },
  "camara_deputados": {
-  "total": 192,
-  "falhas": [],
-  "n_falhas": 0,
+  "total": 175,
+  "falhas": [
+   [
+    66828,
+    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/66828 (HTTP 503: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unava"
+   ],
+   [
+    73433,
+    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73433 (HTTP 503: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unava"
+   ],
+   [
+    73434,
+    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73434 (HTTP 503: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unava"
+   ],
+   [
+    73437,
+    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73437 (HTTP 503: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unava"
+   ],
+   [
+    73441,
+    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73441 (HTTP 503: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unava"
+   ],
+   [
+    73447,
+    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73447 (HTTP 503: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unava"
+   ],
+   [
+    73531,
+    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73531 (HTTP 503: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unava"
+   ],
+   [
+    73535,
+    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73535 (HTTP 503: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unava"
+   ],
+   [
+    73536,
+    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73536 (HTTP 503: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unava"
+   ],
+   [
+    73553,
+    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73553 (HTTP 503: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unava"
+   ]
+  ],
+  "n_falhas": 17,
   "legislaturas": [
-   57,
+   55,
    56,
-   55
+   57
   ],
   "exemplo_historico": [
    {
     "data": "2023-02-01T00:00",
-    "partido": "PP",
+    "partido": "PSD",
+    "uf": "SP",
+    "situacao": null,
+    "condicao": null,
+    "leg": 58,
+    "desc": "Nome no início da legislatura / Partido no início da legislatura"
+   },
+   {
+    "data": "2023-02-01T00:00",
+    "partido": "PSDB",
     "uf": "SP",
     "situacao": null,
     "condicao": null,
@@ -71,68 +121,59 @@
    },
    {
     "data": "2023-02-01T12:05",
-    "partido": "PP",
+    "partido": "PSDB",
     "uf": "SP",
     "situacao": "Exercício",
     "condicao": "Titular",
     "leg": 57,
     "desc": "Entrada - Posse de Eleito Titular - Posse na Sessão Preparatória"
-   },
-   {
-    "data": "2026-04-29T22:10",
-    "partido": "UNIÃO",
-    "uf": "SP",
-    "situacao": "Exercício",
-    "condicao": "Titular",
-    "leg": 57,
-    "desc": "Alteração de partido"
    }
   ],
   "ok": true,
-  "segundos": 165
+  "segundos": 1142
  },
  "camara_proposicoes": {
-  "linhas": 127765,
+  "linhas": 126356,
   "situacoes_mais_comuns": [
    [
     "",
-    46503
+    45801
    ],
    [
     "Arquivada",
-    14245
+    14212
    ],
    [
     "Tramitação Finalizada",
-    4791
+    4777
    ],
    [
     "Aguardando Providências Internas",
-    4073
+    4031
    ],
    [
     "Tramitando em Conjunto",
-    3269
+    3255
    ],
    [
     "Aguardando Designação de Relator(a)",
-    1918
+    1900
    ],
    [
     "Aguardando Remessa ao Arquivo",
-    1337
+    1320
    ],
    [
     "Pronta para Pauta",
-    1309
+    1287
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados",
-    1227
+    1232
    ],
    [
     "Aguardando Parecer",
-    875
+    863
    ],
    [
     "Devolvida ao(à) Autor(a)",
@@ -140,11 +181,11 @@
    ],
    [
     "Retirado pelo(a) Autor(a)",
-    402
+    401
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
-    328
+    317
    ],
    [
     "Transformado em Norma Jurídica",
@@ -152,15 +193,15 @@
    ],
    [
     "Aguardando Encaminhamento",
-    217
+    215
    ],
    [
     "Aguardando Apreciação pelo Senado Federal",
-    197
+    196
    ],
    [
     "Aguardando Resposta",
-    196
+    183
    ],
    [
     "Aguardando Autorização do Despacho",
@@ -171,20 +212,20 @@
     129
    ],
    [
-    "Aguardando Envio ao Executivo",
-    125
-   ],
-   [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Análise)",
     119
    ],
    [
+    "Aguardando Envio ao Executivo",
+    119
+   ],
+   [
     "Aguardando Deliberação",
-    98
+    104
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Autorização)",
-    60
+    59
    ],
    [
     "Aguardando Criação de Comissão Temporária",
@@ -196,7 +237,7 @@
    ]
   ],
   "ok": true,
-  "segundos": 19
+  "segundos": 15
  },
  "cgu_emendas": {
   "chaves_2025": [
@@ -267,21 +308,21 @@
    "valorRestoCancelado": "0,00",
    "valorRestoPago": "0,00"
   },
-  "linhas": 3771,
+  "linhas": 3702,
   "deputados_com_emendas": 140,
   "ok": true,
-  "segundos": 412
+  "segundos": 323
  },
  "montagem_federal": {
-  "emendas": 3771,
-  "parlamentares": 192,
+  "emendas": 3350,
+  "parlamentares": 175,
   "sem_tse": [
    "ABELARDO CAMARINHA",
    "OTONIEL LIMA"
   ],
   "n_sem_tse": 2,
-  "divergencia_partido_arquivo_cota": 15825,
-  "linhas_despesa": 68982
+  "divergencia_partido_arquivo_cota": 14776,
+  "linhas_despesa": 62075
  },
  "alesp_cadastro": {
   "deputados": 94,
@@ -296,7 +337,7 @@
    "aniversario": "26/08"
   },
   "ok": true,
-  "segundos": 7
+  "segundos": 3
  },
  "alesp_despesas": {
   "registros": 250870,
@@ -378,7 +419,7 @@
   "deputados": 238,
   "sem_matricula": [],
   "ok": true,
-  "segundos": 42
+  "segundos": 147
  },
  "alesp_proposituras": {
   "proposituras": 149887,
@@ -449,28 +490,28 @@
      "Publicacao",
      "E"
     ],
-    20517
+    20397
    ],
    [
     [
      "Comissao",
      "E"
     ],
-    1759
+    1757
    ],
    [
     [
      "Não Identificada",
      "E"
     ],
-    1626
+    1623
    ],
    [
     [
      "Comissao",
      "S"
     ],
-    1292
+    1288
    ],
    [
     [
@@ -509,6 +550,13 @@
    ],
    [
     [
+     "Não Identificada",
+     "I"
+    ],
+    31
+   ],
+   [
+    [
      "Pauta",
      "E"
     ],
@@ -534,13 +582,6 @@
      "E"
     ],
     3
-   ],
-   [
-    [
-     "Não Identificada",
-     "I"
-    ],
-    2
    ]
   ],
   "autores_mais_comuns": [
@@ -606,18 +647,18 @@
    ]
   ],
   "ok": true,
-  "segundos": 66
+  "segundos": 67
  },
  "alesp_presencas": {
   "presencas": 16459,
   "exemplo": [
-   "Daniel José",
-   "1000000399",
-   "1000004521",
-   "2021-12-14"
+   "Coronel Camilo",
+   "13106",
+   "13648",
+   "2016-05-31"
   ],
   "ok": true,
-  "segundos": 8
+  "segundos": 10
  },
  "alesp_normas": {
   "normas": 2462,
@@ -752,7 +793,7 @@
    }
   ],
   "ok": true,
-  "segundos": 24
+  "segundos": 56
  },
  "montagem_estadual": {
   "parlamentares": 244,
@@ -951,7 +992,7 @@
   "normas_casadas": 3785
  },
  "geral": {
-  "geradoEm": "2026-11-09 07:01",
-  "tamanho_painel_mb": 7.05
+  "geradoEm": "2026-11-10 14:13",
+  "tamanho_painel_mb": 6.75
  }
 }
