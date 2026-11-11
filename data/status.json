@@ -40,9 +40,9 @@
    "urlDocumento",
    "v"
   ],
-  "linhas": 68996,
+  "linhas": 69009,
   "ok": true,
-  "segundos": 6
+  "segundos": 5
  },
  "camara_votacoes": {
   "votacoes_nominais_plenario": 3915,
@@ -51,68 +51,18 @@
   "segundos": 8
  },
  "camara_deputados": {
-  "total": 175,
-  "falhas": [
-   [
-    66828,
-    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/66828 (HTTP 503: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unava"
-   ],
-   [
-    73433,
-    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73433 (HTTP 503: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unava"
-   ],
-   [
-    73434,
-    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73434 (HTTP 503: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unava"
-   ],
-   [
-    73437,
-    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73437 (HTTP 503: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unava"
-   ],
-   [
-    73441,
-    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73441 (HTTP 503: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unava"
-   ],
-   [
-    73447,
-    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73447 (HTTP 503: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unava"
-   ],
-   [
-    73531,
-    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73531 (HTTP 503: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unava"
-   ],
-   [
-    73535,
-    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73535 (HTTP 503: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unava"
-   ],
-   [
-    73536,
-    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73536 (HTTP 503: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unava"
-   ],
-   [
-    73553,
-    "falha em https://dadosabertos.camara.leg.br/api/v2/deputados/73553 (HTTP 503: <html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unava"
-   ]
-  ],
-  "n_falhas": 17,
+  "total": 192,
+  "falhas": [],
+  "n_falhas": 0,
   "legislaturas": [
-   55,
+   57,
    56,
-   57
+   55
   ],
   "exemplo_historico": [
    {
     "data": "2023-02-01T00:00",
-    "partido": "PSD",
-    "uf": "SP",
-    "situacao": null,
-    "condicao": null,
-    "leg": 58,
-    "desc": "Nome no início da legislatura / Partido no início da legislatura"
-   },
-   {
-    "data": "2023-02-01T00:00",
-    "partido": "PSDB",
+    "partido": "PP",
     "uf": "SP",
     "situacao": null,
     "condicao": null,
@@ -121,59 +71,68 @@
    },
    {
     "data": "2023-02-01T12:05",
-    "partido": "PSDB",
+    "partido": "PP",
     "uf": "SP",
     "situacao": "Exercício",
     "condicao": "Titular",
     "leg": 57,
     "desc": "Entrada - Posse de Eleito Titular - Posse na Sessão Preparatória"
+   },
+   {
+    "data": "2026-04-29T22:10",
+    "partido": "UNIÃO",
+    "uf": "SP",
+    "situacao": "Exercício",
+    "condicao": "Titular",
+    "leg": 57,
+    "desc": "Alteração de partido"
    }
   ],
   "ok": true,
-  "segundos": 1142
+  "segundos": 153
  },
  "camara_proposicoes": {
-  "linhas": 126356,
+  "linhas": 127890,
   "situacoes_mais_comuns": [
    [
     "",
-    45801
+    46583
    ],
    [
     "Arquivada",
-    14212
+    14247
    ],
    [
     "Tramitação Finalizada",
-    4777
+    4796
    ],
    [
     "Aguardando Providências Internas",
-    4031
+    4077
    ],
    [
     "Tramitando em Conjunto",
-    3255
+    3271
    ],
    [
     "Aguardando Designação de Relator(a)",
-    1900
+    1920
    ],
    [
     "Aguardando Remessa ao Arquivo",
-    1320
+    1337
    ],
    [
     "Pronta para Pauta",
-    1287
+    1311
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados",
-    1232
+    1238
    ],
    [
     "Aguardando Parecer",
-    863
+    871
    ],
    [
     "Devolvida ao(à) Autor(a)",
@@ -181,51 +140,51 @@
    ],
    [
     "Retirado pelo(a) Autor(a)",
-    401
+    402
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
-    317
+    331
+   ],
+   [
+    "Aguardando Encaminhamento",
+    222
    ],
    [
     "Transformado em Norma Jurídica",
     222
    ],
    [
-    "Aguardando Encaminhamento",
-    215
-   ],
-   [
     "Aguardando Apreciação pelo Senado Federal",
-    196
+    197
    ],
    [
     "Aguardando Resposta",
-    183
+    196
    ],
    [
     "Aguardando Autorização do Despacho",
-    141
+    144
    ],
    [
     "Aguardando Designação - Aguardando Devolução de Relator(a) que deixou de ser Membro",
     129
    ],
    [
+    "Aguardando Envio ao Executivo",
+    125
+   ],
+   [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Análise)",
     119
    ],
    [
-    "Aguardando Envio ao Executivo",
-    119
-   ],
-   [
     "Aguardando Deliberação",
-    104
+    100
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Autorização)",
-    59
+    60
    ],
    [
     "Aguardando Criação de Comissão Temporária",
@@ -237,7 +196,7 @@
    ]
   ],
   "ok": true,
-  "segundos": 15
+  "segundos": 14
  },
  "cgu_emendas": {
   "chaves_2025": [
@@ -308,21 +267,21 @@
    "valorRestoCancelado": "0,00",
    "valorRestoPago": "0,00"
   },
-  "linhas": 3702,
+  "linhas": 3776,
   "deputados_com_emendas": 140,
   "ok": true,
-  "segundos": 323
+  "segundos": 350
  },
  "montagem_federal": {
-  "emendas": 3350,
-  "parlamentares": 175,
+  "emendas": 3776,
+  "parlamentares": 192,
   "sem_tse": [
    "ABELARDO CAMARINHA",
    "OTONIEL LIMA"
   ],
   "n_sem_tse": 2,
-  "divergencia_partido_arquivo_cota": 14776,
-  "linhas_despesa": 62075
+  "divergencia_partido_arquivo_cota": 15825,
+  "linhas_despesa": 69009
  },
  "alesp_cadastro": {
   "deputados": 94,
@@ -337,75 +296,75 @@
    "aniversario": "26/08"
   },
   "ok": true,
-  "segundos": 3
+  "segundos": 4
  },
  "alesp_despesas": {
-  "registros": 250870,
-  "linhas": 101323,
+  "registros": 240224,
+  "linhas": 97309,
   "tipos": [
    [
     "A - COMBUSTÍVEIS E LUBRIFICANTES",
-    61754
+    58753
    ],
    [
     "I - HOSPEDAGEM, ALIMENTAÇÃO E DESPESAS DE LOCOMOÇÃO",
-    39402
+    37876
    ],
    [
     "H - SERV.UTIL.PÚBLICA (TELEF.MÓVEL/FIXA, ENERGIA, ÁGUA, GÁS ETC)",
-    28290
+    27139
    ],
    [
     "E - MATERIAIS DE ESCRITÓRIO E OUTROS MATERIAIS DE CONSUMO",
-    22593
+    21786
    ],
    [
     "G - ASSINATURAS DE PERIÓDICOS, PUBLICAÇÕES, INTERNET E SOFTWARES",
-    18850
-   ],
-   [
-    "M - MANUTENÇÃO DE BENS MÓVEIS, IMÓVEIS, CONDOMÍNIOS E OUTROS",
-    15631
+    18210
    ],
    [
     "K - LOCAÇÃO DE BENS MÓVEIS",
-    15538
+    14742
+   ],
+   [
+    "M - MANUTENÇÃO DE BENS MÓVEIS, IMÓVEIS, CONDOMÍNIOS E OUTROS",
+    14701
    ],
    [
     "L - LOCAÇÃO DE BENS IMÓVEIS",
-    12767
+    12238
    ],
    [
     "D - MATERIAIS E SERVIÇOS GRÁFICOS, DE CÓPIAS E REPRODUÇÃO DE DOCS",
-    7967
+    7656
    ],
    [
     "F - SERVIÇOS TÉCNICOS PROFISSIONAIS (CONSULTORIA, PESQUISAS ETC)",
-    5738
+    5588
    ],
    [
     "O - LOCAÇÃO DE VEÍCULO DE REPRESENTAÇÃO",
-    5314
+    5122
    ],
    [
     "C - MATERIAIS E SERVIÇOS DE MANUT E CONSERV DE VEÍCULOS ; PEDÁGIOS",
-    5169
+    5009
    ],
    [
     "J - SERVIÇOS DE COMUNICAÇÃO",
-    4551
+    4317
    ],
    [
     "P - DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR",
-    3645
+    3528
    ],
    [
     "N - MORADIA",
-    2830
+    2740
    ],
    [
     "B - PEDÁGIOS",
-    605
+    593
    ],
    [
     "Q - LOCAÇÃO DE VEÍCULO DE APOIO",
@@ -416,10 +375,10 @@
     6
    ]
   ],
-  "deputados": 238,
+  "deputados": 229,
   "sem_matricula": [],
   "ok": true,
-  "segundos": 147
+  "segundos": 125
  },
  "alesp_proposituras": {
   "proposituras": 149887,
@@ -490,28 +449,28 @@
      "Publicacao",
      "E"
     ],
-    20397
+    20333
    ],
    [
     [
      "Comissao",
      "E"
     ],
-    1757
+    1758
    ],
    [
     [
      "Não Identificada",
      "E"
     ],
-    1623
+    1621
    ],
    [
     [
      "Comissao",
      "S"
     ],
-    1288
+    1287
    ],
    [
     [
@@ -546,7 +505,7 @@
      "Distribuicao",
      "S"
     ],
-    40
+    38
    ],
    [
     [
@@ -647,18 +606,18 @@
    ]
   ],
   "ok": true,
-  "segundos": 67
+  "segundos": 75
  },
  "alesp_presencas": {
   "presencas": 16459,
   "exemplo": [
-   "Coronel Camilo",
-   "13106",
-   "13648",
-   "2016-05-31"
+   "Thiago Auricchio",
+   "1000000373",
+   "1000006486",
+   "2024-09-10"
   ],
   "ok": true,
-  "segundos": 10
+  "segundos": 11
  },
  "alesp_normas": {
   "normas": 2462,
@@ -793,7 +752,7 @@
    }
   ],
   "ok": true,
-  "segundos": 56
+  "segundos": 42
  },
  "montagem_estadual": {
   "parlamentares": 244,
@@ -992,7 +951,7 @@
   "normas_casadas": 3785
  },
  "geral": {
-  "geradoEm": "2026-11-10 14:13",
-  "tamanho_painel_mb": 6.75
+  "geradoEm": "2026-11-11 14:02",
+  "tamanho_painel_mb": 6.94
  }
 }
