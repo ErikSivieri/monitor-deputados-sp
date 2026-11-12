@@ -40,15 +40,15 @@
    "urlDocumento",
    "v"
   ],
-  "linhas": 69009,
+  "linhas": 68522,
   "ok": true,
-  "segundos": 5
+  "segundos": 4
  },
  "camara_votacoes": {
   "votacoes_nominais_plenario": 3915,
   "votos_sp": 216317,
   "ok": true,
-  "segundos": 8
+  "segundos": 7
  },
  "camara_deputados": {
   "total": 192,
@@ -89,14 +89,14 @@
    }
   ],
   "ok": true,
-  "segundos": 153
+  "segundos": 217
  },
  "camara_proposicoes": {
-  "linhas": 127890,
+  "linhas": 127974,
   "situacoes_mais_comuns": [
    [
     "",
-    46583
+    46656
    ],
    [
     "Arquivada",
@@ -108,7 +108,7 @@
    ],
    [
     "Aguardando Providências Internas",
-    4077
+    4085
    ],
    [
     "Tramitando em Conjunto",
@@ -116,7 +116,7 @@
    ],
    [
     "Aguardando Designação de Relator(a)",
-    1920
+    1913
    ],
    [
     "Aguardando Remessa ao Arquivo",
@@ -124,15 +124,15 @@
    ],
    [
     "Pronta para Pauta",
-    1311
+    1322
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados",
-    1238
+    1235
    ],
    [
     "Aguardando Parecer",
-    871
+    874
    ],
    [
     "Devolvida ao(à) Autor(a)",
@@ -144,11 +144,15 @@
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
-    331
+    364
+   ],
+   [
+    "Aguardando Resposta",
+    259
    ],
    [
     "Aguardando Encaminhamento",
-    222
+    228
    ],
    [
     "Transformado em Norma Jurídica",
@@ -159,20 +163,12 @@
     197
    ],
    [
-    "Aguardando Resposta",
-    196
-   ],
-   [
-    "Aguardando Autorização do Despacho",
-    144
-   ],
-   [
     "Aguardando Designação - Aguardando Devolução de Relator(a) que deixou de ser Membro",
     129
    ],
    [
-    "Aguardando Envio ao Executivo",
-    125
+    "Aguardando Autorização do Despacho",
+    121
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Análise)",
@@ -180,7 +176,11 @@
    ],
    [
     "Aguardando Deliberação",
-    100
+    77
+   ],
+   [
+    "Aguardando Envio ao Executivo",
+    62
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Autorização)",
@@ -196,7 +196,7 @@
    ]
   ],
   "ok": true,
-  "segundos": 14
+  "segundos": 12
  },
  "cgu_emendas": {
   "chaves_2025": [
@@ -267,21 +267,21 @@
    "valorRestoCancelado": "0,00",
    "valorRestoPago": "0,00"
   },
-  "linhas": 3776,
+  "linhas": 3778,
   "deputados_com_emendas": 140,
   "ok": true,
-  "segundos": 350
+  "segundos": 346
  },
  "montagem_federal": {
-  "emendas": 3776,
+  "emendas": 3778,
   "parlamentares": 192,
   "sem_tse": [
    "ABELARDO CAMARINHA",
    "OTONIEL LIMA"
   ],
   "n_sem_tse": 2,
-  "divergencia_partido_arquivo_cota": 15825,
-  "linhas_despesa": 69009
+  "divergencia_partido_arquivo_cota": 15699,
+  "linhas_despesa": 68522
  },
  "alesp_cadastro": {
   "deputados": 94,
@@ -296,89 +296,13 @@
    "aniversario": "26/08"
   },
   "ok": true,
-  "segundos": 4
+  "segundos": 3
  },
  "alesp_despesas": {
-  "registros": 240224,
-  "linhas": 97309,
-  "tipos": [
-   [
-    "A - COMBUSTÍVEIS E LUBRIFICANTES",
-    58753
-   ],
-   [
-    "I - HOSPEDAGEM, ALIMENTAÇÃO E DESPESAS DE LOCOMOÇÃO",
-    37876
-   ],
-   [
-    "H - SERV.UTIL.PÚBLICA (TELEF.MÓVEL/FIXA, ENERGIA, ÁGUA, GÁS ETC)",
-    27139
-   ],
-   [
-    "E - MATERIAIS DE ESCRITÓRIO E OUTROS MATERIAIS DE CONSUMO",
-    21786
-   ],
-   [
-    "G - ASSINATURAS DE PERIÓDICOS, PUBLICAÇÕES, INTERNET E SOFTWARES",
-    18210
-   ],
-   [
-    "K - LOCAÇÃO DE BENS MÓVEIS",
-    14742
-   ],
-   [
-    "M - MANUTENÇÃO DE BENS MÓVEIS, IMÓVEIS, CONDOMÍNIOS E OUTROS",
-    14701
-   ],
-   [
-    "L - LOCAÇÃO DE BENS IMÓVEIS",
-    12238
-   ],
-   [
-    "D - MATERIAIS E SERVIÇOS GRÁFICOS, DE CÓPIAS E REPRODUÇÃO DE DOCS",
-    7656
-   ],
-   [
-    "F - SERVIÇOS TÉCNICOS PROFISSIONAIS (CONSULTORIA, PESQUISAS ETC)",
-    5588
-   ],
-   [
-    "O - LOCAÇÃO DE VEÍCULO DE REPRESENTAÇÃO",
-    5122
-   ],
-   [
-    "C - MATERIAIS E SERVIÇOS DE MANUT E CONSERV DE VEÍCULOS ; PEDÁGIOS",
-    5009
-   ],
-   [
-    "J - SERVIÇOS DE COMUNICAÇÃO",
-    4317
-   ],
-   [
-    "P - DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR",
-    3528
-   ],
-   [
-    "N - MORADIA",
-    2740
-   ],
-   [
-    "B - PEDÁGIOS",
-    593
-   ],
-   [
-    "Q - LOCAÇÃO DE VEÍCULO DE APOIO",
-    220
-   ],
-   [
-    "C - MATERIAIS E SERVIÇOS DE MANUT E CONSERV DE VEÍCULOS",
-    6
-   ]
-  ],
-  "deputados": 229,
-  "sem_matricula": [],
-  "ok": true,
-  "segundos": 125
+  "ok": false,
+  "erro": "RuntimeError: alesp_despesas: 156228 registros contra 250870 na última coleta; possível arquivo incompleto",
+  "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 48, in inner\n    r = func(*a, **kw)\n        ^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 87, in despesas\n    conferir(\"alesp_despesas\", n)\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 195, in conferir\n    raise RuntimeError(f\"{nome}: {n} registros contra {antes} na última coleta; possível arquivo incompleto\")\nRuntimeError: alesp_despesas: 156228 registros contra 250870 na última coleta; possível arquivo incompleto\n",
+  "segundos": 24
  },
  "alesp_proposituras": {
   "proposituras": 149887,
@@ -449,28 +373,28 @@
      "Publicacao",
      "E"
     ],
-    20333
+    20287
    ],
    [
     [
      "Comissao",
      "E"
     ],
-    1758
+    1749
    ],
    [
     [
      "Não Identificada",
      "E"
     ],
-    1621
+    1617
    ],
    [
     [
      "Comissao",
      "S"
     ],
-    1287
+    1280
    ],
    [
     [
@@ -606,18 +530,18 @@
    ]
   ],
   "ok": true,
-  "segundos": 75
+  "segundos": 51
  },
  "alesp_presencas": {
   "presencas": 16459,
   "exemplo": [
-   "Thiago Auricchio",
-   "1000000373",
-   "1000006486",
-   "2024-09-10"
+   "Reinaldo Alguz",
+   "10619",
+   "1000002586",
+   "2019-09-25"
   ],
   "ok": true,
-  "segundos": 11
+  "segundos": 18
  },
  "alesp_normas": {
   "normas": 2462,
@@ -752,16 +676,16 @@
    }
   ],
   "ok": true,
-  "segundos": 42
+  "segundos": 84
  },
  "montagem_estadual": {
-  "parlamentares": 244,
+  "parlamentares": 222,
   "n_sem_tse": 5,
   "sem_tse": [
-   "Heroilma Soares",
-   "Francisco Campos Tito",
-   "Cezinha De Madureira",
    "Fabiana Bolsonaro",
+   "Cezinha de Madureira",
+   "Francisco Campos Tito",
+   "Heroilma Soares Tavares",
    "Ricardo Trípoli"
   ],
   "autores_nao_casados": [
@@ -772,6 +696,10 @@
    [
     "Mesa Diretora",
     241
+   ],
+   [
+    "Angelo Perugini",
+    82
    ],
    [
     "Tribunal de Justiça",
@@ -794,8 +722,16 @@
     20
    ],
    [
+    "Dr. Itamar",
+    20
+   ],
+   [
     "Tenente Carmelidia",
     20
+   ],
+   [
+    "Daniela Braga",
+    19
    ],
    [
     "Comissão de Educação e Cultura",
@@ -814,6 +750,10 @@
     13
    ],
    [
+    "Dr. Raul",
+    11
+   ],
+   [
     "CPI Trabalho Escravo",
     10
    ],
@@ -830,40 +770,24 @@
     7
    ],
    [
+    "Marco Aurélio de Souza",
+    6
+   ],
+   [
+    "Ulisses Sales",
+    6
+   ],
+   [
     "Comissão de Infraestrutura",
     6
    ],
    [
-    "Uebe Rezeck",
+    "Major Mauro",
+    6
+   ],
+   [
+    "Alexandre da Farmácia",
     5
-   ],
-   [
-    "Comissão de Segurança Pública e Assuntos Penitenciários",
-    5
-   ],
-   [
-    "Comissão de Administração Pública e Relações do Trabalho",
-    5
-   ],
-   [
-    "CPI Obesidade Infantil",
-    4
-   ],
-   [
-    "Coronel Helena",
-    4
-   ],
-   [
-    "CPI - Violência Sexual Contra Estudantes de Ensino Superior",
-    3
-   ],
-   [
-    "Conselho de Ética e Decoro Parlamentar",
-    3
-   ],
-   [
-    "CPI Violações dos Direitos Humanos nas Faculdades Paulistas",
-    2
    ]
   ],
   "normas_autores_nao_casados": [
@@ -874,6 +798,10 @@
    [
     "Mesa",
     61
+   ],
+   [
+    "Afonso Lobato",
+    43
    ],
    [
     "Tribunal de Justiça",
@@ -912,6 +840,10 @@
     7
    ],
    [
+    "Bruno Covas",
+    5
+   ],
+   [
     "outros",
     5
    ],
@@ -920,38 +852,50 @@
     4
    ],
    [
+    "Marco Aurélio de Souza",
+    4
+   ],
+   [
+    "Alexandre da Farmácia",
+    3
+   ],
+   [
+    "Samuel Moreira",
+    3
+   ],
+   [
+    "Luiz Moura",
+    2
+   ],
+   [
+    "Alex Manente",
+    2
+   ],
+   [
+    "Rui Falcão",
+    2
+   ],
+   [
+    "Edinho Silva",
+    2
+   ],
+   [
     "Sebastião Almeida",
+    2
+   ],
+   [
+    "Dr. Itamar",
     2
    ],
    [
     "MESA",
     2
-   ],
-   [
-    "CCTI",
-    2
-   ],
-   [
-    "CSPAP",
-    1
-   ],
-   [
-    "Donisete Braga",
-    1
-   ],
-   [
-    "Paulo Alexandre Barbosa",
-    1
-   ],
-   [
-    "CEDP",
-    1
    ]
   ],
-  "normas_casadas": 3785
+  "normas_casadas": 3712
  },
  "geral": {
-  "geradoEm": "2026-11-11 14:02",
-  "tamanho_painel_mb": 6.94
+  "geradoEm": "2026-11-12 14:29",
+  "tamanho_painel_mb": 6.93
  }
 }
