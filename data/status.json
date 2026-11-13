@@ -40,9 +40,9 @@
    "urlDocumento",
    "v"
   ],
-  "linhas": 68522,
+  "linhas": 69043,
   "ok": true,
-  "segundos": 4
+  "segundos": 5
  },
  "camara_votacoes": {
   "votacoes_nominais_plenario": 3915,
@@ -89,18 +89,18 @@
    }
   ],
   "ok": true,
-  "segundos": 217
+  "segundos": 147
  },
  "camara_proposicoes": {
-  "linhas": 127974,
+  "linhas": 127984,
   "situacoes_mais_comuns": [
    [
     "",
-    46656
+    46693
    ],
    [
     "Arquivada",
-    14247
+    14248
    ],
    [
     "Tramitação Finalizada",
@@ -112,11 +112,11 @@
    ],
    [
     "Tramitando em Conjunto",
-    3271
+    3275
    ],
    [
     "Aguardando Designação de Relator(a)",
-    1913
+    1920
    ],
    [
     "Aguardando Remessa ao Arquivo",
@@ -124,15 +124,15 @@
    ],
    [
     "Pronta para Pauta",
-    1322
+    1326
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados",
-    1235
+    1238
    ],
    [
     "Aguardando Parecer",
-    874
+    873
    ],
    [
     "Devolvida ao(à) Autor(a)",
@@ -144,7 +144,7 @@
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
-    364
+    324
    ],
    [
     "Aguardando Resposta",
@@ -152,7 +152,7 @@
    ],
    [
     "Aguardando Encaminhamento",
-    228
+    229
    ],
    [
     "Transformado em Norma Jurídica",
@@ -168,7 +168,7 @@
    ],
    [
     "Aguardando Autorização do Despacho",
-    121
+    123
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Análise)",
@@ -176,7 +176,7 @@
    ],
    [
     "Aguardando Deliberação",
-    77
+    72
    ],
    [
     "Aguardando Envio ao Executivo",
@@ -196,7 +196,7 @@
    ]
   ],
   "ok": true,
-  "segundos": 12
+  "segundos": 13
  },
  "cgu_emendas": {
   "chaves_2025": [
@@ -270,7 +270,7 @@
   "linhas": 3778,
   "deputados_com_emendas": 140,
   "ok": true,
-  "segundos": 346
+  "segundos": 348
  },
  "montagem_federal": {
   "emendas": 3778,
@@ -280,8 +280,8 @@
    "OTONIEL LIMA"
   ],
   "n_sem_tse": 2,
-  "divergencia_partido_arquivo_cota": 15699,
-  "linhas_despesa": 68522
+  "divergencia_partido_arquivo_cota": 15825,
+  "linhas_despesa": 69043
  },
  "alesp_cadastro": {
   "deputados": 94,
@@ -299,10 +299,86 @@
   "segundos": 3
  },
  "alesp_despesas": {
-  "ok": false,
-  "erro": "RuntimeError: alesp_despesas: 156228 registros contra 250870 na última coleta; possível arquivo incompleto",
-  "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 48, in inner\n    r = func(*a, **kw)\n        ^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 87, in despesas\n    conferir(\"alesp_despesas\", n)\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 195, in conferir\n    raise RuntimeError(f\"{nome}: {n} registros contra {antes} na última coleta; possível arquivo incompleto\")\nRuntimeError: alesp_despesas: 156228 registros contra 250870 na última coleta; possível arquivo incompleto\n",
-  "segundos": 24
+  "registros": 250870,
+  "linhas": 101323,
+  "tipos": [
+   [
+    "A - COMBUSTÍVEIS E LUBRIFICANTES",
+    61754
+   ],
+   [
+    "I - HOSPEDAGEM, ALIMENTAÇÃO E DESPESAS DE LOCOMOÇÃO",
+    39402
+   ],
+   [
+    "H - SERV.UTIL.PÚBLICA (TELEF.MÓVEL/FIXA, ENERGIA, ÁGUA, GÁS ETC)",
+    28290
+   ],
+   [
+    "E - MATERIAIS DE ESCRITÓRIO E OUTROS MATERIAIS DE CONSUMO",
+    22593
+   ],
+   [
+    "G - ASSINATURAS DE PERIÓDICOS, PUBLICAÇÕES, INTERNET E SOFTWARES",
+    18850
+   ],
+   [
+    "M - MANUTENÇÃO DE BENS MÓVEIS, IMÓVEIS, CONDOMÍNIOS E OUTROS",
+    15631
+   ],
+   [
+    "K - LOCAÇÃO DE BENS MÓVEIS",
+    15538
+   ],
+   [
+    "L - LOCAÇÃO DE BENS IMÓVEIS",
+    12767
+   ],
+   [
+    "D - MATERIAIS E SERVIÇOS GRÁFICOS, DE CÓPIAS E REPRODUÇÃO DE DOCS",
+    7967
+   ],
+   [
+    "F - SERVIÇOS TÉCNICOS PROFISSIONAIS (CONSULTORIA, PESQUISAS ETC)",
+    5738
+   ],
+   [
+    "O - LOCAÇÃO DE VEÍCULO DE REPRESENTAÇÃO",
+    5314
+   ],
+   [
+    "C - MATERIAIS E SERVIÇOS DE MANUT E CONSERV DE VEÍCULOS ; PEDÁGIOS",
+    5169
+   ],
+   [
+    "J - SERVIÇOS DE COMUNICAÇÃO",
+    4551
+   ],
+   [
+    "P - DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR",
+    3645
+   ],
+   [
+    "N - MORADIA",
+    2830
+   ],
+   [
+    "B - PEDÁGIOS",
+    605
+   ],
+   [
+    "Q - LOCAÇÃO DE VEÍCULO DE APOIO",
+    220
+   ],
+   [
+    "C - MATERIAIS E SERVIÇOS DE MANUT E CONSERV DE VEÍCULOS",
+    6
+   ]
+  ],
+  "deputados": 238,
+  "sem_matricula": [],
+  "ok": true,
+  "segundos": 44
  },
  "alesp_proposituras": {
   "proposituras": 149887,
@@ -373,35 +449,35 @@
      "Publicacao",
      "E"
     ],
-    20287
+    19912
    ],
    [
     [
      "Comissao",
      "E"
     ],
-    1749
+    1745
    ],
    [
     [
      "Não Identificada",
      "E"
     ],
-    1617
+    1612
    ],
    [
     [
      "Comissao",
      "S"
     ],
-    1280
+    1259
    ],
    [
     [
      "Arquivo",
      "I"
     ],
-    855
+    854
    ],
    [
     [
@@ -415,7 +491,7 @@
      "Publicacao",
      "S"
     ],
-    100
+    99
    ],
    [
     [
@@ -530,18 +606,18 @@
    ]
   ],
   "ok": true,
-  "segundos": 51
+  "segundos": 47
  },
  "alesp_presencas": {
   "presencas": 16459,
   "exemplo": [
-   "Reinaldo Alguz",
-   "10619",
-   "1000002586",
-   "2019-09-25"
+   "Leci Brandão",
+   "12420",
+   "1000005058",
+   "2022-12-14"
   ],
   "ok": true,
-  "segundos": 18
+  "segundos": 8
  },
  "alesp_normas": {
   "normas": 2462,
@@ -676,16 +752,16 @@
    }
   ],
   "ok": true,
-  "segundos": 84
+  "segundos": 34
  },
  "montagem_estadual": {
-  "parlamentares": 222,
+  "parlamentares": 244,
   "n_sem_tse": 5,
   "sem_tse": [
-   "Fabiana Bolsonaro",
-   "Cezinha de Madureira",
+   "Heroilma Soares",
    "Francisco Campos Tito",
-   "Heroilma Soares Tavares",
+   "Cezinha De Madureira",
+   "Fabiana Bolsonaro",
    "Ricardo Trípoli"
   ],
   "autores_nao_casados": [
@@ -696,10 +772,6 @@
    [
     "Mesa Diretora",
     241
-   ],
-   [
-    "Angelo Perugini",
-    82
    ],
    [
     "Tribunal de Justiça",
@@ -722,16 +794,8 @@
     20
    ],
    [
-    "Dr. Itamar",
-    20
-   ],
-   [
     "Tenente Carmelidia",
     20
-   ],
-   [
-    "Daniela Braga",
-    19
    ],
    [
     "Comissão de Educação e Cultura",
@@ -750,10 +814,6 @@
     13
    ],
    [
-    "Dr. Raul",
-    11
-   ],
-   [
     "CPI Trabalho Escravo",
     10
    ],
@@ -770,24 +830,40 @@
     7
    ],
    [
-    "Marco Aurélio de Souza",
-    6
-   ],
-   [
-    "Ulisses Sales",
-    6
-   ],
-   [
     "Comissão de Infraestrutura",
     6
    ],
    [
-    "Major Mauro",
-    6
+    "Uebe Rezeck",
+    5
    ],
    [
-    "Alexandre da Farmácia",
+    "Comissão de Segurança Pública e Assuntos Penitenciários",
     5
+   ],
+   [
+    "Comissão de Administração Pública e Relações do Trabalho",
+    5
+   ],
+   [
+    "CPI Obesidade Infantil",
+    4
+   ],
+   [
+    "Coronel Helena",
+    4
+   ],
+   [
+    "CPI - Violência Sexual Contra Estudantes de Ensino Superior",
+    3
+   ],
+   [
+    "Conselho de Ética e Decoro Parlamentar",
+    3
+   ],
+   [
+    "CPI Violações dos Direitos Humanos nas Faculdades Paulistas",
+    2
    ]
   ],
   "normas_autores_nao_casados": [
@@ -798,10 +874,6 @@
    [
     "Mesa",
     61
-   ],
-   [
-    "Afonso Lobato",
-    43
    ],
    [
     "Tribunal de Justiça",
@@ -840,10 +912,6 @@
     7
    ],
    [
-    "Bruno Covas",
-    5
-   ],
-   [
     "outros",
     5
    ],
@@ -852,50 +920,38 @@
     4
    ],
    [
-    "Marco Aurélio de Souza",
-    4
-   ],
-   [
-    "Alexandre da Farmácia",
-    3
-   ],
-   [
-    "Samuel Moreira",
-    3
-   ],
-   [
-    "Luiz Moura",
-    2
-   ],
-   [
-    "Alex Manente",
-    2
-   ],
-   [
-    "Rui Falcão",
-    2
-   ],
-   [
-    "Edinho Silva",
-    2
-   ],
-   [
     "Sebastião Almeida",
-    2
-   ],
-   [
-    "Dr. Itamar",
     2
    ],
    [
     "MESA",
     2
+   ],
+   [
+    "CCTI",
+    2
+   ],
+   [
+    "CSPAP",
+    1
+   ],
+   [
+    "Donisete Braga",
+    1
+   ],
+   [
+    "Paulo Alexandre Barbosa",
+    1
+   ],
+   [
+    "CEDP",
+    1
    ]
   ],
-  "normas_casadas": 3712
+  "normas_casadas": 3785
  },
  "geral": {
-  "geradoEm": "2026-11-12 14:29",
-  "tamanho_painel_mb": 6.93
+  "geradoEm": "2026-11-13 14:04",
+  "tamanho_painel_mb": 7.05
  }
 }
