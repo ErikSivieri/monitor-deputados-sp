@@ -42,13 +42,13 @@
   ],
   "linhas": 69043,
   "ok": true,
-  "segundos": 5
+  "segundos": 6
  },
  "camara_votacoes": {
   "votacoes_nominais_plenario": 3915,
   "votos_sp": 216317,
   "ok": true,
-  "segundos": 7
+  "segundos": 9
  },
  "camara_deputados": {
   "total": 192,
@@ -92,11 +92,11 @@
   "segundos": 147
  },
  "camara_proposicoes": {
-  "linhas": 127984,
+  "linhas": 128057,
   "situacoes_mais_comuns": [
    [
     "",
-    46693
+    46742
    ],
    [
     "Arquivada",
@@ -116,7 +116,7 @@
    ],
    [
     "Aguardando Designação de Relator(a)",
-    1920
+    1931
    ],
    [
     "Aguardando Remessa ao Arquivo",
@@ -128,11 +128,11 @@
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados",
-    1238
+    1235
    ],
    [
     "Aguardando Parecer",
-    873
+    869
    ],
    [
     "Devolvida ao(à) Autor(a)",
@@ -144,7 +144,7 @@
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
-    324
+    285
    ],
    [
     "Aguardando Resposta",
@@ -152,7 +152,7 @@
    ],
    [
     "Aguardando Encaminhamento",
-    229
+    224
    ],
    [
     "Transformado em Norma Jurídica",
@@ -168,7 +168,7 @@
    ],
    [
     "Aguardando Autorização do Despacho",
-    123
+    127
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Análise)",
@@ -176,7 +176,7 @@
    ],
    [
     "Aguardando Deliberação",
-    72
+    79
    ],
    [
     "Aguardando Envio ao Executivo",
@@ -196,7 +196,7 @@
    ]
   ],
   "ok": true,
-  "segundos": 13
+  "segundos": 39
  },
  "cgu_emendas": {
   "chaves_2025": [
@@ -270,7 +270,7 @@
   "linhas": 3778,
   "deputados_com_emendas": 140,
   "ok": true,
-  "segundos": 348
+  "segundos": 369
  },
  "montagem_federal": {
   "emendas": 3778,
@@ -284,674 +284,45 @@
   "linhas_despesa": 69043
  },
  "alesp_cadastro": {
-  "deputados": 94,
-  "partidos": 25,
-  "exemplo": {
-   "idDeputado": "1139",
-   "nome": "Agente Federal Danilo Balas",
-   "partido": "PL",
-   "situacao": "EXE",
-   "matricula": "300607",
-   "idSPL": "1000000335",
-   "aniversario": "26/08"
-  },
-  "ok": true,
-  "segundos": 3
+  "ok": false,
+  "erro": "RuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml",
+  "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 48, in inner\n    r = func(*a, **kw)\n        ^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 41, in cadastro\n    f = _xml(f\"{BASE}/deputados/partidos.xml\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 29, in _xml\n    arq = baixar(caminho_url)\n          ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 83, in baixar\n    raise RuntimeError(f\"não foi possível baixar {url}\")\nRuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml\n",
+  "segundos": 55
  },
  "alesp_despesas": {
-  "registros": 250870,
-  "linhas": 101323,
-  "tipos": [
-   [
-    "A - COMBUSTÍVEIS E LUBRIFICANTES",
-    61754
-   ],
-   [
-    "I - HOSPEDAGEM, ALIMENTAÇÃO E DESPESAS DE LOCOMOÇÃO",
-    39402
-   ],
-   [
-    "H - SERV.UTIL.PÚBLICA (TELEF.MÓVEL/FIXA, ENERGIA, ÁGUA, GÁS ETC)",
-    28290
-   ],
-   [
-    "E - MATERIAIS DE ESCRITÓRIO E OUTROS MATERIAIS DE CONSUMO",
-    22593
-   ],
-   [
-    "G - ASSINATURAS DE PERIÓDICOS, PUBLICAÇÕES, INTERNET E SOFTWARES",
-    18850
-   ],
-   [
-    "M - MANUTENÇÃO DE BENS MÓVEIS, IMÓVEIS, CONDOMÍNIOS E OUTROS",
-    15631
-   ],
-   [
-    "K - LOCAÇÃO DE BENS MÓVEIS",
-    15538
-   ],
-   [
-    "L - LOCAÇÃO DE BENS IMÓVEIS",
-    12767
-   ],
-   [
-    "D - MATERIAIS E SERVIÇOS GRÁFICOS, DE CÓPIAS E REPRODUÇÃO DE DOCS",
-    7967
-   ],
-   [
-    "F - SERVIÇOS TÉCNICOS PROFISSIONAIS (CONSULTORIA, PESQUISAS ETC)",
-    5738
-   ],
-   [
-    "O - LOCAÇÃO DE VEÍCULO DE REPRESENTAÇÃO",
-    5314
-   ],
-   [
-    "C - MATERIAIS E SERVIÇOS DE MANUT E CONSERV DE VEÍCULOS ; PEDÁGIOS",
-    5169
-   ],
-   [
-    "J - SERVIÇOS DE COMUNICAÇÃO",
-    4551
-   ],
-   [
-    "P - DIVULGAÇÃO DA ATIVIDADE PARLAMENTAR",
-    3645
-   ],
-   [
-    "N - MORADIA",
-    2830
-   ],
-   [
-    "B - PEDÁGIOS",
-    605
-   ],
-   [
-    "Q - LOCAÇÃO DE VEÍCULO DE APOIO",
-    220
-   ],
-   [
-    "C - MATERIAIS E SERVIÇOS DE MANUT E CONSERV DE VEÍCULOS",
-    6
-   ]
-  ],
-  "deputados": 238,
-  "sem_matricula": [],
-  "ok": true,
-  "segundos": 44
+  "ok": false,
+  "erro": "RuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml",
+  "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 48, in inner\n    r = func(*a, **kw)\n        ^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 58, in despesas\n    f = _xml(f\"{BASE}/deputados/despesas_gabinetes.xml\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 29, in _xml\n    arq = baixar(caminho_url)\n          ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 83, in baixar\n    raise RuntimeError(f\"não foi possível baixar {url}\")\nRuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml\n",
+  "segundos": 53
  },
  "alesp_proposituras": {
-  "proposituras": 149887,
-  "autorias": 179319,
-  "naturezas": 106,
-  "naturezas_usadas": [
-   [
-    "Indicação",
-    97449
-   ],
-   [
-    "Req.",
-    26884
-   ],
-   [
-    "PL",
-    13005
-   ],
-   [
-    "RI",
-    7056
-   ],
-   [
-    "Moção",
-    3234
-   ],
-   [
-    "PLC",
-    724
-   ],
-   [
-    "Req Com",
-    676
-   ],
-   [
-    "PDL",
-    455
-   ],
-   [
-    "PR",
-    307
-   ],
-   [
-    "PEC",
-    97
-   ]
-  ],
-  "exemplo_autor": [
-   [
-    "Feliciano Filho",
-    "1191597",
-    "10599"
-   ],
-   [
-    "Ana do Carmo",
-    "1192949",
-    "418"
-   ],
-   [
-    "Hélio Nishimoto",
-    "1201264",
-    "11155"
-   ]
-  ],
-  "etapas_finais_mais_comuns": [
-   [
-    [
-     "Publicacao",
-     "E"
-    ],
-    19912
-   ],
-   [
-    [
-     "Comissao",
-     "E"
-    ],
-    1745
-   ],
-   [
-    [
-     "Não Identificada",
-     "E"
-    ],
-    1612
-   ],
-   [
-    [
-     "Comissao",
-     "S"
-    ],
-    1259
-   ],
-   [
-    [
-     "Arquivo",
-     "I"
-    ],
-    854
-   ],
-   [
-    [
-     "Conclusao",
-     "S"
-    ],
-    306
-   ],
-   [
-    [
-     "Publicacao",
-     "S"
-    ],
-    99
-   ],
-   [
-    [
-     "Prontos para Ordem do Dia",
-     "S"
-    ],
-    58
-   ],
-   [
-    [
-     "Distribuicao",
-     "S"
-    ],
-    38
-   ],
-   [
-    [
-     "Não Identificada",
-     "I"
-    ],
-    31
-   ],
-   [
-    [
-     "Pauta",
-     "E"
-    ],
-    21
-   ],
-   [
-    [
-     "Distribuicao",
-     "E"
-    ],
-    19
-   ],
-   [
-    [
-     "Pauta",
-     "S"
-    ],
-    8
-   ],
-   [
-    [
-     "Arquivo",
-     "E"
-    ],
-    3
-   ]
-  ],
-  "autores_mais_comuns": [
-   [
-    "Rogério Nogueira",
-    14430
-   ],
-   [
-    "Jorge Wilson Xerife do Consumidor",
-    13025
-   ],
-   [
-    "Sebastião Santos",
-    12180
-   ],
-   [
-    "Letícia Aguiar",
-    6087
-   ],
-   [
-    "Jorge Caruso",
-    5788
-   ],
-   [
-    "Caio França",
-    4685
-   ],
-   [
-    "Coronel Telhada",
-    4497
-   ],
-   [
-    "Itamar Borges",
-    4265
-   ],
-   [
-    "Enio Tatto",
-    3483
-   ],
-   [
-    "Ricardo Madalena",
-    3333
-   ],
-   [
-    "Gil Diniz Bolsonaro",
-    2643
-   ],
-   [
-    "Mauro Bragato",
-    2465
-   ],
-   [
-    "Carlos Giannazi",
-    2130
-   ],
-   [
-    "Carla Morando",
-    2076
-   ],
-   [
-    "Agente Federal Danilo Balas",
-    2054
-   ]
-  ],
-  "ok": true,
-  "segundos": 47
+  "ok": false,
+  "erro": "RuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml",
+  "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 48, in inner\n    r = func(*a, **kw)\n        ^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 99, in proposituras\n    f = _xml(url)\n        ^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 29, in _xml\n    arq = baixar(caminho_url)\n          ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 83, in baixar\n    raise RuntimeError(f\"não foi possível baixar {url}\")\nRuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml\n",
+  "segundos": 53
  },
  "alesp_presencas": {
-  "presencas": 16459,
-  "exemplo": [
-   "Leci Brandão",
-   "12420",
-   "1000005058",
-   "2022-12-14"
-  ],
-  "ok": true,
-  "segundos": 8
+  "ok": false,
+  "erro": "RuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml",
+  "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 48, in inner\n    r = func(*a, **kw)\n        ^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 155, in presencas\n    f = _xml(f\"{BASE}/processo_legislativo/comissoes_permanentes_presencas.xml\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 29, in _xml\n    arq = baixar(caminho_url)\n          ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 83, in baixar\n    raise RuntimeError(f\"não foi possível baixar {url}\")\nRuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml\n",
+  "segundos": 53
  },
  "alesp_normas": {
-  "normas": 2462,
-  "tipos": {
-   "9": "Lei",
-   "2": "Lei Complementar",
-   "55": "Emenda Constitucional",
-   "3": "Decreto",
-   "28": "Decreto Legislativo",
-   "25": "Decreto-Lei",
-   "1": "Decreto-Lei Complementar",
-   "19": "Resolução da Alesp",
-   "14": "Resolução",
-   "12": "Decisão da Mesa",
-   "21": "Ato da Mesa",
-   "22": "Ato do Presidente",
-   "23": "Decisão do Presidente",
-   "59": "Constituição Estadual"
-  },
-  "ambito_promulg": [
-   [
-    [
-     null,
-     "E"
-    ],
-    157867
-   ],
-   [
-    [
-     null,
-     null
-    ],
-    26661
-   ],
-   [
-    [
-     null,
-     "L"
-    ],
-    19367
-   ],
-   [
-    [
-     null,
-     "I"
-    ],
-    63
-   ]
-  ],
-  "exemplo": [
-   {
-    "id": "197700",
-    "tipo": "Lei",
-    "numero": "17349",
-    "ano": 2021,
-    "data": "2021-03-31",
-    "autores": "Léo Oliveira",
-    "ementa": "Autoriza o Poder Executivo a construir o Hospital Veterinário Público Metropolitano no Município de Ribeirão Preto, destinado aos animais domésticos de famílias comprovadamente de baixa renda",
-    "url": "http://www.al.sp.gov.br/norma/197700",
-    "situacao": "1"
-   },
-   {
-    "id": "197382",
-    "tipo": "Lei",
-    "numero": "17324",
-    "ano": 2021,
-    "data": "2021-03-05",
-    "autores": "Rodrigo Gambale",
-    "ementa": "Declara de utilidade pública o Clube de Mães Residencial Pâmela, com sede em Itaquaquecetuba",
-    "url": "http://www.al.sp.gov.br/norma/197382",
-    "situacao": "1"
-   },
-   {
-    "id": "197389",
-    "tipo": "Lei",
-    "numero": "17331",
-    "ano": 2021,
-    "data": "2021-03-05",
-    "autores": "Estevam Galvão",
-    "ementa": "Declara de utilidade pública a Associação dos Voluntários de Combate ao Câncer de Bastos, com sede naquele Município",
-    "url": "http://www.al.sp.gov.br/norma/197389",
-    "situacao": "1"
-   }
-  ],
-  "registro_bruto_tipo": {
-   "idtipo": "9",
-   "dstipo": "Lei"
-  },
-  "registros_brutos": [
-   {
-    "data": "2021-03-31T00:00:00-03:00",
-    "ementa": "Autoriza o Poder Executivo a construir o Hospital Veterinário Público Metropolitano no Município de Ribeirão Preto, destinado aos animais domésticos de famílias comprovadamente de baixa renda",
-    "idnorma": "197700",
-    "idtema": "356",
-    "autores": "Léo Oliveira",
-    "caddo": "DOE-I",
-    "datado": "2023-05-05 16:38:29",
-    "numero": "17349",
-    "pagdo": "1",
-    "idtipo": "9",
-    "promulg": "E",
-    "situacao": "1",
-    "urlficha": "http://www.al.sp.gov.br/norma/197700"
-   },
-   {
-    "data": "2021-04-16T00:00:00-03:00",
-    "ementa": "Autoriza a Fazenda do Estado a permitir o uso, a título precário e gratuito e por prazo indeterminado, em favor do Município de Franco da Rocha, do imóvel que especifica, e dá providências correlatas",
-    "idnorma": "197883",
-    "idtema": "353",
-    "caddo": "DOE-I",
-    "datado": "2023-05-05 16:38:29",
-    "numero": "65637",
-    "pagdo": "1",
-    "idtipo": "3",
-    "promulg": "E",
-    "situacao": "1",
-    "urlficha": "http://www.al.sp.gov.br/norma/197883"
-   },
-   {
-    "data": "2021-04-16T00:00:00-03:00",
-    "ementa": "Autoriza a Fazenda do Estado a receber, mediante doação, sem ônus ou encargos, do Município de Mauá, o imóvel que especifica",
-    "idnorma": "197885",
-    "idtema": "353",
-    "caddo": "DOE-I",
-    "datado": "2023-05-05 16:38:29",
-    "numero": "65639",
-    "pagdo": "3",
-    "idtipo": "3",
-    "promulg": "E",
-    "situacao": "1",
-    "urlficha": "http://www.al.sp.gov.br/norma/197885"
-   }
-  ],
-  "ok": true,
-  "segundos": 34
+  "ok": false,
+  "erro": "RuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml",
+  "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 48, in inner\n    r = func(*a, **kw)\n        ^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 174, in normas\n    f = _xml(f\"{BASE}/legislacao/legislacao_tipo_normas.xml\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 29, in _xml\n    arq = baixar(caminho_url)\n          ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 83, in baixar\n    raise RuntimeError(f\"não foi possível baixar {url}\")\nRuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml\n",
+  "segundos": 54
  },
  "montagem_estadual": {
-  "parlamentares": 244,
-  "n_sem_tse": 5,
-  "sem_tse": [
-   "Heroilma Soares",
-   "Francisco Campos Tito",
-   "Cezinha De Madureira",
-   "Fabiana Bolsonaro",
-   "Ricardo Trípoli"
-  ],
-  "autores_nao_casados": [
-   [
-    "Governador",
-    311
-   ],
-   [
-    "Mesa Diretora",
-    241
-   ],
-   [
-    "Tribunal de Justiça",
-    66
-   ],
-   [
-    "Comissão de Finanças, Orçamento e Planejamento",
-    51
-   ],
-   [
-    "Ministério Público",
-    26
-   ],
-   [
-    "Tribunal de Contas do Estado de São Paulo",
-    21
-   ],
-   [
-    "Comissão de Saúde",
-    20
-   ],
-   [
-    "Tenente Carmelidia",
-    20
-   ],
-   [
-    "Comissão de Educação e Cultura",
-    17
-   ],
-   [
-    "Comissão de Transportes e Comunicações",
-    15
-   ],
-   [
-    "Comissão de Constituição, Justiça e Redação",
-    15
-   ],
-   [
-    "Defensoria Pública do Estado",
-    13
-   ],
-   [
-    "CPI Trabalho Escravo",
-    10
-   ],
-   [
-    "Comissão de Meio Ambiente e Desenvolvimento Sustentável",
-    9
-   ],
-   [
-    "Comissão de Defesa dos Direitos da Pessoa Humana, da Cidadania, da Participação e das Questões Sociais",
-    8
-   ],
-   [
-    "CPI Merenda",
-    7
-   ],
-   [
-    "Comissão de Infraestrutura",
-    6
-   ],
-   [
-    "Uebe Rezeck",
-    5
-   ],
-   [
-    "Comissão de Segurança Pública e Assuntos Penitenciários",
-    5
-   ],
-   [
-    "Comissão de Administração Pública e Relações do Trabalho",
-    5
-   ],
-   [
-    "CPI Obesidade Infantil",
-    4
-   ],
-   [
-    "Coronel Helena",
-    4
-   ],
-   [
-    "CPI - Violência Sexual Contra Estudantes de Ensino Superior",
-    3
-   ],
-   [
-    "Conselho de Ética e Decoro Parlamentar",
-    3
-   ],
-   [
-    "CPI Violações dos Direitos Humanos nas Faculdades Paulistas",
-    2
-   ]
-  ],
-  "normas_autores_nao_casados": [
-   [
-    "Governador",
-    251
-   ],
-   [
-    "Mesa",
-    61
-   ],
-   [
-    "Tribunal de Justiça",
-    25
-   ],
-   [
-    "Mesa Diretora",
-    25
-   ],
-   [
-    "CFOP",
-    24
-   ],
-   [
-    "Tribunal de Contas do Estado de São Paulo",
-    22
-   ],
-   [
-    "Ministério Público",
-    9
-   ],
-   [
-    "Defensoria Pública do Estado",
-    8
-   ],
-   [
-    "Monica da Mandata Ativista",
-    7
-   ],
-   [
-    "CCJR",
-    7
-   ],
-   [
-    "Baleia Rossi",
-    7
-   ],
-   [
-    "outros",
-    5
-   ],
-   [
-    "Patricia Bezerra",
-    4
-   ],
-   [
-    "Sebastião Almeida",
-    2
-   ],
-   [
-    "MESA",
-    2
-   ],
-   [
-    "CCTI",
-    2
-   ],
-   [
-    "CSPAP",
-    1
-   ],
-   [
-    "Donisete Braga",
-    1
-   ],
-   [
-    "Paulo Alexandre Barbosa",
-    1
-   ],
-   [
-    "CEDP",
-    1
-   ]
-  ],
-  "normas_casadas": 3785
+  "parlamentares": 0,
+  "n_sem_tse": 0,
+  "sem_tse": [],
+  "autores_nao_casados": [],
+  "normas_autores_nao_casados": [],
+  "normas_casadas": 0
  },
  "geral": {
-  "geradoEm": "2026-11-13 14:04",
+  "geradoEm": "2026-11-14 12:41",
   "tamanho_painel_mb": 7.05
  }
 }
