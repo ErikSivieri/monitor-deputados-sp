@@ -1,96 +1,97 @@
-20:47:19 início; atualização completa: False
-20:47:19 despesas 2015 ok
-20:47:19 despesas 2016 ok
-20:47:19 despesas 2017 ok
-20:47:19 despesas 2018 ok
-20:47:19 despesas 2019 ok
-20:47:19 despesas 2020 ok
-20:47:19 despesas 2021 ok
-20:47:19 despesas 2022 ok
-20:47:19 despesas 2023 ok
-20:47:19 despesas 2024 ok
-20:47:21 baixado https://www.camara.leg.br/cotas/Ano-2025.csv.zip 6.9 MB
-20:47:23 despesas 2025 ok
-20:47:24 baixado https://www.camara.leg.br/cotas/Ano-2026.csv.zip 4.8 MB
-20:47:25 despesas 2026 ok
-20:47:25 votações 2015 ok
-20:47:25 votações 2016 ok
-20:47:25 votações 2017 ok
-20:47:25 votações 2018 ok
-20:47:25 votações 2019 ok
-20:47:25 votações 2020 ok
-20:47:25 votações 2021 ok
-20:47:25 votações 2022 ok
-20:47:25 votações 2023 ok
-20:47:25 votações 2024 ok
-20:47:28 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2025.csv 8.8 MB
-20:47:30 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2025.csv 58.2 MB
-20:47:32 votações 2025 ok
-20:47:32 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2026.csv 5.5 MB
-20:47:33 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2026.csv 17.7 MB
-20:47:33 votações 2026 ok
-20:47:35 federais SP desde 2015 : 192
-20:47:36 detalhes 0 / 192
-20:47:53 detalhes 20 / 192
-20:48:09 detalhes 40 / 192
-20:48:25 detalhes 60 / 192
-20:48:41 detalhes 80 / 192
-20:48:57 detalhes 100 / 192
-20:49:13 detalhes 120 / 192
-20:49:29 detalhes 140 / 192
-20:49:45 detalhes 160 / 192
-20:50:00 detalhes 180 / 192
-20:50:08 proposições 2015 ok
-20:50:08 proposições 2016 ok
-20:50:08 proposições 2017 ok
-20:50:08 proposições 2018 ok
-20:50:08 proposições 2019 ok
-20:50:08 proposições 2020 ok
-20:50:08 proposições 2021 ok
-20:50:08 proposições 2022 ok
-20:50:08 proposições 2023 ok
-20:50:08 proposições 2024 ok
-20:50:11 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2025.csv 38.9 MB
-20:50:16 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2025.csv 90.2 MB
-20:50:19 proposições 2025 ok
-20:50:21 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2026.csv 16.6 MB
-20:50:23 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2026.csv 46.0 MB
-20:50:24 proposições 2026 ok
-20:50:24 emendas 2015 140
-20:50:24 emendas 2016 289
-20:50:24 emendas 2017 274
-20:50:24 emendas 2018 320
-20:50:24 emendas 2019 297
-20:50:24 emendas 2020 336
-20:50:24 emendas 2021 349
-20:50:24 emendas 2022 322
-20:50:24 emendas 2023 286
-20:50:24 emendas 2024 395
-20:53:20 emendas 2025 383
-20:56:18 emendas 2026 387
-20:56:21 falha https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml tentativa 1
-20:56:27 falha https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml tentativa 2
-20:56:37 falha https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml tentativa 3
-20:56:53 falha https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml tentativa 4
-20:57:13 ERRO em alesp_cadastro não foi possível baixar https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml
-20:57:16 falha https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml tentativa 1
-20:57:21 falha https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml tentativa 2
-20:57:32 falha https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml tentativa 3
-20:57:48 falha https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml tentativa 4
-20:58:08 ERRO em alesp_despesas não foi possível baixar https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml
-20:58:09 falha https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml tentativa 1
-20:58:15 falha https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml tentativa 2
-20:58:26 falha https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml tentativa 3
-20:58:42 falha https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml tentativa 4
-20:59:02 ERRO em alesp_proposituras não foi possível baixar https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml
-20:59:03 falha https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml tentativa 1
-20:59:09 falha https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml tentativa 2
-20:59:19 falha https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml tentativa 3
-20:59:35 falha https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml tentativa 4
-20:59:55 ERRO em alesp_presencas não foi possível baixar https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml
-20:59:56 falha https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml tentativa 1
-21:00:02 falha https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml tentativa 2
-21:00:13 falha https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml tentativa 3
-21:00:28 falha https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml tentativa 4
-21:00:48 ERRO em alesp_normas não foi possível baixar https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml
-21:00:49 fim
+19:51:14 início; atualização completa: False
+19:51:14 despesas 2015 ok
+19:51:14 despesas 2016 ok
+19:51:14 despesas 2017 ok
+19:51:14 despesas 2018 ok
+19:51:14 despesas 2019 ok
+19:51:14 despesas 2020 ok
+19:51:14 despesas 2021 ok
+19:51:14 despesas 2022 ok
+19:51:14 despesas 2023 ok
+19:51:14 despesas 2024 ok
+19:51:16 baixado https://www.camara.leg.br/cotas/Ano-2025.csv.zip 6.9 MB
+19:51:17 despesas 2025 ok
+19:51:18 baixado https://www.camara.leg.br/cotas/Ano-2026.csv.zip 4.8 MB
+19:51:19 despesas 2026 ok
+19:51:19 votações 2015 ok
+19:51:19 votações 2016 ok
+19:51:19 votações 2017 ok
+19:51:19 votações 2018 ok
+19:51:19 votações 2019 ok
+19:51:19 votações 2020 ok
+19:51:19 votações 2021 ok
+19:51:19 votações 2022 ok
+19:51:19 votações 2023 ok
+19:51:19 votações 2024 ok
+19:51:21 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2025.csv 8.8 MB
+19:51:25 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2025.csv 58.2 MB
+19:51:25 votações 2025 ok
+19:51:26 baixado https://dadosabertos.camara.leg.br/arquivos/votacoes/csv/votacoes-2026.csv 5.6 MB
+19:51:27 baixado https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2026.csv 19.2 MB
+19:51:27 votações 2026 ok
+19:51:29 federais SP desde 2015 : 192
+19:51:30 detalhes 0 / 192
+19:51:47 detalhes 20 / 192
+19:52:14 detalhes 40 / 192
+19:52:31 detalhes 60 / 192
+19:52:48 detalhes 80 / 192
+19:53:06 detalhes 100 / 192
+19:53:23 detalhes 120 / 192
+19:53:39 detalhes 140 / 192
+19:53:55 detalhes 160 / 192
+19:54:11 detalhes 180 / 192
+19:54:20 proposições 2015 ok
+19:54:20 proposições 2016 ok
+19:54:20 proposições 2017 ok
+19:54:20 proposições 2018 ok
+19:54:20 proposições 2019 ok
+19:54:20 proposições 2020 ok
+19:54:20 proposições 2021 ok
+19:54:20 proposições 2022 ok
+19:54:20 proposições 2023 ok
+19:54:20 proposições 2024 ok
+19:54:44 falha https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2025.csv ('Connection broken: IncompleteRead(5508846 bytes read, 33430862 more expected)', IncompleteRead(5508846 bytes read, 33430862 more expected)) tentativa 1
+19:54:53 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2025.csv 38.9 MB
+19:54:57 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2025.csv 90.2 MB
+19:54:59 proposições 2025 ok
+19:55:00 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2026.csv 16.8 MB
+19:55:03 baixado https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2026.csv 46.4 MB
+19:55:04 proposições 2026 ok
+19:55:04 emendas 2015 140
+19:55:04 emendas 2016 289
+19:55:04 emendas 2017 274
+19:55:04 emendas 2018 320
+19:55:04 emendas 2019 297
+19:55:04 emendas 2020 336
+19:55:04 emendas 2021 349
+19:55:04 emendas 2022 322
+19:55:04 emendas 2023 286
+19:55:04 emendas 2024 395
+19:58:34 emendas 2025 383
+20:02:05 emendas 2026 387
+20:02:07 falha https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml tentativa 1
+20:02:14 falha https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml tentativa 2
+20:02:25 falha https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml tentativa 3
+20:02:41 falha https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml tentativa 4
+20:03:01 ERRO em alesp_cadastro não foi possível baixar https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml
+20:03:03 falha https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml tentativa 1
+20:03:09 falha https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml tentativa 2
+20:03:20 falha https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml tentativa 3
+20:03:36 falha https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml tentativa 4
+20:03:56 ERRO em alesp_despesas não foi possível baixar https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml
+20:03:57 falha https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml tentativa 1
+20:04:02 falha https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml tentativa 2
+20:04:13 falha https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml tentativa 3
+20:04:29 falha https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml tentativa 4
+20:04:49 ERRO em alesp_proposituras não foi possível baixar https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml
+20:04:51 falha https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml tentativa 1
+20:04:57 falha https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml tentativa 2
+20:05:08 falha https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml tentativa 3
+20:05:24 falha https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml tentativa 4
+20:05:44 ERRO em alesp_presencas não foi possível baixar https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml
+20:05:45 falha https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml tentativa 1
+20:05:51 falha https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml tentativa 2
+20:06:03 falha https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml tentativa 3
+20:06:18 falha https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml 503 Server Error: Service Unavailable for url: https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml tentativa 4
+20:06:38 ERRO em alesp_normas não foi possível baixar https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml
+20:06:39 fim
