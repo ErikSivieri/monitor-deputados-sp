@@ -40,13 +40,13 @@
    "urlDocumento",
    "v"
   ],
-  "linhas": 69131,
+  "linhas": 69153,
   "ok": true,
   "segundos": 5
  },
  "camara_votacoes": {
-  "votacoes_nominais_plenario": 3925,
-  "votos_sp": 216932,
+  "votacoes_nominais_plenario": 3926,
+  "votos_sp": 216993,
   "ok": true,
   "segundos": 8
  },
@@ -89,14 +89,14 @@
    }
   ],
   "ok": true,
-  "segundos": 173
+  "segundos": 147
  },
  "camara_proposicoes": {
-  "linhas": 128473,
+  "linhas": 128516,
   "situacoes_mais_comuns": [
    [
     "",
-    46926
+    46941
    ],
    [
     "Arquivada",
@@ -108,31 +108,31 @@
    ],
    [
     "Aguardando Providências Internas",
-    4141
+    4142
    ],
    [
     "Tramitando em Conjunto",
-    3275
+    3277
    ],
    [
     "Aguardando Designação de Relator(a)",
-    1952
-   ],
-   [
-    "Pronta para Pauta",
-    1337
+    1958
    ],
    [
     "Aguardando Remessa ao Arquivo",
     1337
    ],
    [
+    "Pronta para Pauta",
+    1336
+   ],
+   [
     "Aguardando Despacho do Presidente da Câmara dos Deputados",
-    1253
+    1249
    ],
    [
     "Aguardando Parecer",
-    854
+    853
    ],
    [
     "Devolvida ao(à) Autor(a)",
@@ -152,7 +152,7 @@
    ],
    [
     "Aguardando Encaminhamento",
-    226
+    238
    ],
    [
     "Transformado em Norma Jurídica",
@@ -176,7 +176,7 @@
    ],
    [
     "Aguardando Deliberação",
-    101
+    108
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Autorização)",
@@ -196,7 +196,7 @@
    ]
   ],
   "ok": true,
-  "segundos": 43
+  "segundos": 13
  },
  "cgu_emendas": {
   "chaves_2025": [
@@ -270,7 +270,7 @@
   "linhas": 3778,
   "deputados_com_emendas": 140,
   "ok": true,
-  "segundos": 421
+  "segundos": 365
  },
  "montagem_federal": {
   "emendas": 3778,
@@ -281,37 +281,37 @@
   ],
   "n_sem_tse": 2,
   "divergencia_partido_arquivo_cota": 15825,
-  "linhas_despesa": 69131
+  "linhas_despesa": 69153
  },
  "alesp_cadastro": {
   "ok": false,
   "erro": "RuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml",
   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 48, in inner\n    r = func(*a, **kw)\n        ^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 41, in cadastro\n    f = _xml(f\"{BASE}/deputados/partidos.xml\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 29, in _xml\n    arq = baixar(caminho_url)\n          ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 83, in baixar\n    raise RuntimeError(f\"não foi possível baixar {url}\")\nRuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml\n",
-  "segundos": 55
+  "segundos": 52
  },
  "alesp_despesas": {
   "ok": false,
   "erro": "RuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml",
   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 48, in inner\n    r = func(*a, **kw)\n        ^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 58, in despesas\n    f = _xml(f\"{BASE}/deputados/despesas_gabinetes.xml\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 29, in _xml\n    arq = baixar(caminho_url)\n          ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 83, in baixar\n    raise RuntimeError(f\"não foi possível baixar {url}\")\nRuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml\n",
-  "segundos": 55
+  "segundos": 52
  },
  "alesp_proposituras": {
   "ok": false,
   "erro": "RuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml",
   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 48, in inner\n    r = func(*a, **kw)\n        ^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 99, in proposituras\n    f = _xml(url)\n        ^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 29, in _xml\n    arq = baixar(caminho_url)\n          ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 83, in baixar\n    raise RuntimeError(f\"não foi possível baixar {url}\")\nRuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/processo_legislativo/naturezasSpl.xml\n",
-  "segundos": 53
+  "segundos": 52
  },
  "alesp_presencas": {
   "ok": false,
   "erro": "RuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml",
   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 48, in inner\n    r = func(*a, **kw)\n        ^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 155, in presencas\n    f = _xml(f\"{BASE}/processo_legislativo/comissoes_permanentes_presencas.xml\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 29, in _xml\n    arq = baixar(caminho_url)\n          ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 83, in baixar\n    raise RuntimeError(f\"não foi possível baixar {url}\")\nRuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml\n",
-  "segundos": 55
+  "segundos": 52
  },
  "alesp_normas": {
   "ok": false,
   "erro": "RuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml",
   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 48, in inner\n    r = func(*a, **kw)\n        ^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 174, in normas\n    f = _xml(f\"{BASE}/legislacao/legislacao_tipo_normas.xml\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 29, in _xml\n    arq = baixar(caminho_url)\n          ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 83, in baixar\n    raise RuntimeError(f\"não foi possível baixar {url}\")\nRuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/legislacao/legislacao_tipo_normas.xml\n",
-  "segundos": 55
+  "segundos": 52
  },
  "montagem_estadual": {
   "parlamentares": 0,
@@ -322,7 +322,7 @@
   "normas_casadas": 0
  },
  "geral": {
-  "geradoEm": "2026-11-24 17:06",
+  "geradoEm": "2026-11-25 16:09",
   "tamanho_painel_mb": 7.06
  }
 }
