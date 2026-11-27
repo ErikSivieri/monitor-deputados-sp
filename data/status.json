@@ -40,15 +40,15 @@
    "urlDocumento",
    "v"
   ],
-  "linhas": 68661,
+  "linhas": 69179,
   "ok": true,
-  "segundos": 5
+  "segundos": 6
  },
  "camara_votacoes": {
   "votacoes_nominais_plenario": 3927,
   "votos_sp": 217051,
   "ok": true,
-  "segundos": 7
+  "segundos": 9
  },
  "camara_deputados": {
   "total": 192,
@@ -89,14 +89,14 @@
    }
   ],
   "ok": true,
-  "segundos": 149
+  "segundos": 151
  },
  "camara_proposicoes": {
-  "linhas": 128647,
+  "linhas": 128656,
   "situacoes_mais_comuns": [
    [
     "",
-    47048
+    47042
    ],
    [
     "Arquivada",
@@ -104,35 +104,35 @@
    ],
    [
     "Tramitação Finalizada",
-    4817
+    4818
    ],
    [
     "Aguardando Providências Internas",
-    4150
+    4152
    ],
    [
     "Tramitando em Conjunto",
-    3278
+    3277
    ],
    [
     "Aguardando Designação de Relator(a)",
-    1960
+    1986
    ],
    [
     "Pronta para Pauta",
-    1348
+    1347
    ],
    [
     "Aguardando Remessa ao Arquivo",
-    1337
+    1338
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados",
-    1243
+    1218
    ],
    [
     "Aguardando Parecer",
-    858
+    859
    ],
    [
     "Devolvida ao(à) Autor(a)",
@@ -144,15 +144,15 @@
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)",
-    288
+    292
    ],
    [
     "Aguardando Resposta",
-    272
+    271
    ],
    [
     "Aguardando Encaminhamento",
-    240
+    237
    ],
    [
     "Transformado em Norma Jurídica",
@@ -164,11 +164,11 @@
    ],
    [
     "Aguardando Autorização do Despacho",
-    136
+    133
    ],
    [
     "Aguardando Designação - Aguardando Devolução de Relator(a) que deixou de ser Membro",
-    127
+    130
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Análise)",
@@ -176,7 +176,7 @@
    ],
    [
     "Aguardando Deliberação",
-    81
+    82
    ],
    [
     "Aguardando Despacho do Presidente da Câmara dos Deputados (Autorização)",
@@ -184,7 +184,7 @@
    ],
    [
     "Aguardando Envio ao Executivo",
-    49
+    52
    ],
    [
     "Aguardando Criação de Comissão Temporária",
@@ -196,7 +196,7 @@
    ]
   ],
   "ok": true,
-  "segundos": 36
+  "segundos": 15
  },
  "cgu_emendas": {
   "chaves_2025": [
@@ -270,7 +270,7 @@
   "linhas": 3778,
   "deputados_com_emendas": 140,
   "ok": true,
-  "segundos": 375
+  "segundos": 384
  },
  "montagem_federal": {
   "emendas": 3778,
@@ -280,20 +280,20 @@
    "OTONIEL LIMA"
   ],
   "n_sem_tse": 2,
-  "divergencia_partido_arquivo_cota": 15699,
-  "linhas_despesa": 68661
+  "divergencia_partido_arquivo_cota": 15825,
+  "linhas_despesa": 69179
  },
  "alesp_cadastro": {
   "ok": false,
   "erro": "RuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml",
   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 48, in inner\n    r = func(*a, **kw)\n        ^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 41, in cadastro\n    f = _xml(f\"{BASE}/deputados/partidos.xml\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 29, in _xml\n    arq = baixar(caminho_url)\n          ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 83, in baixar\n    raise RuntimeError(f\"não foi possível baixar {url}\")\nRuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/deputados/partidos.xml\n",
-  "segundos": 54
+  "segundos": 55
  },
  "alesp_despesas": {
   "ok": false,
   "erro": "RuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml",
   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 48, in inner\n    r = func(*a, **kw)\n        ^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 58, in despesas\n    f = _xml(f\"{BASE}/deputados/despesas_gabinetes.xml\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 29, in _xml\n    arq = baixar(caminho_url)\n          ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 83, in baixar\n    raise RuntimeError(f\"não foi possível baixar {url}\")\nRuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/deputados/despesas_gabinetes.xml\n",
-  "segundos": 53
+  "segundos": 55
  },
  "alesp_proposituras": {
   "ok": false,
@@ -305,7 +305,7 @@
   "ok": false,
   "erro": "RuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml",
   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 48, in inner\n    r = func(*a, **kw)\n        ^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 155, in presencas\n    f = _xml(f\"{BASE}/processo_legislativo/comissoes_permanentes_presencas.xml\")\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/alesp.py\", line 29, in _xml\n    arq = baixar(caminho_url)\n          ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/monitor-deputados-sp/monitor-deputados-sp/coletor/util.py\", line 83, in baixar\n    raise RuntimeError(f\"não foi possível baixar {url}\")\nRuntimeError: não foi possível baixar https://www.al.sp.gov.br/repositorioDados/processo_legislativo/comissoes_permanentes_presencas.xml\n",
-  "segundos": 54
+  "segundos": 55
  },
  "alesp_normas": {
   "ok": false,
@@ -322,7 +322,7 @@
   "normas_casadas": 0
  },
  "geral": {
-  "geradoEm": "2026-11-26 15:59",
-  "tamanho_painel_mb": 7.05
+  "geradoEm": "2026-11-27 15:51",
+  "tamanho_painel_mb": 7.06
  }
 }
